@@ -1,13 +1,15 @@
 nav {
-  position: fixed;
-  width: calc(100% - 60px);
-  height: 75px;
-  margin: 30px;
-  background: #175059;
-  color: #FFF;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr); }
-  nav .burgerBtn {
+    position: fixed;
+    width: calc(100% - 60px);
+    height: 75px;
+    margin: 30px;
+    background: #175059;
+    color: #FFF;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+nav .burgerBtn {
     grid-column: 1;
     grid-row: 1;
     width: 75px;
@@ -18,24 +20,34 @@ nav {
     color: #FFF;
     font-size: 25px;
     cursor: pointer;
-    outline: none; }
-    nav .burgerBtn div {
-      width: 50%;
-      height: 4px;
-      background: white;
-      margin: 4px auto;
-      border-radius: 3px;
-      transition: all 0.3s;
-      backface-visibility: hidden; }
-    nav .burgerBtn.on .one {
-      transform: rotate(45deg) translate(5px, 5px); }
-    nav .burgerBtn.on .two {
-      width: 0;
-      opacity: 0;
-      transition: all 0.6s; }
-    nav .burgerBtn.on .three {
-      transform: rotate(-45deg) translate(7px, -8px); }
-  nav .logo {
+    outline: none;
+}
+
+nav .burgerBtn div {
+    width: 50%;
+    height: 4px;
+    background: white;
+    margin: 4px auto;
+    border-radius: 3px;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+}
+
+nav .burgerBtn.on .one {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+nav .burgerBtn.on .two {
+    width: 0;
+    opacity: 0;
+    transition: all 0.6s;
+}
+
+nav .burgerBtn.on .three {
+    transform: rotate(-45deg) translate(7px, -8px);
+}
+
+nav .logo {
     grid-column: 3/11;
     text-align: center;
     text-decoration: none;
@@ -43,27 +55,35 @@ nav {
     color: #FFF;
     align-self: center;
     height: 100%;
-    width: 100%; }
-    nav .logo:before {
-      content: '';
-      display: inline-block;
-      vertical-align: middle;
-      height: 100%; }
-      nav .contactBtn {
-        grid-column: 11/13;
-        text-align: center;
-        text-decoration: none;
-        font-size: 1em;
-        color: #FFF;
-        align-self: center;
-        height: 100%;
-        width: 100%; }
-        nav .contactBtn:before {
-          content: '';
-          display: inline-block;
-          vertical-align: middle;
-          height: 100%; }
-  nav ul#overlay {
+    width: 100%;
+}
+
+nav .logo:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+nav .contactBtn {
+    grid-column: 11/13;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    color: #FFF;
+    align-self: center;
+    height: 100%;
+    width: 100%;
+}
+
+nav .contactBtn:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+nav ul#overlay {
     grid-column: 1/13;
     grid-row: 2;
     width: 0;
@@ -71,60 +91,75 @@ nav {
     background: #175059;
     text-align: center;
     transition: all 0.7s;
-    opacity: 0; }
-    nav ul#overlay li {
-      height: 25%; }
-      nav ul#overlay li a {
-        text-decoration: none;
-        color: #fff;
-        display: block;
-        width: 100%;
-        height: 100%; }
-        nav ul#overlay li a:before {
-          content: '';
-          display: inline-block;
-          vertical-align: middle;
-          height: 100%; }
+    opacity: 0;
+}
+
+nav ul#overlay li {
+    height: 25%;
+}
+
+nav ul#overlay li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+nav ul#overlay li a:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
 
 @media screen and (min-width: 1200px) {
-  nav {
-    background: transparent;
-    height: 0px; }
+    nav {
+        background: transparent;
+        height: 0px;
+    }
+
     nav .logo {
-      grid-column: 2;
-      text-align: left;
-      height: 75px
-  }
-  nav .contactBtn{
-      padding:0;
-      text-align: right;
-  }
+        grid-column: 2;
+        text-align: left;
+        height: 75px
+    }
+
+    nav .contactBtn {
+        padding: 0;
+        text-align: right;
+    }
+
     nav ul#overlay {
-      grid-column: 2/13; }
+        grid-column: 2/13;
+    }
+
     nav .burgerBtn {
-      grid-row: 2;
-      height: 100%; }
-      nav .burgerBtn:before {
+        grid-row: 2;
+        height: 100%;
+    }
+
+    nav .burgerBtn:before {
         content: '';
         display: inline-block;
         vertical-align: middle;
-        height: 100%; } }
-
-/*# sourceMappingURL=navigation.css.map */
-
-
-      nav .loginBtn {
-  grid-column: 12;
-  grid-row: 1;
-  color: #FFF;
-  font-size: 20px;
-  text-align: center;
+        height: 100%;
+    }
 }
 
-  nav .regisBtn {
-grid-column: 10/12;
-grid-row: 1;
-color: #FFF;
-font-size: 20px;
-text-align: center;
+/*# sourceMappingURL=navigation.css.map */
+nav .loginBtn {
+    grid-column: 12;
+    grid-row: 1;
+    color: #FFF;
+    font-size: 20px;
+    text-align: center;
+}
+
+nav .regisBtn {
+    grid-column: 10/12;
+    grid-row: 1;
+    color: #FFF;
+    font-size: 20px;
+    text-align: center;
 }
