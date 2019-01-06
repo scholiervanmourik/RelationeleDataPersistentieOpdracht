@@ -234,22 +234,107 @@ INSERT INTO `stages` (`Stage_ID`, `Festival_ID`, `Location`, `Capacity`) VALUES
 
 --                                                                                           All Data for the first table of the database
 
-
-INSERT INTO `Facilities` (`Facility_ID`,`Location`,`Facility_Type`,`Capacity`) VALUES (1,"-74.28488, -0.60153","Drinks",487),(2,"20.22061, 42.19416","Entree",221),(3,"-39.57265, 80.72012","EHBO",263),(4,"82.45832, -83.38103","Food",377),(5,"19.42521, -155.77923","Toilet",438),(6,"44.01379, 67.20673","Food",298),(7,"65.90791, -26.38814","Entree",375),(8,"26.39693, -34.08875","Toilet",309),(9,"79.58276, 95.96446","Food",240),(10,"73.62086, -157.57601","Toilet",341);
-INSERT INTO `Facilities` (`Facility_ID`,`Location`,`Facility_Type`,`Capacity`) VALUES (11,"-28.29172, 123.52331","Exit",298),(12,"34.96976, 61.51005","EHBO",273),(13,"79.12871, 77.05213","Toilet",306),(14,"-36.49453, -72.83652","Drinks",335),(15,"-63.31658, 119.52168","Entree",344),(16,"72.48273, 118.13586","Toilet",272),(17,"-60.80508, 139.32184","Toilet",483),(18,"51.79691, 171.03699","Toilet",397),(19,"15.0504, 120.11201","Entree",426),(20,"-32.33852, 131.77216","EHBO",366);
-INSERT INTO `Facilities` (`Facility_ID`,`Location`,`Facility_Type`,`Capacity`) VALUES (21,"63.56373, 26.94926","Exit",349),(22,"-46.22653, 44.09197","Food",310),(23,"-50.16779, -142.15761","Entree",450),(24,"49.39427, -171.18287","EHBO",328),(25,"-18.81449, 164.57878","EHBO",238),(26,"-69.8138, -131.15151","Drinks",336),(27,"20.84643, 106.9065","Drinks",321),(28,"-3.47238, -133.67404","Entree",271),(29,"66.80906, 16.4989","EHBO",251),(30,"69.12248, 112.94626","Food",363);
-INSERT INTO `Facilities` (`Facility_ID`,`Location`,`Facility_Type`,`Capacity`) VALUES (31,"66.52047, -166.56313","EHBO",338),(32,"59.88538, -158.96022","Entree",328),(33,"75.64567, 101.75059","EHBO",214),(34,"-86.7526, 90.91236","Food",434),(35,"-89.80928, -96.62222","Drinks",341),(36,"-7.4023, -177.76709","EHBO",417),(37,"-67.90382, -101.76378","Food",457),(38,"79.81734, 138.26405","Drinks",302),(39,"-5.1421, -50.34884","EHBO",440),(40,"87.08056, -91.2907","Entree",354);
-INSERT INTO `Facilities` (`Facility_ID`,`Location`,`Facility_Type`,`Capacity`) VALUES (41,"23.53038, 22.03821","Entree",312),(42,"-72.81629, -29.30228","EHBO",239),(43,"11.56425, -104.03657","Drinks",400),(44,"-35.79895, -5.8208","Food",301),(45,"-62.96328, -162.45217","Drinks",449),(46,"-71.70533, 103.73221","Drinks",406),(47,"3.74295, -20.86585","Exit",407),(48,"40.2138, -165.98525","Exit",369),(49,"32.70398, 56.18569","Drinks",421),(50,"59.28733, 29.04639","Food",284);
-INSERT INTO `Facilities` (`Facility_ID`,`Location`,`Facility_Type`,`Capacity`) VALUES (51,"44.65749, -37.0288","Food",301),(52,"-81.46439, -7.46955","Drinks",460),(53,"-76.49751, -169.34859","EHBO",206),(54,"-75.01649, -105.19359","Toilet",433),(55,"-21.39756, 129.5135","Toilet",475),(56,"-75.22158, 21.79329","Exit",479),(57,"61.38515, 177.25559","EHBO",244),(58,"-65.0958, 140.03336","Toilet",443),(59,"-45.15641, -110.73607","Entree",216),(60,"-59.84854, -13.0959","Toilet",481);
-INSERT INTO `Facilities` (`Facility_ID`,`Location`,`Facility_Type`,`Capacity`) VALUES (61,"36.85428, -143.08684","Food",422),(62,"50.69754, 44.94834","Toilet",234),(63,"-37.38388, 78.88673","Drinks",401),(64,"66.49303, -125.03683","Food",359),(65,"88.22785, -134.11058","Drinks",434),(66,"-7.01859, 10.36057","Food",225),(67,"-22.6007, 58.03914","Drinks",241),(68,"9.57265, 175.73881","Entree",477),(69,"-7.01697, 5.48804","EHBO",201),(70,"-54.7983, 64.31065","Toilet",398);
-INSERT INTO `Facilities` (`Facility_ID`,`Location`,`Facility_Type`,`Capacity`) VALUES (71,"-14.13266, 123.38914","Toilet",304),(72,"59.39583, 137.43673","EHBO",367),(73,"-81.86377, -3.85308","Toilet",403),(74,"-20.80661, -66.39678","EHBO",482),(75,"-22.88961, 25.25454","EHBO",337),(76,"4.76753, -96.41505","Drinks",452),(77,"-68.68267, -42.15398","Drinks",283),(78,"38.04609, 154.3636","Toilet",285),(79,"-31.62083, -10.68788","Drinks",445),(80,"0.89735, -95.93537","Food",302);
-INSERT INTO `Facilities` (`Facility_ID`,`Location`,`Facility_Type`,`Capacity`) VALUES (81,"-30.93832, -128.34605","Exit",314),(82,"-18.5604, 144.78627","Food",202),(83,"-59.04288, 73.02679","Exit",354),(84,"29.35359, 5.30184","Drinks",419),(85,"-58.20287, -104.11696","Food",337),(86,"20.33011, -66.51725","EHBO",466),(87,"78.48937, -72.85251","EHBO",443),(88,"81.27921, -148.00782","EHBO",397),(89,"69.98323, -32.50618","Drinks",438),(90,"4.82325, 40.81678","EHBO",495);
-INSERT INTO `Facilities` (`Facility_ID`,`Location`,`Facility_Type`,`Capacity`) VALUES (91,"-54.11274, 135.80474","Entree",291),(92,"81.37219, 22.47884","Drinks",270),(93,"9.94809, 56.19728","Drinks",457),(94,"12.57799, 166.24615","EHBO",400),(95,"-70.08323, -67.83356","Entree",307),(96,"-33.85343, 17.91437","Entree",224),(97,"4.92741, 129.27099","Entree",219),(98,"24.15833, -28.71057","Exit",432),(99,"-50.92554, 85.17875","Toilet",401),(100,"43.66713, -65.2055","Entree",393);
-
-
-
-
-
+-- 6.1.2019 goed geladen in tabel Facilities. 
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (71,1,"Drinks","-74.91772","137.67466",149);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (98,2,"Toilet","8.78775","-66.26633",423);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (93,3,"Toilet","-44.69727","-134.56282",762);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (89,4,"Food","-53.37937","-175.12889",883);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (93,5,"Food","70.5441","-139.7995",591);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (54,6,"Food","-64.06792","27.58266",85);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (77,7,"Drinks","-55.53304","-45.30791",85);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (57,8,"Drinks","-11.57133","135.25607",573);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (58,9,"Toilet","-6.03375","68.94289",266);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (21,10,"Food","6.30498","-36.41198",454);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (83,11,"Drinks","52.03431","-58.04026",304);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (48,12,"Drinks","-73.4307","71.34283",336);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (67,13,"Drinks","73.40071","-140.30821",163);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (20,14,"Toilet","-1.84423","-179.02041",773);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (63,15,"Food","25.39505","-71.05873",453);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (70,16,"Toilet","66.47745","91.56298",844);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (81,17,"Drinks","2.55386","-69.51491",106);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (88,18,"Toilet","82.03232","-135.33646",176);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (25,19,"Drinks","66.50772","-145.09153",853);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (21,20,"Drinks","-36.9131","-147.72483",532);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (40,21,"Drinks","-64.94066","99.38594",537);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (25,22,"Drinks","-0.22879","130.44915",394);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (87,23,"Food","69.88349","92.65634",350);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (73,24,"Drinks","8.37146","89.5083",395);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (93,25,"Drinks","33.66808","-9.67507",209);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (81,26,"Food","81.80202","82.20451",599);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (36,27,"Toilet","22.85414","78.35807",288);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (9,28,"Toilet","57.73181","86.7832",401);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (73,29,"Drinks","-26.0426","19.93916",4);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (47,30,"Toilet","70.92678","100.25985",330);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (75,31,"Food","-11.4536","123.9531",612);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (90,32,"Toilet","-76.20931","43.33614",149);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (89,33,"Drinks","2.6185","6.88117",842);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (53,34,"Toilet","11.03475","-41.48107",426);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (75,35,"Drinks","85.90356","87.99935",144);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (97,36,"Toilet","50.9886","168.27057",3);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (14,37,"Toilet","-51.58664","116.81145",959);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (74,38,"Food","-73.90528","18.8684",246);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (5,39,"Toilet","-31.77943","-85.40891",837);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (2,40,"Drinks","-29.00542","147.74968",594);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (65,41,"Drinks","8.34453","29.80635",379);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (33,42,"Food","-33.1306","36.89574",501);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (19,43,"Drinks","-67.9055","38.04025",495);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (50,44,"Food","31.76282","14.48501",570);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (80,45,"Toilet","56.70108","-91.73702",227);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (55,46,"Toilet","-71.55141","-137.52138",341);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (17,47,"Toilet","-29.21352","163.90222",400);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (30,48,"Food","-26.91858","-90.77965",438);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (24,49,"Toilet","-38.34879","108.70004",547);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (65,50,"Toilet","-42.42498","132.4054",802);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (59,51,"Drinks","46.41125","-67.15904",63);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (76,52,"Drinks","-43.35687","159.03272",520);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (6,53,"Toilet","52.92803","-23.58234",326);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (46,54,"Toilet","37.87357","-154.85709",45);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (19,55,"Drinks","38.3509","-120.02555",130);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (96,56,"Food","-88.20852","114.82049",356);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (28,57,"Food","-36.74656","161.27701",459);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (97,58,"Food","-9.0866","175.37064",987);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (32,59,"Drinks","82.49295","-87.80194",757);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (64,60,"Drinks","59.26387","109.18927",895);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (14,61,"Food","-30.6353","-101.93813",541);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (7,62,"Food","13.29747","73.79767",110);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (74,63,"Food","-7.55048","46.59459",369);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (2,64,"Toilet","36.18507","158.62397",769);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (62,65,"Toilet","5.05316","1.76216",868);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (30,66,"Toilet","-39.61247","-73.23271",940);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (94,67,"Drinks","20.22656","37.44519",812);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (15,68,"Food","78.50296","-98.20319",636);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (13,69,"Drinks","3.1179","121.5331",274);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (59,70,"Drinks","23.92998","-155.33866",537);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (25,71,"Drinks","71.77448","136.30723",953);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (52,72,"Food","13.13907","158.79559",720);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (73,73,"Food","-28.92361","160.27742",740);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (57,74,"Drinks","-20.94507","-104.42501",5);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (50,75,"Food","-33.6273","168.68502",144);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (80,76,"Drinks","-89.18466","-23.52684",275);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (6,77,"Toilet","30.73174","-43.09255",125);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (81,78,"Toilet","76.47207","-78.8923",441);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (40,79,"Toilet","-37.51351","-83.40128",513);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (27,80,"Drinks","-24.19084","-93.0332",136);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (70,81,"Food","80.82458","-103.93806",731);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (33,82,"Drinks","29.58541","-38.68476",115);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (88,83,"Toilet","-71.4044","151.56567",49);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (11,84,"Food","52.03884","-41.14487",760);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (40,85,"Drinks","-63.95602","-0.32318",469);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (10,86,"Food","6.22039","-30.84361",463);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (37,87,"Drinks","42.18922","108.20649",918);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (79,88,"Drinks","20.21922","-176.26857",461);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (18,89,"Drinks","-29.00729","105.76906",273);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (58,90,"Drinks","16.85227","113.55223",440);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (69,91,"Food","-26.34165","-76.25896",159);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (23,92,"Drinks","-5.28905","-59.53666",565);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (47,93,"Toilet","-18.74659","21.3814",579);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (64,94,"Drinks","63.49012","-56.20399",389);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (36,95,"Drinks","74.86235","-145.52478",742);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (19,96,"Toilet","-46.30208","116.1788",334);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (23,97,"Toilet","-15.69126","174.24025",347);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (44,98,"Drinks","-34.57421","14.64074",686);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (81,99,"Food","-84.57311","-107.88584",764);
+INSERT INTO Facilities (Stage_ID,Facility_ID,Facility_Type,Latitude,Longitude,Capacity) VALUES (83,100,"Drinks","-74.15415","-62.26107",436);
 
 
 
