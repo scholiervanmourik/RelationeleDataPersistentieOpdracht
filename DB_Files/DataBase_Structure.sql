@@ -21,7 +21,7 @@ CREATE TABLE `Festivals` (
   `End_Date` DATE NOT NULL,
   `Capacity` INT(11) NOT NULL,
   `Score` INT(11) DEFAULT NULL,
-  `Price` DECIMAL NOT NULL,
+  `Price` DECIMAL(5,2) NOT NULL,
   PRIMARY KEY (`Festival_ID`),
   CONSTRAINT `FK_FestivalsOrganisations` FOREIGN KEY (`Organisation_ID`)
   	REFERENCES `Organisations` (`Organisation_ID`)
