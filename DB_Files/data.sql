@@ -1,8 +1,6 @@
-
-
 --                                                                                           All Data for the first table of the database
 
-
+-- 6.1.2019 deze is helemaal goed na aanpassing van de INT naar varchar in de DDL. Laad zonder fouten
 INSERT INTO `Organisations` (`Organisation_ID`,`Name`,`Vat_Number`,`CoC_Number`,`IBAN`,`Telephone_Number`,`Email`,`Contact_Person`) VALUES (1,"Catherine Marsh","33630546299","077760-2020","555 29716 01276 135","8607-7-79-20-19-29","nunc.risus.varius@necante.net","Summer"),
 (2,"Aimee Barrera","05603820199","882934-9151","547 03089 90055 250","3172-7-57-20-27-83","Nunc.commodo.auctor@egettincidunt.com","Lars"),(3,"Salvador Carpenter","23739174599","435501-3311","532 75206 30209 270","7762-9-43-38-53-55","auctor.velit.eget@et.edu","Timon"),(4,"Roth Bush","00580634599","457679-9227","527 32396 90461 010","4638-2-86-36-59-82","risus@Phasellus.net","Herrod"),(5,"Blossom Dotson","98954538799","169627-3216","521 28214 44704 227","4741-9-46-26-21-57","dui@Donec.ca","Riley"),(6,"Shad Meadows","17606265199","447396-3777","529 42922 87758 731","1747-6-79-59-91-94","Nullam.scelerisque.neque@nascetur.org","Geraldine"),(7,"Giselle Riley","84547823699","512024-4180","521 48097 28197 430","8121-7-24-74-93-78","Nullam.velit.dui@volutpatornarefacilisis.co.uk","Rebekah"),(8,"Len Mccall","66387705899","052415-7716","559 51021 45710 343","1505-6-93-49-88-13","gravida.non.sollicitudin@risus.co.uk","Grant"),(9,"Aaron Calhoun","71858220099","325497-0621","512 39338 10261 084","6261-1-23-82-88-68","quis@tempusscelerisquelorem.ca","Suki"),(10,"Brynne Gamble","63790280399","025104-8807","549 33383 10016 826","8246-9-17-48-21-83","ligula.elit.pretium@metusAliquam.com","Jana");
 INSERT INTO `Organisations` (`Organisation_ID`,`Name`,`Vat_Number`,`CoC_Number`,`IBAN`,`Telephone_Number`,`Email`,`Contact_Person`) VALUES (11,"Kamal Heath","45820633399","635064-6862","517 98821 82810 916","4447-4-33-48-32-31","eu.turpis@arcuVivamussit.net","Dana"),(12,"Quincy Knox","55953618799","763010-0662","519 59906 28793 651","7640-2-68-21-17-94","amet.consectetuer@Phasellus.net","Evangeline"),(13,"Kenneth Hodge","12210038299","164525-4424","536 24950 87392 497","1080-7-48-37-39-45","aliquet@erosProinultrices.net","Alec"),(14,"Otto Estrada","70441920099","408204-1452","513 57609 52626 238","6932-7-93-86-79-18","Vestibulum.ante@Duis.ca","Britanney"),(15,"Camille Reeves","63254325899","079054-1114","541 69053 00667 539","7082-7-50-61-43-79","ut@pharetra.org","Xavier"),(16,"Chaney Hill","97764576899","996551-2974","516 82470 34708 101","2665-8-55-64-68-10","ornare.libero.at@loremloremluctus.co.uk","Phoebe"),(17,"Rosalyn Perkins","65983596499","364565-2821","552 70642 05580 656","2434-4-56-35-17-75","Integer@vitaepurusgravida.co.uk","Stephanie"),(18,"Lunea Martin","63263394799","543618-6851","543 70691 08571 875","3552-4-74-65-85-36","tempor.erat@magnatellus.co.uk","Ella"),(19,"Linus Hensley","71487557699","544843-3564","522 52541 02058 568","3689-2-66-18-53-11","neque.pellentesque@accumsan.net","Cassidy"),(20,"Rhonda Bass","11587202999","857518-0214","536 01452 35633 381","2011-5-90-70-36-35","lobortis.risus.In@purusmaurisa.net","Josephine");
@@ -16,120 +14,111 @@ INSERT INTO `Organisations` (`Organisation_ID`,`Name`,`Vat_Number`,`CoC_Number`,
 INSERT INTO `Organisations` (`Organisation_ID`,`Name`,`Vat_Number`,`CoC_Number`,`IBAN`,`Telephone_Number`,`Email`,`Contact_Person`) VALUES (91,"Veda Newman","05403553299","833804-6702","550 96509 55007 494","8336-5-90-13-32-25","feugiat@consectetuer.com","Zeph"),(92,"Kennedy Terrell","59714601899","758488-5102","532 77838 75869 584","1332-7-23-98-66-71","Etiam@Quisque.org","Geoffrey"),(93,"Daphne Burke","48478736799","075457-3012","551 88647 87235 442","4796-6-55-33-26-10","non.enim@duiquisaccumsan.co.uk","Rogan"),(94,"Kimberly Burns","14892770899","863762-0678","513 45117 71027 079","3053-4-41-12-22-37","Ut@a.org","Emi"),(95,"Nissim Church","06432720099","844773-9213","549 43524 45482 307","5153-7-43-50-22-68","In.faucibus.Morbi@tellusSuspendissesed.org","Indigo"),(96,"Caldwell Yang","77821189699","984162-8036","519 88739 59019 135","4804-1-74-36-42-54","enim.Curabitur.massa@egestasa.ca","Briar"),(97,"Gray Wilder","39700010899","768701-5391","535 49071 34738 571","9114-9-40-22-66-89","malesuada.ut.sem@risusDonec.ca","Evelyn"),(98,"Colton Herrera","98213016099","379222-4275","557 88083 18777 924","9088-9-87-52-63-90","at.libero@Sed.ca","Meredith"),(99,"Kristen Greene","08203866299","112838-0605","545 70569 99432 817","1961-6-87-65-66-81","quis.urna.Nunc@temporlorem.co.uk","Maggy"),(100,"Quin Nixon","54599333499","914996-4851","533 28598 58358 481","6291-7-59-18-47-50","tempor.bibendum@sitamet.co.uk","Jelani");
 
 
-
-
-
-
-
-
 --                                                                                           All Data for the first table of the database
 
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (1, 1, 'Captopril', 'House', '6/5/2018', '1/3/2019', 2382, 1, 71.25);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (2, 2, 'Doxepin Hydrochloride', 'Reggae', '7/5/2018', '1/2/2019', 8503, 6, 65.8);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (3, 3, 'Tahitian Noni Lip Balm Pineapple', 'Reggae', '4/25/2018', '1/4/2019', 9606, 9, 19.02);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (4, 4, 'Nitrogen', 'Jazz', '9/26/2018', '1/3/2019', 813, 10, 65.61);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (5, 5, 'Nivea A Kiss of Smoothness Lip Care', 'House', '2/16/2018', '1/4/2019', 4028, 9, 2.82);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (6, 6, 'Temazepam', 'Reggae', '2/3/2018', '1/2/2019', 6216, 3, 94.06);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (7, 7, 'Feminine Comfort', 'Reggae', '5/20/2018', '1/2/2019', 536, 5, 5.23);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (8, 8, 'Triticum Cerebri', 'Reggae', '9/8/2018', '1/4/2019', 9122, 4, 5.32);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (9, 9, 'Gas Relief Ultra Strength', 'Jazz', '8/28/2018', '1/2/2019', 5500, 9, 96.14);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (10, 10, 'Halls', 'House', '3/8/2018', '1/3/2019', 3168, 6, 51.38);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (11, 11, 'Banana Boat Sport SPF 30', 'Jazz', '1/16/2018', '1/4/2019', 2639, 4, 94.91);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (12, 12, 'Cardene IV', 'House', '6/9/2018', '1/2/2019', 6229, 3, 22.95);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (13, 13, 'Treatment Set TS330718', 'Reggae', '7/24/2018', '1/2/2019', 7308, 6, 46.9);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (14, 14, 'PreNatal 19', 'Jazz', '12/5/2018', '1/4/2019', 3874, 8, 31.47);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (15, 15, 'Mango Blossom', 'Reggae', '1/26/2018', '1/2/2019', 2518, 3, 98.95);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (16, 16, 'Rifampin', 'Reggae', '12/31/2018', '1/2/2019', 4732, 3, 18.64);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (17, 17, 'smart sense sore throat', 'Jazz', '1/28/2018', '1/2/2019', 7907, 5, 34.08);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (18, 18, 'Bupivacaine Hydrochloride', 'House', '2/11/2018', '1/3/2019', 4094, 5, 80.67);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (19, 19, 'PECAN POLLEN', 'House', '8/13/2018', '1/2/2019', 863, 8, 82.06);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (20, 20, 'CYZONE', 'House', '12/28/2018', '1/4/2019', 7942, 3, 19.54);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (21, 21, 'CD DIORSKIN NUDE CREME Nude Glow Creme Gel Compact Makeup Sunscreen Broad Spectrum SPF20 030', 'House', '12/2/2018', '1/3/2019', 4272, 7, 32.93);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (22, 22, 'Ondansetron', 'House', '8/1/2018', '1/3/2019', 288, 8, 10.55);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (23, 23, '1014 Foaming Antimicrobial', 'House', '6/19/2018', '1/4/2019', 6972, 2, 35.72);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (24, 24, 'Plavix', 'Jazz', '2/6/2018', '1/4/2019', 4906, 4, 8.34);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (25, 25, 'Treatment Set TS349631', 'Reggae', '4/8/2018', '1/3/2019', 7513, 8, 21.41);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (26, 26, 'Regular Strength Pain Relief', 'House', '11/29/2018', '1/3/2019', 6514, 8, 76.05);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (27, 27, 'Fosinopril Sodium', 'Reggae', '12/23/2018', '1/3/2019', 9342, 2, 80.82);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (28, 28, 'Ciprofloxacin Hydrochloride', 'Reggae', '2/8/2018', '1/3/2019', 2405, 2, 39.47);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (29, 29, 'Neutrogena Shine Control Makeup', 'Jazz', '10/26/2018', '1/2/2019', 5328, 5, 70.55);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (30, 30, 'Topcare All Day Pain Relief', 'Jazz', '10/16/2018', '1/3/2019', 3888, 9, 31.3);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (31, 31, 'Baby Eczema Moisturizing', 'Jazz', '12/10/2018', '1/3/2019', 8450, 2, 94.19);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (32, 32, 'Hydrogen Peroxide', 'Jazz', '7/6/2018', '1/3/2019', 3427, 3, 55.86);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (33, 33, 'Bio Gentian', 'Reggae', '11/20/2018', '1/4/2019', 5758, 4, 97.59);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (34, 34, 'OXYGEN', 'Reggae', '9/29/2018', '1/4/2019', 6347, 3, 86.27);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (35, 35, 'Folic Acid', 'Reggae', '1/16/2018', '1/4/2019', 7278, 2, 30.21);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (36, 36, 'Good Mood Enhancer', 'House', '5/15/2018', '1/2/2019', 2704, 1, 91.98);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (37, 37, 'ZOLPIDEM TARTRATE', 'Jazz', '8/15/2018', '1/4/2019', 8400, 10, 8.04);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (38, 38, 'Diltiazem Hydrochloride', 'House', '5/6/2018', '1/3/2019', 6422, 7, 15.45);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (39, 39, 'ComfortCaine', 'Jazz', '6/14/2018', '1/2/2019', 4383, 6, 50.51);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (40, 40, 'Pure Foam', 'Jazz', '5/6/2018', '1/2/2019', 3589, 10, 38.55);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (41, 41, 'Premasol - sulfite-free (Amino Acid)', 'Reggae', '2/26/2018', '1/4/2019', 3816, 8, 13.87);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (42, 42, 'Appetite - Craving Control', 'Jazz', '9/10/2018', '1/3/2019', 3065, 4, 95.47);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (43, 43, 'Oxycodone Hydrochloride', 'Reggae', '5/12/2018', '1/3/2019', 1474, 2, 63.52);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (44, 44, 'doxycycline hyclate', 'Reggae', '1/17/2018', '1/4/2019', 8040, 10, 55.92);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (45, 45, 'Fenofibrate', 'Reggae', '9/19/2018', '1/2/2019', 1018, 3, 99.97);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (46, 46, 'Magnesium Citrate', 'House', '6/18/2018', '1/4/2019', 9017, 1, 76.19);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (47, 47, 'Gabapentin', 'Reggae', '6/27/2018', '1/2/2019', 5636, 6, 85.36);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (48, 48, 'good neighbor pharmacy pain relief', 'Reggae', '4/18/2018', '1/4/2019', 4612, 4, 25.39);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (49, 49, 'Hydrocodone Bitartate and Acetaminophen', 'Jazz', '1/21/2018', '1/2/2019', 4972, 9, 21.23);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (50, 50, 'TOPIRAMATE', 'House', '3/14/2018', '1/3/2019', 9652, 8, 55.84);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (51, 51, 'Triple Antibiotic', 'Jazz', '3/8/2018', '1/4/2019', 8839, 2, 64.79);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (52, 52, 'VENLAFAXINE', 'Reggae', '12/23/2018', '1/3/2019', 8223, 2, 71.3);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (53, 53, 'ORIGINAL POWER HYDRO AMPOULE', 'Reggae', '9/6/2018', '1/4/2019', 5210, 6, 92.68);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (54, 54, 'Neutrogena TGel Therapeutic Stubborn Itch', 'Jazz', '12/6/2018', '1/2/2019', 2011, 9, 59.77);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (55, 55, 'Carbaphen Ped CH', 'Jazz', '4/1/2018', '1/4/2019', 1846, 2, 9.45);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (56, 56, 'ASPERGILLUS TERREUS', 'House', '4/26/2018', '1/2/2019', 8701, 4, 17.43);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (57, 57, 'Methotrexate', 'House', '9/15/2018', '1/3/2019', 7132, 6, 30.31);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (58, 58, 'Hydra Intensive Blemish Balm SPF30 PA', 'Jazz', '12/29/2018', '1/3/2019', 319, 8, 22.98);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (59, 59, 'Ropinirole', 'Jazz', '9/15/2018', '1/3/2019', 2711, 6, 52.12);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (60, 60, 'Estradiol / Norethindrone Acetate', 'Jazz', '2/17/2018', '1/4/2019', 6313, 4, 32.16);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (61, 61, 'Isovue-M', 'Jazz', '7/13/2018', '1/3/2019', 6628, 6, 98.85);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (62, 62, 'Aveeno Soothing Bath Treatment', 'House', '11/15/2018', '1/3/2019', 6852, 5, 87.48);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (63, 63, 'bareMinerals Advanced Protection SPF 20 Moisturizer', 'Reggae', '4/26/2018', '1/3/2019', 1530, 6, 73.43);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (64, 64, 'Lidocaine Hydrochloride', 'House', '9/7/2018', '1/4/2019', 4733, 9, 48.42);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (65, 65, 'Sulfamethoxazole and Trimethoprim', 'Reggae', '4/26/2018', '1/2/2019', 4093, 7, 78.72);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (66, 66, 'EROS BODYGLIDE', 'House', '5/16/2018', '1/4/2019', 3380, 10, 90.55);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (67, 67, 'Peptic Relief', 'House', '2/18/2018', '1/2/2019', 2507, 8, 53.0);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (68, 68, 'bacitracin zinc, neomycin sulfate and polymyxin b sulfate', 'Jazz', '9/14/2018', '1/4/2019', 922, 3, 2.78);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (69, 69, 'Suave', 'House', '3/14/2018', '1/3/2019', 4219, 3, 99.69);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (70, 70, 'Clonidine Hydrochloride', 'House', '2/22/2018', '1/4/2019', 9997, 1, 50.05);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (71, 71, 'Pollens - Trees, Oak Mix', 'Jazz', '7/12/2018', '1/2/2019', 9060, 6, 16.34);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (72, 72, 'Etodolac', 'Reggae', '6/10/2018', '1/4/2019', 2219, 7, 45.2);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (73, 73, 'ALPRAZOLAM', 'Jazz', '11/13/2018', '1/3/2019', 3346, 6, 63.22);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (74, 74, 'Chlorpromazine Hydrochloride', 'Reggae', '3/29/2018', '1/3/2019', 6328, 5, 89.65);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (75, 75, 'Neutrogena Ultra Sheer', 'Reggae', '8/7/2018', '1/2/2019', 2939, 6, 13.05);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (76, 76, 'Anti-Bacterial Hand', 'Jazz', '2/27/2018', '1/3/2019', 2733, 6, 11.68);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (77, 77, 'RHEUMATISM LARYNGITIS', 'House', '6/21/2018', '1/3/2019', 8079, 4, 40.34);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (78, 78, 'Morphine Sulfate', 'House', '6/12/2018', '1/2/2019', 4213, 10, 97.06);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (79, 79, 'Bisacodyl', 'Reggae', '3/17/2018', '1/2/2019', 8647, 9, 40.15);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (80, 80, 'CETIRIZINE HYDROCHLORIDE', 'House', '10/19/2018', '1/4/2019', 2346, 3, 5.46);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (81, 81, 'Triple Antibiotic HC', 'Reggae', '3/9/2018', '1/3/2019', 7959, 2, 60.88);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (82, 82, 'GlipizideER', 'Jazz', '2/7/2018', '1/3/2019', 5493, 9, 57.42);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (83, 83, 'Triamcinolone Acetonide', 'Reggae', '12/1/2018', '1/2/2019', 5654, 6, 75.76);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (84, 84, 'Tussin CF', 'Jazz', '7/22/2018', '1/4/2019', 6084, 10, 27.26);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (85, 85, 'Lab1796 Detox Escort', 'House', '9/28/2018', '1/3/2019', 2138, 10, 90.68);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (86, 86, 'KGS', 'Reggae', '3/27/2018', '1/3/2019', 2298, 4, 21.99);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (87, 87, 'Platinum Cichorium', 'Reggae', '1/9/2018', '1/2/2019', 6132, 5, 92.59);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (88, 88, 'Herring', 'House', '1/19/2018', '1/4/2019', 3598, 6, 76.17);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (89, 89, 'Glipizide and Metformin HCl', 'House', '8/27/2018', '1/4/2019', 5633, 6, 16.4);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (90, 90, 'Clindamycin Hydrochloride', 'Reggae', '10/30/2018', '1/2/2019', 5647, 4, 77.05);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (91, 91, 'Cotton', 'Reggae', '12/10/2018', '1/2/2019', 5135, 2, 13.67);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (92, 92, 'Potassium Chloride', 'Jazz', '8/23/2018', '1/2/2019', 5812, 7, 21.66);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (93, 93, 'CVS Fragrance Free Anti-Itch', 'House', '6/13/2018', '1/2/2019', 8594, 3, 28.15);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (94, 94, 'Clopidogrel bisulfate', 'Reggae', '1/28/2018', '1/4/2019', 2696, 9, 50.85);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (95, 95, 'Walgreens Anti-Sagging and Ultra Hydrating Day Cream Broad Spectrum SPF15 Sunscreen', 'House', '7/12/2018', '1/4/2019', 1722, 8, 79.98);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (96, 96, 'Metoclopramide Hydrochloride', 'Jazz', '12/19/2018', '1/2/2019', 1586, 8, 22.96);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (97, 97, 'Spiny Pigweed', 'Reggae', '1/19/2018', '1/2/2019', 7695, 2, 24.73);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (98, 98, 'The Oriental Gyeol Goun Two Way Pact', 'House', '2/21/2018', '1/2/2019', 4071, 4, 60.62);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (99, 99, 'Hay Fever', 'Jazz', '7/12/2018', '1/3/2019', 4953, 2, 75.37);
-INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, End_Date, Capacity, Score, Price) VALUES (100, 100, 'Infants Ibuprofen', 'Jazz', '4/22/2018', '1/4/2019', 2123, 2, 2.04);
-
-
-
-
-
-
+-- 6.1.2019 datum notatie gecorrigeerd naar 0000-00-00 ipv 00/00/0000
+-- 6.1.2019 price truncation opgelost 71.25 werd geladen als 71. Oplossing: in DDL Decimal veranderen naar Decimal (5,2). Hier in de DML staat de price goed.
+-- 6.1.2019 laad zonder fouten. restpunt is dat start en end date niet chronologisch is
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (1,1,'Warfarin Sodium','Reggae','2019-11-17','2019-12-18',50947,3,0.5);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (2,2,'Albuterol','Jazz','2019-04-27','2019-01-04',46574,2,1.6);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (3,3,'Flovent HFA','Jazz','2019-06-17','2019-05-17',61405,7,2.7);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (4,4,'Potassium Chloride','Reggae','2018-03-26','2018-09-22',98066,7,3.8);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (5,5,'Simvastatin','Reggae','2019-01-05','2018-08-07',1380,6,4.9);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (6,6,'LevothyroxineSodium','Reggae','2019-01-20','2018-02-14',4564,1,6);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (7,7,'Famotidine','Reggae','2019-04-12','2018-08-18',59042,4,7.1);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (8,8,'Naproxen','Reggae','2018-10-01','2019-03-26',44821,4,8.2);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (9,9,'Lovastatin','House','2018-12-05','2019-06-10',93855,3,9.3);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (10,10,'Sertraline HCl','Jazz','2019-03-18','2018-11-26',32807,3,10.4);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (11,11,'Vitamin D (Rx)','Jazz','2018-08-10','2018-04-16',41902,4,11.5);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (12,12,'Lantus Solostar','Reggae','2018-07-17','2019-04-01',60747,9,12.6);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (13,13,'Furosemide','House','2018-04-11','2019-07-13',98567,2,13.7);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (14,14,'Clonazepam','Jazz','2018-03-11','2018-04-03',62646,1,14.8);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (15,15,'Lantus','Reggae','2018-03-16','2018-08-23',41087,1,15.9);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (16,16,'Lisinopril/Hydrochlorothiazide','Jazz','2019-09-29','2018-03-18',31506,5,17);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (17,17,'Furosemide','House','2019-09-10','2019-01-24',42972,3,18.1);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (18,18,'Triamterene/Hydrochlorothiazide','House','2019-05-05','2020-01-01',48689,9,19.2);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (19,19,'Triamterene/Hydrochlorothiazide','House','2019-04-11','2018-06-01',73566,2,20.3);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (20,20,'Enalapril Maleate','House','2020-01-24','2019-08-25',78939,9,21.4);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (21,21,'Sulfamethoxazole/Trimethoprim','Reggae','2020-01-04','2018-02-04',87583,8,22.5);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (22,22,'Lisinopril','Reggae','2019-04-30','2019-11-20',83274,2,23.6);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (23,23,'Viagra','Jazz','2019-09-24','2018-12-18',23446,9,24.7);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (24,24,'Sulfamethoxazole/Trimethoprim','House','2019-04-13','2020-01-17',64750,10,25.8);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (25,25,'Trazodone HCl','Reggae','2019-05-20','2018-12-27',47857,6,26.9);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (26,26,'Oxycontin','Jazz','2018-09-17','2018-01-29',60748,4,28);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (27,27,'Simvastatin','House','2019-05-22','2019-06-23',65504,5,29.1);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (28,28,'Doxycycline Hyclate','House','2019-01-13','2018-07-16',47982,3,30.2);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (29,29,'Enalapril Maleate','House','2020-01-12','2018-06-19',84167,7,31.3);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (30,30,'Tramadol HCl','House','2018-07-22','2018-05-10',91699,6,32.4);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (31,31,'Hydrocodone/APAP','Reggae','2018-05-30','2018-12-29',94686,9,33.5);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (32,32,'Lyrica','House','2019-05-07','2019-04-15',4980,10,34.6);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (33,33,'Flovent HFA','Jazz','2019-10-18','2019-10-28',83949,1,35.7);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (34,34,'Zetia','House','2018-02-25','2018-02-05',44974,4,36.8);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (35,35,'Prednisone','House','2018-12-16','2019-01-19',38007,4,37.9);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (36,36,'Albuterol','Reggae','2019-08-15','2019-01-14',13426,10,39);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (37,37,'Hydrochlorothiazide','Reggae','2018-09-20','2018-08-07',35190,8,40.1);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (38,38,'LevothyroxineSodium','Jazz','2019-04-09','2019-10-10',83640,2,41.2);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (39,39,'Paroxetine HCl','Reggae','2018-03-29','2019-09-16',2112,10,42.3);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (40,40,'Lyrica','Jazz','2018-10-15','2020-01-23',30419,7,43.4);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (41,41,'Lexapro','Jazz','2018-08-09','2018-05-11',22233,8,44.5);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (42,42,'Furosemide','House','2019-06-21','2019-09-02',55233,3,45.6);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (43,43,'Suboxone','House','2019-02-03','2019-04-14',46893,6,46.7);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (44,44,'Lisinopril','Reggae','2019-05-28','2019-06-07',49435,5,47.8);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (45,45,'Gabapentin','Jazz','2019-06-23','2019-04-29',94563,1,48.9);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (46,46,'Atenolol','Reggae','2019-08-31','2018-03-03',21453,2,50);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (47,47,'Cheratussin AC','Reggae','2019-11-14','2019-03-06',69807,2,51.1);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (48,48,'Simvastatin','Jazz','2019-10-04','2018-12-21',81807,10,52.2);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (49,49,'Hydrocodone/APAP','House','2018-03-29','2018-08-12',73601,7,53.3);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (50,50,'Lipitor','Jazz','2018-08-11','2018-05-20',1421,10,54.4);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (51,51,'Lyrica','Jazz','2020-01-24','2019-05-26',34496,1,55.5);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (52,52,'Alprazolam','House','2019-11-28','2018-01-19',19960,8,56.6);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (53,53,'Zetia','Reggae','2018-01-17','2019-04-07',94807,5,57.7);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (54,54,'Venlafaxine HCl ER','Jazz','2019-07-03','2019-06-24',318,10,58.8);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (55,55,'Zolpidem Tartrate','House','2019-05-29','2019-01-12',36935,2,59.9);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (56,56,'Benicar','House','2018-04-22','2018-03-11',88629,5,61);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (57,57,'Alprazolam','House','2019-03-27','2019-07-17',73971,2,62.1);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (58,58,'Lisinopril/Hydrochlorothiazide','House','2019-02-06','2019-06-29',18377,3,63.2);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (59,59,'Lidoderm','Jazz','2019-07-14','2019-05-06',30177,4,64.3);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (60,60,'Simvastatin','House','2019-12-11','2019-05-17',57976,6,65.4);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (61,61,'Crestor','House','2018-10-20','2018-12-11',76344,9,66.5);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (62,62,'Actos','House','2019-08-11','2019-07-09',88244,10,67.6);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (63,63,'Ciprofloxacin HCl','Reggae','2018-03-10','2018-07-30',12844,6,68.7);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (64,64,'Endocet','House','2018-03-10','2018-01-10',71588,9,69.8);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (65,65,'Amitriptyline HCl','Jazz','2019-04-19','2018-10-05',77065,2,70.9);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (66,66,'Prednisone','Jazz','2019-03-26','2018-03-19',69885,3,72);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (67,67,'Cephalexin','Jazz','2019-03-17','2019-08-28',32931,6,73.1);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (68,68,'Niaspan','Reggae','2019-01-29','2019-07-08',86252,2,74.2);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (69,69,'Prednisone','Jazz','2019-11-27','2020-01-25',8045,9,75.3);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (70,70,'Fluconazole','Reggae','2019-05-27','2020-01-06',27485,3,76.4);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (71,71,'Seroquel','Reggae','2018-02-09','2018-03-22',99016,1,77.5);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (72,72,'Promethazine HCl','House','2019-09-08','2019-05-21',47513,5,78.6);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (73,73,'Abilify','Reggae','2019-04-08','2019-06-23',33640,10,79.7);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (74,74,'Ibuprofen (Rx)','House','2019-04-18','2018-11-28',76173,9,80.8);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (75,75,'Atenolol','Jazz','2018-08-31','2018-07-26',59042,5,81.9);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (76,76,'Flovent HFA','House','2018-12-29','2018-10-18',90996,4,83);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (77,77,'Simvastatin','Reggae','2019-09-18','2019-01-28',4778,2,84.1);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (78,78,'Potassium Chloride','Jazz','2018-06-10','2018-08-06',90079,1,85.2);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (79,79,'Diovan','Reggae','2019-11-11','2018-04-19',99813,1,86.3);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (80,80,'Clonazepam','Reggae','2019-07-27','2019-12-13',71527,8,87.4);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (81,81,'Triamcinolone Acetonide','Reggae','2018-01-14','2019-07-06',65250,5,88.5);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (82,82,'Diazepam','House','2019-08-16','2018-08-25',25398,6,89.6);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (83,83,'Simvastatin','Jazz','2019-04-28','2019-02-21',54381,4,90.7);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (84,84,'Synthroid','Jazz','2019-09-06','2018-12-31',9962,4,91.8);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (85,85,'Hydrocodone/APAP','House','2019-05-09','2018-09-23',88460,8,92.9);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (86,86,'Famotidine','House','2019-06-25','2019-06-06',51573,5,94);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (87,87,'Omeprazole (Rx)','Jazz','2019-11-11','2018-03-22',98690,5,95.1);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (88,88,'Diovan HCT','House','2019-08-20','2018-07-20',24407,3,96.2);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (89,89,'Alprazolam','Jazz','2018-02-05','2019-10-09',99962,1,97.3);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (90,90,'Nasonex','Jazz','2018-09-04','2019-04-01',98454,1,98.4);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (91,91,'Furosemide','House','2019-08-17','2018-11-09',82335,7,99.5);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (92,92,'Synthroid','Jazz','2018-10-08','2019-07-02',74,1,100.6);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (93,93,'Cymbalta','House','2019-08-25','2018-05-08',86859,9,101.7);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (94,94,'Citalopram HBr','House','2018-03-18','2020-01-21',78055,2,102.8);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (95,95,'Alprazolam','House','2019-04-16','2018-01-22',82329,5,103.9);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (96,96,'Amlodipine Besylate','Jazz','2019-10-04','2019-05-13',81441,4,105);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (97,97,'Digoxin','House','2019-09-18','2018-03-29',31582,1,106.1);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (98,98,'Metformin HCl','Reggae','2018-11-26','2018-05-06',63134,4,107.2);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (99,99,'Doxycycline Hyclate','Reggae','2018-05-10','2019-09-19',81132,6,108.3);
+INSERT INTO Festivals (Organisation_ID,Festival_ID,Name,Genre,Start_Date,End_Date,Capacity,Score,Price) VALUES (100,100,'Triamterene/Hydrochlorothiazide','Reggae','2018-12-14','2018-07-20',71413,9,109.4);
 
 
 --                                                                                           All Data for the first table of the database
