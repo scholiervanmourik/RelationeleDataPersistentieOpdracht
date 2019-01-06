@@ -1,4 +1,5 @@
 
+
 --                                                                                           All Data for the first table of the database
 
 
@@ -134,17 +135,107 @@ INSERT INTO Festivals (Organisation_ID, Festival_ID, Name, Genre, Start_Date, En
 --                                                                                           All Data for the first table of the database
 
 
-INSERT INTO `Stages` (`Stage_ID`,`Location`,`Capacity`) VALUES (1,"SJ",2191),(2,"C",1120),(3,"MG",2591),(4,"Western Australia",2558),(5,"Kansas",2898),(6,"Victoria",2519),(7,"Noord Holland",1744),(8,"Hertfordshire",2428),(9,"Wie",1557),(10,"GA",1880);
-INSERT INTO `Stages` (`Stage_ID`,`Location`,`Capacity`) VALUES (11,"Victoria",2265),(12,"Ontario",1878),(13,"MI",1020),(14,"South Island",1406),(15,"Vienna",1617),(16,"Hamburg",2859),(17,"Uttar Pradesh",2101),(18,"WA",1414),(19,"Victoria",2821),(20,"Florida",2072);
-INSERT INTO `Stages` (`Stage_ID`,`Location`,`Capacity`) VALUES (21,"łódzkie",1916),(22,"IN",1997),(23,"Wie",1618),(24,"HI",2764),(25,"WA",2935),(26,"NI",1461),(27,"OR",1616),(28,"Louisiana",2646),(29,"Campania",1985),(30,"Maine",1123);
-INSERT INTO `Stages` (`Stage_ID`,`Location`,`Capacity`) VALUES (31,"Vienna",2596),(32,"Vienna",1601),(33,"Andhra Pradesh",2837),(34,"L",1517),(35,"Lazio",1746),(36,"Queensland",2428),(37,"WB",2263),(38,"NO",2139),(39,"Alabama",2949),(40,"FC",1760);
-INSERT INTO `Stages` (`Stage_ID`,`Location`,`Capacity`) VALUES (41,"Gaz",2752),(42,"HE",1440),(43,"Uttar Pradesh",2421),(44,"Andalucía",1919),(45,"Bavaria",2211),(46,"WP",2369),(47,"BE",1242),(48,"Rajasthan",2271),(49,"NSW",2567),(50,"Hatay",1490);
-INSERT INTO `Stages` (`Stage_ID`,`Location`,`Capacity`) VALUES (51,"Manitoba",2506),(52,"Zeeland",1486),(53,"ON",2667),(54,"Saarland",1153),(55,"Diy",2798),(56,"Kano",2941),(57,"Rio de Janeiro",2023),(58,"Hamburg",1316),(59,"LO",2645),(60,"Rajasthan",1604);
-INSERT INTO `Stages` (`Stage_ID`,`Location`,`Capacity`) VALUES (61,"North Island",1270),(62,"ON",2306),(63,"BO",2919),(64,"HH",2438),(65,"Sląskie",2832),(66,"VIC",2799),(67,"Tamil Nadu",1936),(68,"SJ",2515),(69,"O",2453),(70,"Stockholms län",2756);
-INSERT INTO `Stages` (`Stage_ID`,`Location`,`Capacity`) VALUES (71,"Hesse",1932),(72,"Hamburg",1629),(73,"Colorado",1870),(74,"Hamburg",1782),(75,"Wie",1169),(76,"Vienna",1335),(77,"OV",1906),(78,"Dalarnas län",1170),(79,"Zeeland",1100),(80,"Swiętokrzyskie",1277);
-INSERT INTO `Stages` (`Stage_ID`,`Location`,`Capacity`) VALUES (81,"North Island",2154),(82,"Ontario",2964),(83,"Hamburg",2869),(84,"VIC",1355),(85,"San José",2415),(86,"Emilia-Romagna",2082),(87,"Ontario",2754),(88,"Brussels Hoofdstedelijk Gewest",2471),(89,"Luik",1388),(90,"Munster",1725);
-INSERT INTO `Stages` (`Stage_ID`,`Location`,`Capacity`) VALUES (91,"CL",1236),(92,"Wie",2584),(93,"Louisiana",1458),(94,"IL",2032),(95,"Ist",1648),(96,"QC",2029),(97,"L",1532),(98,"MP",2431),(99,"New South Wales",1341),(100,"SAR",1965);
-
+INSERT INTO `stages` (`Stage_ID`, `Festival_ID`, `Location`, `Capacity`) VALUES
+(1, 0, 'SJ', 2191),
+(2, 0, 'C', 1120),
+(3, 0, 'MG', 2591),
+(4, 0, 'Western Australia', 2558),
+(5, 0, 'Kansas', 2898),
+(6, 0, 'Victoria', 2519),
+(7, 0, 'Noord Holland', 1744),
+(8, 0, 'Hertfordshire', 2428),
+(9, 0, 'Wie', 1557),
+(10, 0, 'GA', 1880),
+(11, 0, 'Victoria', 2265),
+(12, 0, 'Ontario', 1878),
+(13, 0, 'MI', 1020),
+(14, 0, 'South Island', 1406),
+(15, 0, 'Vienna', 1617),
+(16, 0, 'Hamburg', 2859),
+(17, 0, 'Uttar Pradesh', 2101),
+(18, 0, 'WA', 1414),
+(19, 0, 'Victoria', 2821),
+(20, 0, 'Florida', 2072),
+(21, 0, '?ódzkie', 1916),
+(22, 0, 'IN', 1997),
+(23, 0, 'Wie', 1618),
+(24, 0, 'HI', 2764),
+(25, 0, 'WA', 2935),
+(26, 0, 'NI', 1461),
+(27, 0, 'OR', 1616),
+(28, 0, 'Louisiana', 2646),
+(29, 0, 'Campania', 1985),
+(30, 0, 'Maine', 1123),
+(31, 0, 'Vienna', 2596),
+(32, 0, 'Vienna', 1601),
+(33, 0, 'Andhra Pradesh', 2837),
+(34, 0, 'L', 1517),
+(35, 0, 'Lazio', 1746),
+(36, 0, 'Queensland', 2428),
+(37, 0, 'WB', 2263),
+(38, 0, 'NO', 2139),
+(39, 0, 'Alabama', 2949),
+(40, 0, 'FC', 1760),
+(41, 0, 'Gaz', 2752),
+(42, 0, 'HE', 1440),
+(43, 0, 'Uttar Pradesh', 2421),
+(44, 0, 'Andalucía', 1919),
+(45, 0, 'Bavaria', 2211),
+(46, 0, 'WP', 2369),
+(47, 0, 'BE', 1242),
+(48, 0, 'Rajasthan', 2271),
+(49, 0, 'NSW', 2567),
+(50, 0, 'Hatay', 1490),
+(51, 0, 'Manitoba', 2506),
+(52, 0, 'Zeeland', 1486),
+(53, 0, 'ON', 2667),
+(54, 0, 'Saarland', 1153),
+(55, 0, 'Diy', 2798),
+(56, 0, 'Kano', 2941),
+(57, 0, 'Rio de Janeiro', 2023),
+(58, 0, 'Hamburg', 1316),
+(59, 0, 'LO', 2645),
+(60, 0, 'Rajasthan', 1604),
+(61, 0, 'North Island', 1270),
+(62, 0, 'ON', 2306),
+(63, 0, 'BO', 2919),
+(64, 0, 'HH', 2438),
+(65, 0, 'Sl?skie', 2832),
+(66, 0, 'VIC', 2799),
+(67, 0, 'Tamil Nadu', 1936),
+(68, 0, 'SJ', 2515),
+(69, 0, 'O', 2453),
+(70, 0, 'Stockholms län', 2756),
+(71, 0, 'Hesse', 1932),
+(72, 0, 'Hamburg', 1629),
+(73, 0, 'Colorado', 1870),
+(74, 0, 'Hamburg', 1782),
+(75, 0, 'Wie', 1169),
+(76, 0, 'Vienna', 1335),
+(77, 0, 'OV', 1906),
+(78, 0, 'Dalarnas län', 1170),
+(79, 0, 'Zeeland', 1100),
+(80, 0, 'Swi?tokrzyskie', 1277),
+(81, 0, 'North Island', 2154),
+(82, 0, 'Ontario', 2964),
+(83, 0, 'Hamburg', 2869),
+(84, 0, 'VIC', 1355),
+(85, 0, 'San José', 2415),
+(86, 0, 'Emilia-Romagna', 2082),
+(87, 0, 'Ontario', 2754),
+(88, 0, 'Brussels Hoofdstedelijk Gewest', 2471),
+(89, 0, 'Luik', 1388),
+(90, 0, 'Munster', 1725),
+(91, 0, 'CL', 1236),
+(92, 0, 'Wie', 2584),
+(93, 0, 'Louisiana', 1458),
+(94, 0, 'IL', 2032),
+(95, 0, 'Ist', 1648),
+(96, 0, 'QC', 2029),
+(97, 0, 'L', 1532),
+(98, 0, 'MP', 2431),
+(99, 0, 'New South Wales', 1341),
+(100, 0, 'SAR', 1965);
 
 
 
@@ -260,4 +351,4 @@ INSERT INTO `Artists` (`Artist_Name`,`Start_Time`,`End_Time`,`Location`) VALUES 
 --                                                                                           All Data for the first table of the database
 
 
-INSERT INTO `Visits` (`Date`, `Festival_
+INSERT INTO `Visits` (`Date`, `Festival_ID`, `Email`) VALUES ('1/17/2018', 1, 'dictum.placerat@Praesent.co.uk'), ('2/17/2018', 2, 'dictum.placerat@Praesent.co.uk');

@@ -17,10 +17,10 @@
 		}
 	?>
 
-	<h3>Gebruiker aanmaken</h3>
+	<h3>Registreren</h3>
 	<form action="register.php" method="POST">
-		<input type="text" name="email" placeholder="email">
-		<input type="password" name="password" placeholder="wachtwoord">
+		<input type="text" name="email" placeholder="Email">
+		<input type="password" name="password" placeholder="Wachtwoord">
 		<input type="text" name="screenName" placeholder="Gebruikersnaam">
 		<input type="text" name="firstName" placeholder="Voornaam">
 		<input type="text" name="lastName" placeholder="Achternaam">
