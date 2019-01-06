@@ -8,7 +8,7 @@
 	<?php require_once('template/top.php') ?>
 	<?php
 		require_once('database.php');
-		require_once('user-repository.php');
+		require_once('repositories/user-repository.php');
 		$userRepo = new UserRepository($conn);
 
 		if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['screenName']) && isset($_POST['firstName']) && isset($_POST['lastName'])) {

@@ -14,6 +14,8 @@
 	?>
 	
 	<h3>Festivals</h3>
+	<button href="add-organisation.php">Toevoegen organisatie</button>
+	
 	<table class="table">
 		<thead class="thead-dark">
 			<tr>
@@ -27,8 +29,6 @@
 		<?php endforeach; ?>
 	</table>
 		
-	<a href="add-organisation.php">Toevoegen organisatie</a>
-	
 	<?php require_once('template/bottom.php'); ?>
 </body>
 </html>

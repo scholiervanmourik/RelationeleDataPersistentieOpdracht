@@ -8,7 +8,7 @@
 	<?php require_once('template/top.php'); ?>
 	<?php
 		require_once('database.php');
-		require_once('organisation-repository.php');
+		require_once('repositories/organisation-repository.php');
 		$organisationRepo = new OrganisationRepository($conn);
 		if (isset($_POST['name'])) {
 			$organisationRepo->insert($_POST['name']);
