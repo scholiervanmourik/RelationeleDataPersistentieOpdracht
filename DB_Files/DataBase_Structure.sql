@@ -45,7 +45,8 @@ CREATE TABLE `Facilities` (
   `Stage_ID` INT NOT NULL,
   `Facility_ID` INT(11) NOT NULL AUTO_INCREMENT,
   `Facility_Type` ENUM('Toilet', 'Drinks', 'Food') NOT NULL,
-  `Location` FLOAT,
+  `Latitude` DECIMAL(10,8) NOT NULL,
+  `Longitude` DECIMAL(11,8) NOT NULL,
   `Capacity` INT(11),
   PRIMARY KEY (`Facility_ID`),
   CONSTRAINT FK_FacilitiesFestivals
