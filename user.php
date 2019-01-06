@@ -10,13 +10,13 @@
 		require_once('database.php');
 		require_once('user-repository.php');
 		$userRepo = new UserRepository($conn);
-		if (isset($_GET['username'])) {
-			$user = $userRepo->getByUsername($_GET['username']);
+		if (isset($_GET['email'])) {
+			$user = $userRepo->getByEmail($_GET['email']);
 		}
 	?>
 	<h3>Gebruikersnaam: <?php
 		if (isset($user)) {
-			echo $user['Username'];
+			echo $user['Email'];
 		}
 	?></h3>
 	<?php require_once('template/bottom.php') ?>

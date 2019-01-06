@@ -10,16 +10,20 @@
 		require_once('database.php');
 		require_once('user-repository.php');
 		$userRepo = new UserRepository($conn);
-		
-		if (isset($_POST['name']) && isset($_POST['password'])) {
-			$userRepo->register($_POST['name'], $_POST['password']);
+
+		if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['screenName']) && isset($_POST['firstName']) && isset($_POST['lastName'])) {
+			$userRepo->register($_POST['email'], $_POST['password'], $_POST['screenName'], $_POST['firstName'], $_POST['lastName']);
+			header('Location: login.php');
 		}
 	?>
 
 	<h3>Gebruiker aanmaken</h3>
 	<form action="register.php" method="POST">
-		<input type="text" name="name" placeholder="name">
+		<input type="text" name="email" placeholder="email">
 		<input type="password" name="password" placeholder="wachtwoord">
+		<input type="text" name="screenName" placeholder="Gebruikersnaam">
+		<input type="text" name="firstName" placeholder="Voornaam">
+		<input type="text" name="lastName" placeholder="Achternaam">
 		<input type="submit">
 	</form>
 	<?php require_once('template/bottom.php') ?>

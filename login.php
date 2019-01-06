@@ -11,8 +11,8 @@
 		require_once('user-repository.php');
 		$userRepo = new UserRepository($conn);
 		
-		if (isset($_POST['name']) && isset($_POST['password'])) {
-			$user = $userRepo->login($_POST['name'], $_POST['password']);
+		if (isset($_POST['email']) && isset($_POST['password'])) {
+			$user = $userRepo->login($_POST['email'], $_POST['password']);
 			if (isset($user)) {
 				$_SESSION['user'] = $user;
 				header('Location: index.php');
@@ -24,10 +24,10 @@
 	<h3>Login</h3>
 	<form action="login.php" method="POST">
 		<div class="form-group">
-			<input type="text" name="name" placeholder="name">
+			<input type="text" name="email" placeholder="Email">
 		</div>
 		<div class="form-group">
-			<input type="password" name="password" placeholder="wachtwoord">
+			<input type="password" name="password" placeholder="Wachtwoord">
 		</div>
 		<div class="form-group">
 			<input type="submit">

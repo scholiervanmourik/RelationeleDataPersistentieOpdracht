@@ -1,4 +1,3 @@
-</section>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="scripts/Jscript.js"></script>
