@@ -1,8 +1,8 @@
 <?php 
 	if (session_status() == PHP_SESSION_NONE) session_start();
-	error_log('Error: ', 3, '/errors.log');
+	error_log('Error: ', 3, 'errors.log');
 ?>
-<nav>
+<nav class="navbar navbar-expand-lg navbar-light">
 	<button class="burgerBtn" onclick="openClose()" id="toggle">
 		<div class="one"></div>
 		<div class="two"></div>
@@ -18,11 +18,13 @@
 			</li>
 		<?php endif; ?>
 	</ul>
-	<?php if (isset($_SESSION['user'])): ?>
-		<a href="logout.php" class="contactBtn">Logout</a>
-	<?php else: ?>
-		<a href="register.php" class="logo">Registreren</a>
-		<a href="login.php" class="contactBtn">Login</a>
-	<?php endif; ?>
+	<div class="float-right">
+		<?php if (isset($_SESSION['user'])): ?>
+			<a href="logout.php" class="contactBtn">Logout</a>
+		<?php else: ?>
+			<a href="register.php" class="logo">Registreren</a>
+			<a href="login.php" class="contactBtn">Login</a>
+		<?php endif; ?>
+	</div>
 </nav>
-<section>
+<div class="container mt-5">

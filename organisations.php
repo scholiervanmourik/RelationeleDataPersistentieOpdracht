@@ -14,11 +14,11 @@
 	?>
 	
 	<h3>Organisaties</h3>
-	<table>
-		<thead>
+	<table class="table">
+		<thead class="thead-dark">
 			<tr>
-				<th>Naam</th>
-				<th>Email</th>
+				<th class="col">Naam</th>
+				<th class="col">Email</th>
 			<tr>
 		</thead>
 		<?php foreach($organisations as $value): ?>

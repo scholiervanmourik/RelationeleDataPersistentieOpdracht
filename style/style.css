@@ -6,14 +6,80 @@ body {
 	background: #90A4AE;
 }
 
-section {
-  height: 100vh;
-  padding: 135px 30px 0px 30px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 10% 80% 10%;
+nav {
+    position: sticky;
+	top: 30px;
+    height: 75px;
+    margin: 30px;
+    background: #175059;
 }
 
-section *{
-	grid-column: 2;
+nav a, nav {
+	color: #fff;
+}
+
+nav .burgerBtn {
+    width: 75px;
+    height: 75px;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    color: #FFF;
+    font-size: 25px;
+    cursor: pointer;
+    outline: none;
+}
+
+nav .burgerBtn div {
+    width: 50%;
+    height: 4px;
+    background: white;
+    margin: 4px auto;
+    border-radius: 3px;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+}
+
+nav .burgerBtn.on .one {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+nav .burgerBtn.on .two {
+    width: 0;
+    opacity: 0;
+    transition: all 0.6s;
+}
+
+nav .burgerBtn.on .three {
+    transform: rotate(-45deg) translate(7px, -8px);
+}
+
+nav ul#overlay {
+	position: absolute;
+    width: 0;
+    background: #175059;
+    transition: all 0.7s;
+    opacity: 0;
+    top: 86px;
+    left: 0;
+    min-height: 25px;
+}
+
+nav ul#overlay li {
+    height: 25%;
+}
+
+nav ul#overlay li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+nav ul#overlay li a:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
 }
