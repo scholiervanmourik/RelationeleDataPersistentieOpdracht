@@ -1,0 +1,134 @@
+body {
+    background-color: #002040;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+p, b, strong {
+    color: #fff;
+}
+
+nav a.logo img {
+    width: 100%;
+}
+
+nav ul li a {
+    color: #C2E812;
+}
+
+nav li.burger-button {
+    display: inline-block;
+}
+
+section {
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+section article {
+    min-width: 300px;
+}
+
+section:first-of-type {
+    grid-template-rows: repeat(3, 33.33vh);
+    background-image: /* top, transparent red */ linear-gradient(rgba(0, 32, 64, 0.7), rgba(0, 32, 64, 0.9)),
+        /* your image */ url(../img/festival5.jpg);
+    background-size: cover;
+    border-bottom: solid #bd2130;
+}
+
+section, footer {
+    padding: 100px 50px;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+footer {
+    padding-top: 25px;
+    border-top: 1px solid #C2E812;
+}
+
+footer .icon {
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    font-size: 15px;
+    padding: 7px;
+    margin: 2px;
+}
+
+h2 {
+    margin: 0 0 30px 0;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 30px;
+    height: 60px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+hr {
+    border: 1px solid #EB343D;
+    margin: 30px auto;
+    width: 75px;
+}
+
+p {
+    font-size: 12px;
+    margin: 0 0 30px 0;
+    line-height: 23px;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 18px;
+    color: #EB343D;
+    margin: 0 0 15px 0;
+}
+
+.active {
+    color: red;
+}
+
+a.btn {
+    width: 200px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.btn-text {
+    font-weight: 700;
+    font-size: 20px;
+    color: #ffffff;
+    letter-spacing: -1px;
+    top: 10px;
+    left: 20px;
+}
+
+.button {
+    width: 100px;
+    height: 30px;
+    background-color: #eb343d;
+
+    -webkit-font-smoothing: antialiased !important;
+    -ms-font-smoothing: antialiased !important;
+    -moz-font-smoothing: antialiased !important;
+    -o-font-smoothing: antialiased !important;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.icon {
+    text-align: center;
+}
+
+a.btn:hover .button {
+    width: 200px;
+    height: 30px;
+    background-color: #c51f27;
+}

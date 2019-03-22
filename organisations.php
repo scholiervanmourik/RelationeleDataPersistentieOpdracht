@@ -7,8 +7,8 @@
   <body>
 	<?php require_once('template/top.php'); ?>
 	<?php
-		require_once('database.php');
-		require_once('repositories/organisation-repository.php');
+		require_once('Database.php');
+		require_once('repositories/OrganisationRepository.php');
 		$organisationRepo = new OrganisationRepository($conn);
 		$organisations = $organisationRepo->getAll();
 	?>

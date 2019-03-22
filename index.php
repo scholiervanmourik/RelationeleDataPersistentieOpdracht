@@ -1,14 +1,170 @@
-<!doctype html>
-<html lang="nl">
-  <head>
-	<?php require_once('template/head.php'); ?>
-    <title>Periode 2</title>
-  </head>
-  <body>
-	<?php require_once('template/top.php'); ?>
-	
-	<a href="festivals.php">Festivals</a>
-	
-	<?php require_once('template/bottom.php'); ?>
-</body>
-</html>
+<?php
+require_once('views/template/head.php');
+?>
+<nav class="follow-nav navbar navbar-expand-md fixed-bottom">
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#theApp" class="nav-link">De app</a></li>
+            <li class="nav-item"><a href="#Company" class="nav-link">Bedrijven</a></li>
+            <li class="nav-item"><a href="#aboutUs" class="nav-link">Over ons</a></li>
+            <li class="nav-item"><a href="#" class="nav-link" data-open-modal="contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="modal" data-modal="contact">
+    <div class="modal-inner">
+        <div class="modal-header">
+            <a href="" data-close-modal="contact"><i class="fas fa-window-close"></i></a>
+        </div>
+        <div class="modal-content">
+            <h3>Contact</h3>
+            <form class="contact-form">
+                <div id="emailContactTitle" class="contact-sub-title">
+                    <label for="email">Email</label>
+                </div>
+                <input id="email" name="email" placeholder="Vul je email in">
+                <div class="contact-sub-title">
+                    <label for="phone">telefoon nr.</label>
+                </div>
+                <input id="phone" name="phone" placeholder="Vul je telefoonnummer in">
+                <div class="contact-sub-title">
+                    <label for="contactMessage">Vragen</label>
+                </div>
+                <textarea id="contactMessage" placeholder="Vul je vraag in"></textarea>
+                <a href="#app" class="btn" target="_blank">
+                    <div class="btn-text">Verzenden</div>
+                    <div class="button"></div>
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<section id="home" class="home">
+    <article class="container-fluid">
+        <h2>Alle ondersteuning die je nodig hebt.</h2>
+        <hr>
+        <p>Met onze applicatie krijg je een ongelofelijke ervaring op je festival. Support My Day heeft veel functies
+            die ervoor zorgen dat jij een onvergetelijke dag hebt.</p>
+        <p>Alle informatie die je nodig hebt. Direct op je smartphone.</p>
+
+        <a href="itms-apps://..." class="btn" target="_self">
+            <div class="btn-text">Download the app</div>
+            <div class="button"></div>
+        </a>
+    </article>
+</section>
+
+<section id="theApp" class="app">
+    <div class="row">
+        <article class="col">
+            <h2>Een gemakkelijke manier om je vrienden te vinden</h2>
+            <hr>
+            <p>Wie kent het niet. Je loopt op een festival en bent je vrienden kwijt. Met de Friend Finder kan je jouw
+                vrienden makkelijk terugvinden.</p>
+            <div class="row">
+                <i class="icon fas fa-map-marked-alt fa-3x col"></i>
+                <i class="icon fas fa-map-marker-alt fa-3x col"></i>
+            </div>
+        </article>
+        <article class="col">
+            <h2>Waar je drinken kunt krijgen</h2>
+            <hr>
+            <p>Wil je wat te drinken of eten halen of even naar de WC? Doe je dit liever niet omdat je favoriete artiest
+                zo
+                optreedt? Geen probleem! Op onze interactieve kaart kan je door middel van heat maps precies zien welke
+                plekken het rustigst zijn. Zo hoef je dus niks te missen!</p>
+            <div class="row">
+                <i class="icon far fa-clock fa-3x col"></i>
+                <i class="icon fas fa-stopwatch fa-3x col"></i>
+            </div>
+        </article>
+        <article class="col">
+            <h2>Plan je hele dag, waar en wanneer</h2>
+            <hr>
+            <p>Met planningsagenda kan je precies zien welke artiest waar optreedt. Ook kan je favorieten selecteren en
+                krijg je een melding vóór de show begint. Zo mis je niks en hoef je nooit meer met papieren programma’s
+                te
+                lopen.</p>
+            <div class="row">
+                <i class="icon far fa-calendar-alt fa-3x col"></i>
+            </div>
+        </article>
+    </div>
+    <a href="views/app-info.html" class="btn" target="_self">
+        <div class="btn-text">Meer over de app</div>
+        <div class="button"></div>
+    </a>
+</section>
+
+<section class="company" id="Company">
+    <article class="">
+        <h2>Wat bieden we aan de bedrijven?</h2>
+        <hr>
+        <p>We kunnen verschillende informatie aan bedrijven verstrekken. Denk aan de hoeveelheid bezoekers die er zijn,
+            hoeveel er totaal zijn geweest en drukke plekken op het evenement. Zo heb je altijd controle op jouw
+            evenement.</p>
+
+        <aside>
+            <h3>Makkelijk te verkopen</h3>
+            <p>Een gemakkelijke manier om uw tickets te verkopen, via onze app</p>
+        </aside>
+
+        <aside>
+            <h3>Je persoonlijke muziek lijst</h3>
+            <p>Een exclusieve Spotify afspeellijst gebaseerd op de bezoeker.</p>
+        </aside>
+
+        <aside>
+            <h3>Menigtecontrole</h3>
+            <p>Bekijk je evenement real time. Zo zie je welke plekken het drukst zijn om zo de veiligheid te
+                garanderen.</p>
+        </aside>
+
+        <aside class="">
+            <h3>Een gemeenschap</h3>
+            <p>Een gemeenschap, waar foto's en video's gedeeld kunnen worden.</p>
+        </aside>
+
+        <a href="#" class="btn" data-open-modal="contact">
+            <div class="btn-text">Word onze partner</div>
+            <div class="button"></div>
+        </a>
+    </article>
+</section>
+
+<section class="about" id="aboutUs">
+    <article>
+        <h2>Wil je alles over ons weten?</h2>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <p>Nederland trekt jaarlijks miljoenen festivalgangers. Van deze festivalgangers heeft het grootste
+                    gedeelte
+                    een smartphone bij zich. Logisch natuurlijk! Met deze apparaten kan je namelijk in een handomdraai
+                    informatie opzoeken, belangrijke momenten vastleggen en ben je altijd bereikbaar. Kortom, je hebt de
+                    wereld in je broekzak.</p>
+                <p>De dag makkelijker maken met diverse informatie die de hele dag binnenkomt. Dit is het mooiste wat er
+                    is
+                    volgens ons. Het is algemeen bekend dat er inmiddels overal een app voor is. Echter is er volgens
+                    ons
+                    een probleem. Deze apps zijn namelijk niet volledig waardoor de gebruiker meerdere applicaties moet
+                    downloaden en gebruiken. Wij spelen hierop in door een applicatie uit te brengen die de gebruiker
+                    vanaf
+                    het begin van de dag tot het eind van de dag kan gebruiken.</p>
+            </div>
+            <div class="col">
+                <p>Support My Day is gericht op de term “De wereld in je broekzak”. Wij zijn een jong en dynamisch
+                    bedrijf
+                    opgestart door vier studenten. Opgericht in juli 2018. Ons doel is om ervoor te zorgen dat de
+                    bezoeker
+                    optimaal van de dag kan genieten door zoveel mogelijk, op maat gemaakte informatie, aan te
+                    bieden.</p>
+            </div>
+        </div>
+    </article>
+</section>
+<?php require_once('views/template/bottom.php'); ?>
+

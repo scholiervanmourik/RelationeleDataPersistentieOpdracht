@@ -7,8 +7,8 @@
   <body>
 	<?php require_once('template/top.php'); ?>
 	<?php
-		require_once('database.php');
-		require_once('repositories/festival-repository.php');
+		require_once('Database.php');
+		require_once('repositories/FestivalRepository.php');
 		$festivalRepo = new FestivalRepository($conn);
 		$festivals = $festivalRepo->getAll();
 	?>
