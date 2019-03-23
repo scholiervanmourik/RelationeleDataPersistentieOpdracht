@@ -1,4 +1,9 @@
 <?php
+require_once('views/render.php');
+require_once('models/User.php');
+require_once('Database.php');
+require_once('repositories/UserRepository.php');
+require_once('controllers/UserController.php');
 require_once('views/template/head.php');
 ?>
 <nav class="follow-nav navbar navbar-expand-md fixed-bottom">

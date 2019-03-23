@@ -1,5 +1,5 @@
 <?php
-if (session_status() == PHP_SESSION_NONE) session_start();
+$userController = new UserController();
 ?>
 <!doctype html>
 <html lang="nl">
@@ -22,7 +22,12 @@ if (session_status() == PHP_SESSION_NONE) session_start();
     <div id="navList" class="collapse navbar-collapse">
         <ul class="navbar-nav">
             <li class="nav-item"><a href="/index.php" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="/views/sections/user/login.php" class="nav-link">Login</a></li>
+            <?php if ($userController->isLoggedIn()): ?>
+                <li class="nav-item"><a href="/views/sections/festivals.php" class="nav-link">Festivals</a></li>
+            <?php else: ?>
+                <li class="nav-item"><a href="/views/sections/user/login.php" class="nav-link">Login</a></li>
+                <li class="nav-item"><a href="/views/sections/user/register.php" class="nav-link">Registreren</a></li>
+            <?php endif; ?>
         </ul>
     </div>
 </nav>

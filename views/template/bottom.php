@@ -28,7 +28,7 @@
     <article class="col">
         <h2>Terug naar home</h2>
         <hr>
-        <a class="icon" href="#home">
+        <a class="icon" href="/">
             <i class="fas fa-home"></i>
         </a>
     </article>

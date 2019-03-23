@@ -1,8 +1,10 @@
 <?php
-require_once('../../template/head.php');
+require_once('../../render.php');
+require_once('../../../models/User.php');
 require_once('../../../Database.php');
 require_once('../../../repositories/UserRepository.php');
 require_once('../../../controllers/UserController.php');
+require_once('../../template/head.php');
 $controller = new UserController();
 
 if (isset($_POST['email']) && isset($_POST['password'])) {
@@ -20,10 +22,10 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                     <input type="password" name="password" placeholder="Wachtwoord">
                 </div>
                 <div class="form-group">
-                    <input type="submit">
+                    <button type="submit">Login</button>
+                    <a href="register.php">Registreren</a>
                 </div>
             </form>
-            <a href="../../../register.php">Registreren</a>
         </article>
     </section>
 <?php require_once('../../template/bottom.php') ?>

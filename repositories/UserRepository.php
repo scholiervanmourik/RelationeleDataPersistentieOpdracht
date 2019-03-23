@@ -3,45 +3,50 @@ require_once('Repository.php');
 
 class UserRepository extends Repository
 {
-    function __construct($conn)
+    public function __construct($conn)
     {
         parent::__construct($conn);
     }
 
-    function register($email, $password, $screenName, $firstName, $lastName)
+    public function register(string $email, string $password, string $screenName, string $firstName, string $lastName): bool
     {
-        $stmt = $this->conn->prepare('
-				INSERT INTO `Users` (`Email`, `Password`, `Screen_Name`, `First_Name`, `Last_Name`)
+        $stmt = $this->prepare('
+				INSERT INTO `users` (`Email`, `Password`, `Screen_Name`, `First_Name`, `Last_Name`)
 				VALUES (?, ?, ?, ?, ?);
 			');
         $hashed = password_hash($password, PASSWORD_DEFAULT);
         $stmt->bind_param('sssss', $email, $hashed, $screenName, $firstName, $lastName);
-        $stmt->execute();
+        return $stmt->execute();
     }
 
-    function login($email, $password)
+    /**
+     * @param string $email
+     * @param string $password
+     * @return User|null
+     */
+    public function login(string $email, string $password): ?User
     {
-        $stmt = $this->conn->prepare('
-				SELECT * FROM `Users`
+        $stmt = $this->prepare('
+				SELECT * FROM `users`
 				WHERE `Email` = ?;
 			');
         $stmt->bind_param('s', $email);
         $stmt->execute();
-        $result = $stmt->get_result()->fetch_assoc();
-        if (password_verify($password, $result['Password'])) {
-            return $result;
+        $user = $stmt->get_result()->fetch_object('User');
+        if (isset($user) && password_verify($password, $user->getPassword())) {
+            return $user;
         }
         return null;
     }
 
-    function getByEmail($email)
+    public function getByEmail(string $email): ?User
     {
-        $stmt = $this->conn->prepare('
-				SELECT * FROM `Users`
+        $stmt = $this->prepare('
+				SELECT * FROM `users`
 				WHERE `Email` = ?;
 			');
         $stmt->bind_param('s', $email);
         $stmt->execute();
-        return $stmt->get_result()->fetch_assoc();
+        return $stmt->get_result()->fetch_object('User');
     }
 }

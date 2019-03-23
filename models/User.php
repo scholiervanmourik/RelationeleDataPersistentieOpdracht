@@ -2,18 +2,49 @@
 
 class User
 {
-    private $email;
+    private $Email, $Screen_Name, $First_Name, $Last_Name, $Password;
 
-    public function __construct(string $email)
+    public function __construct()
     {
-        $this->email = $email;
     }
 
     /**
-     * @returns {string}
+     * @return mixed
      */
-    public function getEmail()
+    public function getScreenName()
     {
-        return $this->email;
+        return $this->Screen_Name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFirstName()
+    {
+        return $this->First_Name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLastName()
+    {
+        return $this->Last_Name;
+    }
+
+    /**
+     * @returns string
+     */
+    public function getEmail(): string
+    {
+        return $this->Email;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPassword(): string
+    {
+        return strval($this->Password);
     }
 }
