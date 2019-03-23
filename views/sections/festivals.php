@@ -32,7 +32,9 @@ $festivals = $controller->getAll();
                 <?php while ($festival = $festivals->fetch_object('Festival')): ?>
                     <tr>
                         <td><?php echo $festival->getName(); ?></td>
-                        <td><button><i class="fas fa-trash-alt"></i></button></td>
+                        <td>
+                            <a href="/actions/remove-festival.php?id=<?php echo $festival->getFestivalID(); ?>"><i class="fas fa-trash-alt"></i></a>
+                        </td>
                     </tr>
                 <?php endwhile; ?>
                 </tbody>

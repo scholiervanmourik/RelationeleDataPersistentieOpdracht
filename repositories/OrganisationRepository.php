@@ -10,7 +10,7 @@ class OrganisationRepository extends Repository
     function insert($name): bool
     {
         $stmt = $this->prepare('
-					INSERT INTO `Organisations` (name)
+					INSERT INTO `organisations` (name)
 					VALUES (?);
 				');
         $stmt->bind_param('s', $name);
@@ -37,6 +37,6 @@ class OrganisationRepository extends Repository
 
     public function getAll()
     {
-        return $this->query('SELECT * FROM `Festivals`;');
+        return $this->query('SELECT * FROM `organisations`;');
     }
 }

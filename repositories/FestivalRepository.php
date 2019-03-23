@@ -30,7 +30,7 @@ class FestivalRepository extends Repository
     public function delete(int $festivalId): bool
     {
         $stmt = $this->prepare('
-            DELETE * FROM `Festivals`
+            DELETE FROM `Festivals`
             WHERE `Festival_ID` = ?;
         ');
         $stmt->bind_param('i', $festivalId);
@@ -39,6 +39,6 @@ class FestivalRepository extends Repository
 
     public function getAll()
     {
-        return $this->query('SELECT * FROM `Festivals`;');
+        return $this->query('SELECT * FROM `festivals`;');
     }
 }

@@ -8,6 +8,10 @@ p, b, strong {
     color: #fff;
 }
 
+.card .card-body, .card-body p, .card-body b, .card-body strong {
+    color: #000;
+}
+
 nav a.logo img {
     width: 100%;
 }
@@ -40,7 +44,7 @@ section:first-of-type {
 section, footer {
     padding: 100px 50px;
     font-size: 12px;
-    color: #FFFFFF;
+    color: #fff;
 }
 
 footer {
@@ -62,7 +66,6 @@ h2 {
     font-size: 22px;
     line-height: 30px;
     height: 60px;
-    color: #FFFFFF;
     text-align: center;
 }
 

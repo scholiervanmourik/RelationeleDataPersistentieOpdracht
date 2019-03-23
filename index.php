@@ -98,7 +98,7 @@ require_once('views/template/head.php');
             </div>
         </article>
     </div>
-    <a href="views/app-info.html" class="btn" target="_self">
+    <a href="views/app-info.php" class="btn" target="_self">
         <div class="btn-text">Meer over de app</div>
         <div class="button"></div>
     </a>

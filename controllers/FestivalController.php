@@ -9,6 +9,16 @@ class FestivalController
         $this->repository = new FestivalRepository(Database::getConnection());
     }
 
+    public function removeFestival(int $id): bool
+    {
+        header('Location: /views/sections/festivals.php');
+        if ($this->repository->delete($id)) {
+            showDialog('Gebruiker succesvol verwijderd');
+        } else {
+            showDialog('Gebruiker kan niet worden verwijderd');
+        }
+    }
+
     public function getAll()
     {
         return $this->repository->getAll();
