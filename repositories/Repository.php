@@ -16,4 +16,6 @@ abstract class Repository
     protected function query(string $query) {
         return $this->conn->query($query);
     }
+
+    public abstract function getAll();
 }

@@ -24,6 +24,8 @@ $userController = new UserController();
             <li class="nav-item"><a href="/index.php" class="nav-link">Home</a></li>
             <?php if ($userController->isLoggedIn()): ?>
                 <li class="nav-item"><a href="/views/sections/festivals.php" class="nav-link">Festivals</a></li>
+                <li class="nav-item"><a href="/views/sections/organisations.php" class="nav-link">Organisaties</a></li>
+                <li class="nav-item"><a href="/actions/logout.php" class="nav-link">Logout</a></li>
             <?php else: ?>
                 <li class="nav-item"><a href="/views/sections/user/login.php" class="nav-link">Login</a></li>
                 <li class="nav-item"><a href="/views/sections/user/register.php" class="nav-link">Registreren</a></li>

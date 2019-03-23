@@ -4,11 +4,6 @@ require_once('../../../Database.php');
 require_once('../../../repositories/UserRepository.php');
 require_once('../../../controllers/UserController.php');
 require_once('../../template/head.php');
-$controller = new UserController();
-
-if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['screenName'])) {
-    $controller->register($_POST['email'], $_POST['password'], $_POST['screenName'], $_POST['firstName'], $_POST['lastName']);
-}
 ?>
     <section>
         <article>

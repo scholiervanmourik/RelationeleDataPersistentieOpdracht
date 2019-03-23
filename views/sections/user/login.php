@@ -23,7 +23,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                 </div>
                 <div class="form-group">
                     <button type="submit">Login</button>
-                    <a href="register.php">Registreren</a>
+                    <a href="/actions/register.php">Registreren</a>
                 </div>
             </form>
         </article>

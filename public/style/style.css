@@ -102,6 +102,7 @@ a.btn {
     letter-spacing: -1px;
     top: 10px;
     left: 20px;
+    position: relative;
 }
 
 .button {

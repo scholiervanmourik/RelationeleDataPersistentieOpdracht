@@ -49,4 +49,9 @@ class UserRepository extends Repository
         $stmt->execute();
         return $stmt->get_result()->fetch_object('User');
     }
+
+    public function getAll()
+    {
+        return $this->query('SELECT * FROM `users`;');
+    }
 }
