@@ -14,7 +14,7 @@ $userController = new UserController();
     <link rel="stylesheet" href="/public/style/style.css">
 </head>
 <body data-spy="scroll" data-target=".follow-navbar" data-offset="50">
-<nav class="navbar navbar-expand-md fixed-top">
+<nav id="topNavbar" class="navbar navbar-expand-md fixed-top">
     <a href="/index.php" class="logo navbar-brand"><img src="/public/img/logo.svg" alt="Brand Logo"></a>
     <button class="navbar-toggler" data-toggle="collapse" data-target="#navList">
         <i class="fas fa-bars"></i>

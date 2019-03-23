@@ -4,8 +4,10 @@
             USERNAME = 'root',
             PASSWORD = '',
             DBNAME = 'support my day';
+	    static $conn;
 
 	    public static function getConnection() {
-            return new mysqli(self::SERVERNAME, self::USERNAME, self::PASSWORD, self::DBNAME);
+            if (!isset($conn)) $conn = new mysqli(self::SERVERNAME, self::USERNAME, self::PASSWORD, self::DBNAME);
+	        return $conn;
 	    }
     }

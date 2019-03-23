@@ -2,7 +2,7 @@
 
 function showDialog($text)
 {
-    echo '<script>' .
-        'alert("' . $text . '");' .
-        '</script>';
+    echo '<script>
+        alert("' . $text . '");
+        </script>';
 }

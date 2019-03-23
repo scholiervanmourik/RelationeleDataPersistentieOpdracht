@@ -132,3 +132,7 @@ a.btn:hover .button {
     height: 30px;
     background-color: #c51f27;
 }
+
+#topNavbar {
+    background: #f5f5f5;
+}
