@@ -23,6 +23,7 @@ $userController = new UserController();
         <ul class="navbar-nav">
             <li class="nav-item"><a href="/index.php" class="nav-link">Home</a></li>
             <?php if ($userController->isLoggedIn()): ?>
+                <li class="nav-item"><a href="/views/sections/user/profile.php" class="nav-link">Profiel</a></li>
                 <li class="nav-item"><a href="/views/sections/festivals.php" class="nav-link">Festivals</a></li>
                 <li class="nav-item"><a href="/views/sections/organisations.php" class="nav-link">Organisaties</a></li>
                 <li class="nav-item"><a href="/actions/logout.php" class="nav-link">Logout</a></li>

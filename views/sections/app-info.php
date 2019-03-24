@@ -1,9 +1,9 @@
 <?php
-require_once('render.php');
-require_once('../Database.php');
-require_once('../repositories/UserRepository.php');
-require_once('../controllers/UserController.php');
-require_once('template/head.php');
+require_once('../render.php');
+require_once('../../Database.php');
+require_once('../../repositories/UserRepository.php');
+require_once('../../controllers/UserController.php');
+require_once('../template/head.php');
 ?>
 <section id="app">
     <article>
@@ -96,4 +96,4 @@ require_once('template/head.php');
         </div>
     </article>
 </section>
-<?php require_once('template/bottom.php'); ?>
+<?php require_once('../template/bottom.php'); ?>

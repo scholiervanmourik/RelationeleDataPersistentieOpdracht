@@ -19,17 +19,23 @@ class UserController
                 header('Location: /index.php');
             } else {
                 showDialog('Incorrecte gebruikersnaam en wachtwoord combinatie');
+                redirect('/views/sections/user/login.php');
             }
         }
     }
 
-    public function register($email, $password, $screenName, $firstName, $lastName)
+    public function register(string $email, string $password, string $screenName, string $firstName, string $lastName)
     {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            showDialog('Incorrecte email');
+            return redirect('/views/sections/user/register.php');
+        }
         if ($this->repository->register($email, $password, $screenName, $firstName, $lastName)) {
             showDialog('Succesvol geregistreerd');
         } else {
             showDialog('Gebruiker kan niet worden geregistreerd');
         }
+        redirect('/views/sections/user/register.php');
     }
 
     public function logout()
@@ -41,6 +47,16 @@ class UserController
     public function isLoggedIn(): bool
     {
         return isset($_SESSION['user']);
+    }
+
+    public function editUser($email, $firstName, $lastName)
+    {
+        if ($this->repository->editUser($email, $firstName, $lastName)) {
+            $_SESSION['user'] = $this->repository->getByEmail($email);
+        } else {
+            showDialog('Gebruiker kan niet bijgewerkt worden.');
+        }
+        redirect('/views/sections/user/profile.php');
     }
 
     public function getUser(): ?User

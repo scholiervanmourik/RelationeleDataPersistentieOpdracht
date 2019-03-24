@@ -12,6 +12,10 @@ p, b, strong {
     color: #000;
 }
 
+.card-body {
+    text-align: center;
+}
+
 nav a.logo img {
     width: 100%;
 }

@@ -39,6 +39,17 @@ class UserRepository extends Repository
         return null;
     }
 
+    public function editUser(string $email, string $firstName, string $lastName): bool
+    {
+        $stmt = $this->prepare('
+            UPDATE `users`
+            SET `First_Name` = ?, `Last_Name` = ?
+            WHERE `Email` = ?;
+        ');
+        $stmt->bind_param('sss', $firstName, $lastName, $email);
+        return $stmt->execute();
+    }
+
     public function getByEmail(string $email): ?User
     {
         $stmt = $this->prepare('
