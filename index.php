@@ -1,5 +1,4 @@
 <?php
-if (session_status() == PHP_SESSION_NONE) session_start();
 require_once('views/render.php');
 require_once('models/User.php');
 require_once('Database.php');
