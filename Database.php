@@ -1,6 +1,6 @@
 <?php
 	class Database {
-	    const SERVERNAME = 'localhost',
+	    const SERVERNAME = '127.0.0.1',
             USERNAME = 'root',
             PASSWORD = '',
             DBNAME = 'support my day';
