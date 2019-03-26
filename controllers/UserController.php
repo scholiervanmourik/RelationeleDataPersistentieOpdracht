@@ -7,7 +7,6 @@ class UserController
     public function __construct()
     {
         $this->repository = new UserRepository(Database::getConnection());
-        if (session_status() == PHP_SESSION_NONE) session_start();
     }
 
     public function login(string $email, string $password)
