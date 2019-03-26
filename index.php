@@ -8,44 +8,14 @@ require_once('views/template/head.php');
 ?>
 <nav class="follow-nav navbar navbar-expand-md fixed-bottom">
     <div class="collapse navbar-collapse">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav bg-dark">
             <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="#theApp" class="nav-link">De app</a></li>
             <li class="nav-item"><a href="#Company" class="nav-link">Bedrijven</a></li>
             <li class="nav-item"><a href="#aboutUs" class="nav-link">Over ons</a></li>
-            <li class="nav-item"><a href="#" class="nav-link" data-open-modal="contact">Contact</a></li>
         </ul>
     </div>
 </nav>
-
-<div class="modal" data-modal="contact">
-    <div class="modal-inner">
-        <div class="modal-header">
-            <a href="" data-close-modal="contact"><i class="fas fa-window-close"></i></a>
-        </div>
-        <div class="modal-content">
-            <h3>Contact</h3>
-            <form class="contact-form">
-                <div id="emailContactTitle" class="contact-sub-title">
-                    <label for="email">Email</label>
-                </div>
-                <input id="email" name="email" placeholder="Vul je email in">
-                <div class="contact-sub-title">
-                    <label for="phone">telefoon nr.</label>
-                </div>
-                <input id="phone" name="phone" placeholder="Vul je telefoonnummer in">
-                <div class="contact-sub-title">
-                    <label for="contactMessage">Vragen</label>
-                </div>
-                <textarea id="contactMessage" placeholder="Vul je vraag in"></textarea>
-                <a href="#app" class="btn" target="_blank">
-                    <div class="btn-text">Verzenden</div>
-                    <div class="button"></div>
-                </a>
-            </form>
-        </div>
-    </div>
-</div>
 
 <section id="home" class="home">
     <article class="container-fluid">
@@ -132,11 +102,6 @@ require_once('views/template/head.php');
             <h3>Een gemeenschap</h3>
             <p>Een gemeenschap, waar foto's en video's gedeeld kunnen worden.</p>
         </aside>
-
-        <a href="#" class="btn" data-open-modal="contact">
-            <div class="btn-text">Word onze partner</div>
-            <div class="button"></div>
-        </a>
     </article>
 </section>
 

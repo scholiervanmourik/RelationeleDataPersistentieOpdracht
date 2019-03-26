@@ -33,7 +33,7 @@ $festivals = $controller->getAll();
                     <tr>
                         <td><?php echo $festival->getName(); ?></td>
                         <td>
-                            <a href="/actions/remove-festival.php?id=<?php echo $festival->getFestivalID(); ?>"><i class="fas fa-trash-alt"></i></a>
+                            <a href="../../actions/remove-festival.php?id=<?php echo $festival->getFestivalID(); ?>"><i class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
                 <?php endwhile; ?>

@@ -1,4 +1,5 @@
-CREATE DATABASE `SUPPORT MY DAY`;
+CREATE DATABASE `support my day`;
+USE `support my day`;
 
 CREATE TABLE `Organisations` (
   `Organisation_ID` INT(11) NOT NULL AUTO_INCREMENT,
