@@ -33,7 +33,7 @@ $organisations = $controller->getAll();
                     <tr>
                         <td><?php echo $organisation->getName(); ?></td>
                         <td>
-                            <a href="/actions/remove-organisation.php?id=<?php echo $organisation->getOrganisationID(); ?>"><i class="fas fa-trash-alt"></i></a>
+                            <a href="../../actions/remove-organisation.php?id=<?php echo $organisation->getOrganisationID(); ?>"><i class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
                 <?php endwhile; ?>

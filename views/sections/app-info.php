@@ -10,7 +10,7 @@ require_once('../template/head.php');
         <h2>App</h2>
         <hr>
         <p>Op deze pagina vindt u de informatie over de app.</p>
-        <a href="/" class="btn" target="_blank">
+        <a href="../../index.php" class="btn" target="_blank">
             <div class="btn-text">Ga terug naar home</div>
             <div class="button"></div>
         </a>

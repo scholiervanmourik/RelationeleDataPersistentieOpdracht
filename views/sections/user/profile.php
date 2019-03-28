@@ -15,7 +15,7 @@ $user = $userController->getUser();
 <section>
     <article>
         <h3>Profiel</h3>
-        <form action="/actions/edit-profile.php?email=<?php echo $user->getEmail(); ?>" method="POST" class="form-group">
+        <form action="../../../actions/edit-profile.php?email=<?php echo $user->getEmail(); ?>" method="POST" class="form-group">
             <div class="input-group">
                 <div class="input-group-prepend">
                     <div class="input-group-text">Email</div>

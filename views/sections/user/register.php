@@ -8,7 +8,7 @@ require_once('../../template/head.php');
     <section>
         <article>
             <h3>Registreren</h3>
-            <form action="/actions/register.php" method="POST">
+            <form action="../../../actions/register.php" method="POST">
                 <div class="form-group">
                     <input type="text" name="email" placeholder="Email">
                 </div>
