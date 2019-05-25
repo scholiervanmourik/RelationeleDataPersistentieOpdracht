@@ -20,7 +20,7 @@ $festivals = $controller->getAll();
     <section>
         <article>
             <h3>Festivals</h3>
-            <p>Totaal <?php echo $festivals->num_rows; ?></p>
+            <p>Totaal <?= $festivals->num_rows; ?></p>
             <table class="table table-striped table-light">
                 <thead class="thead thead-light">
                 <tr>
@@ -31,7 +31,7 @@ $festivals = $controller->getAll();
                 <tbody>
                 <?php while ($festival = $festivals->fetch_object('Festival')): ?>
                     <tr>
-                        <td><?php echo $festival->getName(); ?></td>
+                        <td><?= $festival->getName(); ?></td>
                         <td>
                             <a href="../../actions/remove-festival.php?id=<?php echo $festival->getFestivalID(); ?>"><i class="fas fa-trash-alt"></i></a>
                         </td>
