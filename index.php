@@ -10,7 +10,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 ?>
-<nav class="follow-nav navbar navbar-expand-md fixed-bottom">
+<!-- <nav class="follow-nav navbar navbar-expand-md fixed-bottom">
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav bg-dark">
             <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
@@ -19,7 +19,7 @@ error_reporting(E_ALL);
             <li class="nav-item"><a href="#aboutUs" class="nav-link">Over ons</a></li>
         </ul>
     </div>
-</nav>
+</nav> -->
 
 <section id="home" class="home">
     <article class="container-fluid">

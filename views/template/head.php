@@ -22,6 +22,9 @@ $userController = new UserController();
     <div id="navList" class="collapse navbar-collapse">
         <ul class="navbar-nav">
             <li class="nav-item"><a href="../../../index.php" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#theApp" class="nav-link">De app</a></li>
+            <li class="nav-item"><a href="#Company" class="nav-link">Bedrijven</a></li>
+            <li class="nav-item"><a href="#aboutUs" class="nav-link">Over ons</a></li>
             <?php if ($userController->isLoggedIn()): ?>
                 <li class="nav-item"><a href="/views/sections/user/profile.php" class="nav-link">Profiel</a></li>
                 <li class="nav-item"><a href="/views/sections/festivals.php" class="nav-link">Festivals</a></li>
