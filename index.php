@@ -1,5 +1,5 @@
 <?php
-require_once('views/template/head.php');
+require_once 'src/views/template/head.php';
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -67,7 +67,7 @@ error_reporting(E_ALL);
             </div>
         </article>
     </div>
-    <a href="views/sections/app-info.php" class="btn" target="_self">
+    <a href="src/views/sections/app-info.php" class="btn" target="_self">
         <div class="btn-text">Meer over de app</div>
         <div class="button"></div>
     </a>
@@ -135,4 +135,4 @@ error_reporting(E_ALL);
         </div>
     </article>
 </section>
-<?php require_once('views/template/bottom.php'); ?>
+<?php require_once 'src/views/template/bottom.php'; ?>

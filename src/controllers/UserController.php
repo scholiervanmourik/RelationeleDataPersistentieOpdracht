@@ -2,6 +2,8 @@
 namespace smd\controllers;
 use smd\Database;
 use smd\repositories\UserRepository;
+use function smd\views\redirect;
+use function smd\views\showDialog;
 
 class UserController
 {

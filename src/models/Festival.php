@@ -10,18 +10,12 @@ class Festival
     {
     }
 
-    /**
-     * @return mixed
-     */
-    public function getName()
+    public function getName(): string
     {
         return $this->Name;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getFestivalID()
+    public function getFestivalID(): string
     {
         return $this->Festival_ID;
     }

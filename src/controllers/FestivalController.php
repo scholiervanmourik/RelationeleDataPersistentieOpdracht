@@ -2,6 +2,7 @@
 namespace smd\controllers;
 use smd\Database;
 use smd\repositories\FestivalRepository;
+use function smd\views\showDialog;
 
 class FestivalController
 {

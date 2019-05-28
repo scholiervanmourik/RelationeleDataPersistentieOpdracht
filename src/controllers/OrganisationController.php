@@ -2,6 +2,7 @@
 namespace smd\controllers;
 use smd\Database;
 use smd\repositories\OrganisationRepository;
+use function smd\views\showDialog;
 
 class OrganisationController
 {
