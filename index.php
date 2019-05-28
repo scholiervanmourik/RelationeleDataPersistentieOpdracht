@@ -5,6 +5,10 @@ require_once('Database.php');
 require_once('repositories/UserRepository.php');
 require_once('controllers/UserController.php');
 require_once('views/template/head.php');
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 ?>
 <nav class="follow-nav navbar navbar-expand-md fixed-bottom">
     <div class="collapse navbar-collapse">
@@ -137,4 +141,3 @@ require_once('views/template/head.php');
     </article>
 </section>
 <?php require_once('views/template/bottom.php'); ?>
-

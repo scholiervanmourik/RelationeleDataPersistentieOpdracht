@@ -15,13 +15,13 @@ $userController = new UserController();
 </head>
 <body data-spy="scroll" data-target=".follow-navbar" data-offset="50">
 <nav id="topNavbar" class="navbar navbar-expand-md fixed-top">
-    <a href="../../index.php" class="logo navbar-brand"><img src="/public/img/logo.svg" alt="Brand Logo"></a>
+    <a href="../../../index.php" class="logo navbar-brand"><img src="/public/img/logo.svg" alt="Brand Logo"></a>
     <button class="navbar-toggler" data-toggle="collapse" data-target="#navList">
         <i class="fas fa-bars"></i>
     </button>
     <div id="navList" class="collapse navbar-collapse">
         <ul class="navbar-nav">
-            <li class="nav-item"><a href="../../index.php" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="../../../index.php" class="nav-link">Home</a></li>
             <?php if ($userController->isLoggedIn()): ?>
                 <li class="nav-item"><a href="/views/sections/user/profile.php" class="nav-link">Profiel</a></li>
                 <li class="nav-item"><a href="/views/sections/festivals.php" class="nav-link">Festivals</a></li>

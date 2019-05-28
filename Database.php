@@ -1,8 +1,8 @@
 <?php
 	class Database {
-	    const SERVERNAME = '127.0.0.1',
+	    const SERVERNAME = 'localhost',
             USERNAME = 'root',
-            PASSWORD = '',
+            PASSWORD = 'root',
             DBNAME = 'support my day';
 	    static $conn;
 
