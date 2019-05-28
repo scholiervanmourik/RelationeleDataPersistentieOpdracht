@@ -54,7 +54,7 @@ class UserRepository extends Repository
 			');
         $stmt->bind_param('s', $email);
         $stmt->execute();
-        return $stmt->get_result()->fetch_object('User');
+        return $stmt->get_result()->fetch_object('smd\models\User');
     }
 
     public function getAll()

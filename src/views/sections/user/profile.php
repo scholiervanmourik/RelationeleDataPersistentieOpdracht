@@ -1,5 +1,5 @@
 <?php
-require_once('../../template/head.php');
+require_once '../../template/head.php';
 $user = $userController->getUser();
 ?>
 <section>

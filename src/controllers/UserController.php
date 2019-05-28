@@ -1,9 +1,10 @@
 <?php
 namespace smd\controllers;
 use smd\Database;
+use smd\models\User;
 use smd\repositories\UserRepository;
-use function smd\views\redirect;
-use function smd\views\showDialog;
+use function smd\render\redirect;
+use function smd\render\showDialog;
 
 class UserController
 {
@@ -33,7 +34,8 @@ class UserController
     {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             showDialog('Incorrecte email');
-            return redirect('/views/sections/user/register.php');
+            redirect('/views/sections/user/register.php');
+            return false;
         }
         if ($this->repository->register($email, $password, $screenName, $firstName, $lastName)) {
             showDialog('Succesvol geregistreerd');
@@ -41,6 +43,7 @@ class UserController
             showDialog('Gebruiker kan niet worden geregistreerd');
         }
         redirect('/views/sections/user/register.php');
+        return true;
     }
 
     public function logout()

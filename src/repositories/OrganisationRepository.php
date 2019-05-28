@@ -2,6 +2,11 @@
 
 namespace smd\repositories;
 
+/**
+ * Class OrganisationRepository
+ * Collection of all SQL queries which includes organisation.
+ * @package smd\repositories
+ */
 class OrganisationRepository extends Repository
 {
     function __construct($conn)

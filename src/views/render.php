@@ -1,5 +1,5 @@
 <?php
-namespace smd\views;
+namespace smd\render;
 
 function showDialog($text)
 {
