@@ -1,4 +1,5 @@
 <?php
+namespace smd\views;
 
 function showDialog($text)
 {

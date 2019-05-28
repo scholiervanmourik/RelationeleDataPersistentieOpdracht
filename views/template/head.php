@@ -1,4 +1,8 @@
 <?php
+require __DIR__ . '/../../vendor/autoload.php';
+
+use smd\controllers\UserController;
+
 $userController = new UserController();
 ?>
 <!doctype html>

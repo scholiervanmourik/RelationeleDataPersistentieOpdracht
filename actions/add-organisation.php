@@ -1,7 +1,6 @@
 <?php
-require_once('../Database.php');
-require_once('../repositories/Repository.php');
-require_once('../repositories/OrganisationRepository.php');
-require_once('../controllers/OrganisationController.php');
+namespace smd\actions;
+use smd\controllers\OrganisationController;
+
 $controller = new OrganisationController();
 $controller->addOrganisation($_POST['name']);

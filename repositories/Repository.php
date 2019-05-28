@@ -1,5 +1,7 @@
 <?php
 
+namespace smd\repositories;
+
 abstract class Repository
 {
     protected $conn;

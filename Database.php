@@ -1,13 +1,18 @@
 <?php
-	class Database {
-	    const SERVERNAME = 'localhost',
-            USERNAME = 'root',
-            PASSWORD = 'root',
-            DBNAME = 'support my day';
-	    static $conn;
+namespace smd;
+use mysqli;
 
-	    public static function getConnection() {
-            if (!isset($conn)) $conn = new mysqli(self::SERVERNAME, self::USERNAME, self::PASSWORD, self::DBNAME);
-	        return $conn;
-	    }
+class Database
+{
+    const SERVERNAME = 'localhost',
+        USERNAME = 'root',
+        PASSWORD = '',
+        DBNAME = 'support my day';
+    static $conn;
+
+    public static function getConnection()
+    {
+        if (!isset($conn)) $conn = new mysqli(self::SERVERNAME, self::USERNAME, self::PASSWORD, self::DBNAME);
+        return $conn;
     }
+}

@@ -1,5 +1,7 @@
 <?php
 
+namespace smd\models;
+
 class User
 {
     private $Email, $Screen_Name, $First_Name, $Last_Name, $Password;

@@ -1,5 +1,7 @@
 <?php
 
+namespace smd\models;
+
 class Festival
 {
     private $Name, $Festival_ID;

@@ -1,6 +1,6 @@
 <?php
-require_once('../Database.php');
-require_once('../repositories/UserRepository.php');
-require_once('../controllers/UserController.php');
+namespace smd\actions;
+use smd\controllers\UserController;
+
 $controller = new UserController();
 $controller->logout();

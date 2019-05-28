@@ -1,4 +1,7 @@
 <?php
+
+namespace smd\repositories;
+
 class FestivalRepository extends Repository
 {
     public function __construct($conn)

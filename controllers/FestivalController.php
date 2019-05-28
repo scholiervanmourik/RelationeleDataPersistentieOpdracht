@@ -1,4 +1,7 @@
 <?php
+namespace smd\controllers;
+use smd\Database;
+use smd\repositories\FestivalRepository;
 
 class FestivalController
 {

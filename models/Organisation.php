@@ -1,18 +1,15 @@
 <?php
 
+namespace smd\models;
+
 class Organisation
 {
     private $Organisation_ID, $Name;
 
-
-    public function __construct()
-    {
-    }
-
     /**
      * @return mixed
      */
-    public function getOrganisationID()
+    public function getOrganisationID(): string
     {
         return $this->Organisation_ID;
     }
@@ -20,7 +17,7 @@ class Organisation
     /**
      * @return mixed
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->Name;
     }

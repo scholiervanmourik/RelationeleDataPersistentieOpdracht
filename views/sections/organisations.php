@@ -1,13 +1,7 @@
 <?php
-require_once('../../Database.php');
-require_once('../../models/User.php');
-require_once('../../models/Festival.php');
-require_once('../../models/Organisation.php');
-require_once('../../repositories/Repository.php');
-require_once('../../repositories/OrganisationRepository.php');
-require_once('../../repositories/UserRepository.php');
-require_once('../../controllers/OrganisationController.php');
-require_once('../../controllers/UserController.php');
+
+use smd\controllers\OrganisationController;
+
 require_once('../template/head.php');
 $controller = new OrganisationController();
 $organisations = $controller->getAll();

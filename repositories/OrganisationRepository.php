@@ -1,5 +1,7 @@
 <?php
 
+namespace smd\repositories;
+
 class OrganisationRepository extends Repository
 {
     function __construct($conn)

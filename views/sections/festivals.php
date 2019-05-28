@@ -1,16 +1,10 @@
 <?php
-require_once('../../Database.php');
-require_once('../../models/User.php');
-require_once('../../models/Festival.php');
-require_once('../../repositories/Repository.php');
-require_once('../../repositories/UserRepository.php');
-require_once('../../controllers/UserController.php');
-require_once('../../repositories/FestivalRepository.php');
-require_once('../../controllers/FestivalController.php');
+use smd\controllers\FestivalController;
+
 require_once('../template/head.php');
+
 $controller = new FestivalController();
-$festivals = $controller->getAll();
-?>
+$festivals = $controller->getAll();?>
     <section>
         <article>
             <h3>Festivals</h3>

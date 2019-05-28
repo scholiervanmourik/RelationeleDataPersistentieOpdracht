@@ -1,5 +1,7 @@
 <?php
-require_once('Repository.php');
+namespace smd\repositories;
+
+use smd\models\User;
 
 class UserRepository extends Repository
 {
@@ -26,13 +28,7 @@ class UserRepository extends Repository
      */
     public function login(string $email, string $password): ?User
     {
-        $stmt = $this->prepare('
-				SELECT * FROM `users`
-				WHERE `Email` = ?;
-			');
-        $stmt->bind_param('s', $email);
-        $stmt->execute();
-        $user = $stmt->get_result()->fetch_object('User');
+        $user = $this->getByEmail($email);
         if (isset($user) && password_verify($password, $user->getPassword())) {
             return $user;
         }
