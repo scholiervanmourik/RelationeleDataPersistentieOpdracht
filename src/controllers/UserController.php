@@ -3,8 +3,7 @@ namespace smd\controllers;
 use smd\Database;
 use smd\models\User;
 use smd\repositories\UserRepository;
-use function smd\render\redirect;
-use function smd\render\showDialog;
+require_once __DIR__ . '/../views/render.php';
 
 class UserController
 {
@@ -25,7 +24,7 @@ class UserController
                 header('Location: /index.php');
             } else {
                 showDialog('Incorrecte gebruikersnaam en wachtwoord combinatie');
-                redirect('/views/sections/user/login.php');
+                redirect('/src/views/sections/user/login.php');
             }
         }
     }
@@ -34,7 +33,7 @@ class UserController
     {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             showDialog('Incorrecte email');
-            redirect('/views/sections/user/register.php');
+            redirect('/src/views/sections/user/register.php');
             return false;
         }
         if ($this->repository->register($email, $password, $screenName, $firstName, $lastName)) {
@@ -42,7 +41,7 @@ class UserController
         } else {
             showDialog('Gebruiker kan niet worden geregistreerd');
         }
-        redirect('/views/sections/user/register.php');
+        redirect('/src/views/sections/user/register.php');
         return true;
     }
 
@@ -64,7 +63,7 @@ class UserController
         } else {
             showDialog('Gebruiker kan niet bijgewerkt worden.');
         }
-        redirect('/views/sections/user/profile.php');
+        redirect('/src/views/sections/user/profile.php');
     }
 
     public function getUser(): ?User

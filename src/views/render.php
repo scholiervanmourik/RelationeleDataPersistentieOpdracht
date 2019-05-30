@@ -1,6 +1,4 @@
 <?php
-namespace smd\render;
-
 function showDialog($text)
 {
     echo '<script>' .

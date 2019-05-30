@@ -2,7 +2,7 @@
 namespace smd\controllers;
 use smd\Database;
 use smd\repositories\FestivalRepository;
-use function smd\render\showDialog;
+require_once __DIR__ . '/../views/render.php';
 
 class FestivalController
 {
