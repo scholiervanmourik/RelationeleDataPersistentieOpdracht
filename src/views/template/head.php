@@ -51,11 +51,14 @@ $userController = new UserController();
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 NL
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="Translator_language_selector">
-                <a class="dropdown-item" href="#">EN</a>
-                <a class="dropdown-item" href="#">DE</a>
+                <div id="Translator_language_selector"></div>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="?lang=nl">nl</a>
+                    <a class="dropdown-item" href="?lang=en">En</a>
+                    <a class="dropdown-item" href="?lang=fr">Fr</a>
+                    <a class="dropdown-item" href="?lang=de">De</a>
                 </div>
             </li>
         </ul>
-    </div>
+    </div> 
 </nav>
