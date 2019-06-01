@@ -17,7 +17,7 @@ p, b, strong {
 }
 
 nav a.logo img {
-    width: 100%;
+    width: 50%;
 }
 
 nav ul li a {
@@ -142,5 +142,5 @@ a.btn:hover .button {
 }
 
 #topNavbar {
-    background: #f5f5f5;
+    background-image: linear-gradient(rgba(0, 32, 64, 1), rgba(0, 32, 64, 0.01));
 }
