@@ -13,7 +13,7 @@ class FestivalController
         $this->repository = new FestivalRepository(Database::getConnection());
     }
 
-    public function removeFestival(int $id): bool
+    public function removeFestival(int $id)
     {
         header('Location: /views/sections/festivals.php');
         if ($this->repository->delete($id)) {

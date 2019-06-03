@@ -10,14 +10,14 @@ class UserRepository extends Repository
         parent::__construct($conn);
     }
 
-    public function register(string $email, string $password, string $screenName, string $firstName, string $lastName): bool
+    public function register(string $email, string $password, string $screenName, string $firstName, string $lastName, string $role = 'user'): bool
     {
         $stmt = $this->prepare('
-				INSERT INTO `users` (`Email`, `Password`, `Screen_Name`, `First_Name`, `Last_Name`)
-				VALUES (?, ?, ?, ?, ?);
+				INSERT INTO `users` (`Email`, `Password`, `Screen_Name`, `First_Name`, `Last_Name`, `Role`)
+				VALUES (?, ?, ?, ?, ?, ?);
 			');
         $hashed = password_hash($password, PASSWORD_DEFAULT);
-        $stmt->bind_param('sssss', $email, $hashed, $screenName, $firstName, $lastName);
+        $stmt->bind_param('ssssss', $email, $hashed, $screenName, $firstName, $lastName, $role);
         return $stmt->execute();
     }
 
@@ -35,14 +35,25 @@ class UserRepository extends Repository
         return null;
     }
 
-    public function editUser(string $email, string $firstName, string $lastName): bool
+    public function editUser(string $email, string $newFirstName, string $newLastName): bool
     {
         $stmt = $this->prepare('
             UPDATE `users`
             SET `First_Name` = ?, `Last_Name` = ?
             WHERE `Email` = ?;
         ');
-        $stmt->bind_param('sss', $firstName, $lastName, $email);
+        $stmt->bind_param('sss', $newFirstName, $newLastName, $email);
+        return $stmt->execute();
+    }
+
+    public function setOrganisation(string $email, int $organisationId)
+    {
+        $stmt = $this->prepare('
+            UPDATE `users`
+            SET `Organisation_ID` = ?
+            WHERE `Email` = ?;
+        ');
+        $stmt->bind_param('is', $organisationId, $email);
         return $stmt->execute();
     }
 

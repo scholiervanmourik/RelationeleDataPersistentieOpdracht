@@ -62,7 +62,13 @@ CREATE TABLE `Users` (
   `Last_Name` VARCHAR(40) NOT NULL,
   `Email` VARCHAR(40) NOT NULL,
   `Password` VARCHAR(255) NOT NULL,
-  PRIMARY KEY (`Email`)
+  `Role` ENUM ('user', 'organisation', 'admin') DEFAULT 'user' NOT NULL,
+  `Organisation_ID` INT(11) DEFAULT NULL,
+  PRIMARY KEY (`Email`),
+  CONSTRAINT FK_Users
+    FOREIGN KEY (`Organisation_ID`) REFERENCES Organisations (`Organisation_ID`)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
 );
 
 CREATE TABLE `Wallets` (

@@ -2,8 +2,10 @@
 
 namespace smd\repositories;
 
+use smd\models\Organisation;
+
 /**
- * Class OrganisationRepository
+ * @class OrganisationRepository
  * Collection of all SQL queries which includes organisation.
  * @package smd\repositories
  */
@@ -14,14 +16,17 @@ class OrganisationRepository extends Repository
         parent::__construct($conn);
     }
 
-    function insert($name): bool
+    function insert($name): ?int
     {
         $stmt = $this->prepare('
-					INSERT INTO `organisations` (name)
-					VALUES (?);
-				');
+            INSERT INTO `organisations` (name)
+            VALUES (?);
+        ');
         $stmt->bind_param('s', $name);
-        return $stmt->execute();
+        if ($stmt->execute()) {
+            return $this->conn->insert_id;
+        }
+        return null;
     }
 
     public function deleteById(int $id): bool
@@ -35,7 +40,7 @@ class OrganisationRepository extends Repository
     {
         $stmt = $this->prepare('
 					SELECT * FROM `Organisations`
-					WHERE `UID` = ?;
+					WHERE `Organisation_ID` = ?;
 				');
         $stmt->bind_param('i', $id);
         $stmt->execute();

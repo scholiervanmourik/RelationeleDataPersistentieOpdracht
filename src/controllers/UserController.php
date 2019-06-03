@@ -2,6 +2,7 @@
 namespace smd\controllers;
 use smd\Database;
 use smd\models\User;
+use smd\repositories\OrganisationRepository;
 use smd\repositories\UserRepository;
 require_once __DIR__ . '/../views/render.php';
 
@@ -29,19 +30,18 @@ class UserController
         }
     }
 
-    public function register(string $email, string $password, string $screenName, string $firstName, string $lastName)
+    public function register(string $email, string $password, string $screenName, string $firstName, string $lastName, string $role = 'user')
     {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             showDialog('Incorrecte email');
             redirect('/src/views/sections/user/register.php');
             return false;
         }
-        if ($this->repository->register($email, $password, $screenName, $firstName, $lastName)) {
+        if ($this->repository->register($email, $password, $screenName, $firstName, $lastName, $role)) {
             showDialog('Succesvol geregistreerd');
         } else {
             showDialog('Gebruiker kan niet worden geregistreerd');
         }
-        redirect('/src/views/sections/user/register.php');
         return true;
     }
 
@@ -64,6 +64,13 @@ class UserController
             showDialog('Gebruiker kan niet bijgewerkt worden.');
         }
         redirect('/src/views/sections/user/profile.php');
+    }
+
+    public function setOrganisation($email, $organisationName)
+    {
+        $organisationRepository = new OrganisationRepository(Database::getConnection());
+        $organisationId = $organisationRepository->insert($organisationName);
+        $this->repository->setOrganisation($email, $organisationId);
     }
 
     public function getUser(): ?User

@@ -4,7 +4,7 @@ namespace smd\models;
 
 class User
 {
-    private $Email, $Screen_Name, $First_Name, $Last_Name, $Password;
+    private $Email, $Screen_Name, $First_Name, $Last_Name, $Password, $Role;
 
     public function getScreenName(): string
     {
@@ -29,5 +29,10 @@ class User
     public function getPassword(): string
     {
         return strval($this->Password);
+    }
+
+    public function getRole(): string
+    {
+        return $this->Role;
     }
 }
