@@ -22,12 +22,12 @@ class UserController
             $user = $this->repository->login($email, $password);
             if (isset($user)) {
                 $_SESSION['user'] = $user;
-                header('Location: /index.php');
+                return 'Succesvol ingelogd';
             } else {
-                showDialog('Incorrecte gebruikersnaam en wachtwoord combinatie');
-                redirect('/src/views/sections/user/login.php');
+                return 'Incorrecte gebruikersnaam en wachtwoord combinatie';
             }
         }
+        return 'Geen email en/of wachtwoord ingevuld';
     }
 
     public function register(string $email, string $password, string $screenName, string $firstName, string $lastName, string $role = 'user')

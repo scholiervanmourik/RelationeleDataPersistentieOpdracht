@@ -8,6 +8,6 @@ final class UserControllerTest extends TestCase
     public function testCannotBeRegisteredFromIncorrectEmail()
     {
         $userController = new UserController();
-        $this->assertEquals($userController->register('test', 'test', 'test', 'test', 'test'), false);
+        $this->assertEquals($userController->register('test', 'test', 'test', 'test', 'test', 'user'), false);
     }
 }
