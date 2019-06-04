@@ -10,7 +10,7 @@ Execute the following for MAC in the terminal:
 * composer dump-autoload
 
 Execute the following in the terminal to start the tests:
-* php vendor/phpunit/phpunit/phpunit tests
+* php vendor/phpunit/phpunit/phpunit tests --stderr
 
 ## Description
 src folder contains all the code.

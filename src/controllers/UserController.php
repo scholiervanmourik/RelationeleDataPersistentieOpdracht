@@ -47,14 +47,17 @@ class UserController
             ];
         }
         if ($this->repository->register($email, $password, $screenName, $firstName, $lastName, $role)) {
-            $msg = 'Succesvol geregistreerd';
+            return [
+                'success' => true,
+                'message' => 'Succesvol geregistreerd'
+            ];
         } else {
-            $msg = 'Gebruiker kan niet worden geregistreerd';
+            return [
+                'success' => false,
+                'message' => 'Gebruiker kan niet worden geregistreerd'
+            ];
         }
-        return [
-            'success' => true,
-            'message' => $msg
-        ];
+
     }
 
     public function logout()

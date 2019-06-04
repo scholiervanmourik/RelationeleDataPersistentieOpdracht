@@ -2,7 +2,6 @@
 namespace smd\controllers;
 use smd\Database;
 use smd\repositories\OrganisationRepository;
-require_once __DIR__ . '/../views/render.php';
 
 class OrganisationController
 {

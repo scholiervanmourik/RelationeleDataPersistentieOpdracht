@@ -1,3 +1,4 @@
+USE `support my day`;
 --                                                                                           All Data for the first table of the database
 
 -- 6.1.2019 deze is helemaal goed na aanpassing van de INT naar varchar in de DDL. Laad zonder fouten
