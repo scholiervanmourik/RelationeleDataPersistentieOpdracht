@@ -6,7 +6,7 @@ class Database
 {
     const SERVERNAME = 'localhost',
         USERNAME = 'root',
-        PASSWORD = 'root',
+        PASSWORD = '',
         DBNAME = 'support my day';
     static $conn;
 

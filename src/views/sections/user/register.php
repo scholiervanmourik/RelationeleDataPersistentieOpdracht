@@ -4,7 +4,7 @@ require_once('../../template/head.php');
     <section>
         <article>
             <h3>Registreren als gebruiker</h3>
-            <form action="../../../actions/register.php" method="POST">
+            <form class="xhr-form" action="../../../actions/register.php" method="post" data-callback="register">
                 <div class="form-group">
                     <input type="text" name="email" placeholder="Email">
                 </div>
@@ -27,7 +27,7 @@ require_once('../../template/head.php');
         </article>
         <article>
             <h3>Registreren als organisatie</h3>
-            <form action="../../../actions/register.php?role=organisation" method="POST">
+            <form class="xhr-form" action="../../../actions/register.php?role=organisation" method="post" data-callback="register">
                 <div class="form-group">
                     <input type="text" name="email" placeholder="Email">
                 </div>

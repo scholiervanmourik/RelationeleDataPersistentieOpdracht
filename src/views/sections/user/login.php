@@ -4,7 +4,7 @@ require_once('../../template/head.php');
     <section>
         <article>
             <h3>Login</h3>
-            <form class="xhr-form" action="../../../actions/login.php" method="POST">
+            <form class="xhr-form" action="../../../actions/login.php" data-callback="login" method="POST">
                 <div class="form-group">
                     <input type="text" name="email" placeholder="Email">
                 </div>

@@ -22,27 +22,39 @@ class UserController
             $user = $this->repository->login($email, $password);
             if (isset($user)) {
                 $_SESSION['user'] = $user;
-                return 'Succesvol ingelogd';
-            } else {
-                return 'Incorrecte gebruikersnaam en wachtwoord combinatie';
+                return [
+                    'success' => true,
+                    'message' => 'Logged in'
+                ];
             }
+            return [
+                'success' => false,
+                'message' => 'Incorrecte gebruikersnaam en wachtwoord combinatie'
+            ];
         }
-        return 'Geen email en/of wachtwoord ingevuld';
+        return [
+            'success' => false,
+            'message' => 'Geen email en/of wachtwoord ingevuld'
+        ];
     }
 
     public function register(string $email, string $password, string $screenName, string $firstName, string $lastName, string $role = 'user')
     {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            showDialog('Incorrecte email');
-            redirect('/src/views/sections/user/register.php');
-            return false;
+            return [
+                'success' => false,
+                'message' => 'Incorrecte email'
+            ];
         }
         if ($this->repository->register($email, $password, $screenName, $firstName, $lastName, $role)) {
-            showDialog('Succesvol geregistreerd');
+            $msg = 'Succesvol geregistreerd';
         } else {
-            showDialog('Gebruiker kan niet worden geregistreerd');
+            $msg = 'Gebruiker kan niet worden geregistreerd';
         }
-        return true;
+        return [
+            'success' => true,
+            'message' => $msg
+        ];
     }
 
     public function logout()

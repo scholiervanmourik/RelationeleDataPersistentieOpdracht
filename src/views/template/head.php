@@ -31,16 +31,20 @@ $userController = new UserController();
         <i class="fas fa-bars"></i>
     </button>
     <div id="navList" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav ml-auto w-100 justify-content-start">
-            <li class="nav-item"><a href="/index.php" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#theApp" class="nav-link">De app</a></li>
-            <li class="nav-item"><a href="#Company" class="nav-link">Bedrijven</a></li>
-            <li class="nav-item"><a href="#aboutUs" class="nav-link">Over ons</a></li>
-        </ul>
-        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+        <ul class="nav navbar-nav w-100 justify-content-end">
+            <div class="dropdown">
+                <a class="dropdown-toggle nav-link" id="dropdownHome" data-toggle="dropdown">
+                    Home
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownHome">
+                    <a href="/index.php#theApp" class="dropdown-item">De app</a>
+                    <a href="/index.php#Company" class="dropdown-item">Bedrijven</a>
+                    <a href="/index.php#aboutUs" class="dropdown-item">Over ons</a>
+                </div>
+            </div>
+            <li class="nav-item"><a href="/src/views/sections/festivals.php" class="nav-link">Festivals</a></li>
             <?php if ($userController->isLoggedIn()): ?>
                 <li class="nav-item"><a href="/src/views/sections/user/profile.php" class="nav-link">Profiel</a></li>
-                <li class="nav-item"><a href="/src/views/sections/festivals.php" class="nav-link">Festivals</a></li>
                 <li class="nav-item"><a href="/src/views/sections/organisations.php" class="nav-link">Organisaties</a></li>
                 <li class="nav-item"><a href="/src/actions/logout.php" class="nav-link">Logout</a></li>
             <?php else: ?>

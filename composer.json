@@ -1,11 +1,14 @@
 {
-    "name": "supportmyday",
-    "require-dev": {
-        "phpunit/phpunit": "^4.8"
-    },
-    "autoload": {
-        "psr-4": {
-            "smd\\": "src"
-        }
+  "name": "supportmyday",
+  "autoload": {
+    "psr-4": {
+      "smd\\": "src"
     }
+  },
+  "require": {
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.8"
+  }
 }

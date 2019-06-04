@@ -1,5 +1,5 @@
 function request(method, url, params, cb) {
-    var xhr = new XMLHttpRequest();
+    let xhr = new XMLHttpRequest();
     xhr.open(method, url);
     xhr.onreadystatechange = function () {
         if (this.readyState === XMLHttpRequest.DONE) {
@@ -24,18 +24,40 @@ function requestForm(method, url, form, cb) {
     xhr.send(formData);
 }
 
-var forms = document.getElementsByClassName('xhr-form');
+let forms = document.getElementsByClassName('xhr-form');
 Array.from(forms).forEach(function (form) {
     form.addEventListener('submit', function (e) {
         e.preventDefault();
-        requestForm(this.method, this.action, this, loginCallback);
+        requestForm(this.method, this.action, this, getCallback(this.dataset.callback));
     });
 });
 
+function getCallback(callbackName) {
+    switch (callbackName) {
+        case 'login':
+            return loginCallback;
+        case 'register':
+            return registerCallback;
+        default:
+            return null;
+    }
+}
+
 function loginCallback(result) {
-    if (result.responseText === 'Succesvol ingelogd') {
+    let res = JSON.parse(result.responseText);
+    if (res.success) {
         window.location = '/';
     } else {
-        alert(result.responseText);
+        alert(res.message);
+    }
+}
+
+function registerCallback(result) {
+    let res = JSON.parse(result.responseText);
+    if (res.success) {
+        window.location = '/';
+        alert(res.message);
+    } else {
+        alert(res.message);
     }
 }
