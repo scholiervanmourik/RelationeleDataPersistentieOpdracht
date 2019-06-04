@@ -6,4 +6,6 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 use smd\controllers\FestivalController;
 
 $controller = new FestivalController();
-$controller->removeFestival($_GET['id']);
+$res = $controller->removeFestival($_GET['id']);
+header('Location: /views/sections/festivals.php');
+showDialog($res['message']);

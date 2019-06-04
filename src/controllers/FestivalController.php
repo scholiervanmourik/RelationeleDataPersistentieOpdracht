@@ -15,11 +15,16 @@ class FestivalController
 
     public function removeFestival(int $id)
     {
-        header('Location: /views/sections/festivals.php');
         if ($this->repository->delete($id)) {
-            showDialog('Gebruiker succesvol verwijderd');
+            return [
+                'success' => true,
+                'message' => 'Gebruiker succesvol verwijderd'
+            ];
         } else {
-            showDialog('Gebruiker kan niet worden verwijderd');
+            return [
+                'success' => false,
+                'message' => 'Gebruiker kan niet worden verwijderd'
+            ];
         }
     }
 

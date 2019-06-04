@@ -38,6 +38,8 @@ function getCallback(callbackName) {
             return loginCallback;
         case 'register':
             return registerCallback;
+        case 'addOrganisation':
+            return addOrganisationCallback;
         default:
             return null;
     }
@@ -57,6 +59,16 @@ function registerCallback(result) {
     if (res.success) {
         window.location = '/';
         alert(res.message);
+    } else {
+        alert(res.message);
+    }
+}
+
+function addOrganisationCallback(result) {
+    let res = JSON.parse(result.responseText);
+    if (res.success) {
+        alert(res.message);
+        window.location = '/src/views/sections/organisations.php';
     } else {
         alert(res.message);
     }

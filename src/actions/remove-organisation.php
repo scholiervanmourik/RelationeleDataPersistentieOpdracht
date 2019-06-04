@@ -6,4 +6,7 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 use smd\controllers\OrganisationController;
 
 $controller = new OrganisationController();
-$controller->removeOrganisation($_GET['id']);
+$res = $controller->removeOrganisation($_GET['id']);
+
+header('Location: /views/sections/organisations.php');
+showDialog($res['message']);

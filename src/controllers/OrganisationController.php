@@ -16,10 +16,15 @@ class OrganisationController
     public function addOrganisation(string $name)
     {
         if ($this->repository->insert($name)) {
-            header('Location: /views/sections/organisations.php');
+            return [
+                'success' => true,
+                'message' => 'Organisatie toegevoegd'
+            ];
         } else {
-            header('Location: /views/sections/add-organisation.php');
-            showDialog('Organisatie kan niet worden toegevoegd.');
+            return [
+                'success' => false,
+                'message' => 'Organisatie kan niet worden toegevoegd.'
+            ];
         }
     }
 
@@ -27,9 +32,15 @@ class OrganisationController
     {
         header('Location: /views/sections/organisations.php');
         if ($this->repository->deleteById($id)) {
-            showDialog('Gebruiker succesvol verwijderd');
+            return [
+                'success' => true,
+                'message' => 'Gebruiker succesvol verwijderd'
+            ];
         } else {
-            showDialog('Gebruiker kan niet worden verwijderd');
+            return [
+                'success' => false,
+                'message' => 'Gebruiker kan niet worden verwijderd'
+            ];
         }
     }
 
