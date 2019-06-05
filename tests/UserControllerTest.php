@@ -13,7 +13,6 @@ final class UserControllerTest extends TestCase
     {
         $stub = $this->getMockBuilder('smd\repositories\UserRepository')
             ->disableOriginalConstructor()
-            ->setMethods(['register', 'login'])
             ->getMock();
 
         $stub->method('register')
