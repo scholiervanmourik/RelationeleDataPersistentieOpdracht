@@ -1,18 +1,22 @@
 <?php
+
 namespace smd\controllers;
+
 use smd\Database;
 use smd\models\User;
 use smd\repositories\OrganisationRepository;
 use smd\repositories\UserRepository;
+
 require_once __DIR__ . '/../views/render.php';
 
 class UserController
 {
     private $repository;
 
-    public function __construct()
+    public function __construct($userRepository)
     {
-        $this->repository = new UserRepository(Database::getConnection());
+        if (!isset($userRepository)) $userRepository = new UserRepository(Database::getConnection());
+        $this->repository = $userRepository;
         if (session_status() == PHP_SESSION_NONE) session_start();
     }
 

@@ -10,7 +10,7 @@ class UserRepository extends Repository
         parent::__construct($conn);
     }
 
-    public function register(string $email, string $password, string $screenName, string $firstName, string $lastName, string $role = 'user'): bool
+    public function register(string $email, string $password, string $screenName, string $firstName, string $lastName, string $role = 'user')
     {
         $stmt = $this->prepare('
 				INSERT INTO `users` (`Email`, `Password`, `Screen_Name`, `First_Name`, `Last_Name`, `Role`)
@@ -26,7 +26,7 @@ class UserRepository extends Repository
      * @param string $password
      * @return User|null
      */
-    public function login(string $email, string $password): ?User
+    public function login(string $email, string $password)
     {
         $user = $this->getByEmail($email);
         if (isset($user) && password_verify($password, $user->getPassword())) {
@@ -35,7 +35,13 @@ class UserRepository extends Repository
         return null;
     }
 
-    public function editUser(string $email, string $newFirstName, string $newLastName): bool
+    /**
+     * @param string $email
+     * @param string $newFirstName
+     * @param string $newLastName
+     * @returns boolean
+     */
+    public function editUser(string $email, string $newFirstName, string $newLastName)
     {
         $stmt = $this->prepare('
             UPDATE `users`
@@ -57,7 +63,11 @@ class UserRepository extends Repository
         return $stmt->execute();
     }
 
-    public function getByEmail(string $email): ?User
+    /**
+     * @param string $email
+     * @return User|null
+     */
+    public function getByEmail(string $email)
     {
         $stmt = $this->prepare('
 				SELECT * FROM `users`
