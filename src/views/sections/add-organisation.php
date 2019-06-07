@@ -1,5 +1,5 @@
 <?php
-require_once('../template/head.php');
+require_once '../template/head.php';
 ?>
     <section>
         <article>
@@ -10,4 +10,4 @@ require_once('../template/head.php');
             </form>
         </article>
     </section>
-<?php require_once('../template/bottom.php') ?>
+<?php require_once '../template/bottom.php'  ?>

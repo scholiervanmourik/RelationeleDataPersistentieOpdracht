@@ -5,7 +5,8 @@ use smd\controllers\UserController;
 use smd\Database;
 use smd\repositories\UserRepository;
 
-$userController = new UserController(new UserRepository(Database::getConnection()));
+$userRepository = new UserRepository(Database::getConnection());
+$userController = new UserController($userRepository);
 ?>
 <!doctype html>
 <html lang="nl">
@@ -47,15 +48,20 @@ $userController = new UserController(new UserRepository(Database::getConnection(
             <li class="nav-item"><a href="/src/views/sections/festivals.php" class="nav-link">Festivals</a></li>
             <?php if ($userController->isLoggedIn()): ?>
                 <li class="nav-item"><a href="/src/views/sections/user/profile.php" class="nav-link">Profiel</a></li>
-                <li class="nav-item"><a href="/src/views/sections/organisations.php" class="nav-link">Organisaties</a></li>
+                <li class="nav-item"><a href="/src/views/sections/organisations.php" class="nav-link">Organisaties</a>
+                </li>
                 <li class="nav-item"><a href="/src/actions/logout.php" class="nav-link">Logout</a></li>
+                <?php if ($userController->getUser()->getRole() === 'admin'): ?>
+                    <li class="nav-item"><a href="/src/views/sections/admin.php" class="nav-link">Onderhoudsmodule</a></li>
+                <?php endif; ?>
             <?php else: ?>
                 <li class="nav-item"><a href="/src/views/sections/user/login.php" class="nav-link">Login</a></li>
-                <li class="nav-item"><a href="/src/views/sections/user/register.php" class="nav-link">Registreren</a></li>
+                <li class="nav-item"><a href="/src/views/sections/user/register.php" class="nav-link">Registreren</a>
+                </li>
             <?php endif; ?>
             <li class="nav-item dropdown">
                 <div id="Translator_language_selector"></div>
             </li>
         </ul>
-    </div> 
+    </div>
 </nav>

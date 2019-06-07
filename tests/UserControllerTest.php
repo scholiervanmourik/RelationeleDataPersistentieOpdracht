@@ -2,7 +2,6 @@
 
 use PHPUnit\Framework\TestCase;
 use smd\controllers\UserController;
-use smd\Database;
 
 final class UserControllerTest extends TestCase
 {
