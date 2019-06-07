@@ -2,8 +2,10 @@
 require_once __DIR__ . '/../../../vendor/autoload.php';
 
 use smd\controllers\UserController;
+use smd\Database;
+use smd\repositories\UserRepository;
 
-$userController = new UserController();
+$userController = new UserController(new UserRepository(Database::getConnection()));
 ?>
 <!doctype html>
 <html lang="nl">
