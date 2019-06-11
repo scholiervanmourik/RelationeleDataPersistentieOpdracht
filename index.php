@@ -74,7 +74,7 @@ error_reporting(E_ALL);
 </section>
 
 <section class="company" id="Company">
-    <article class="">
+    <article>
         <h2>Wat bieden we aan de bedrijven?</h2>
         <hr>
         <p>We kunnen verschillende informatie aan bedrijven verstrekken. Denk aan de hoeveelheid bezoekers die er zijn,
