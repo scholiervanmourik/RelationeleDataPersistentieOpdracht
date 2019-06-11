@@ -45,6 +45,8 @@ class FestivalRepository extends Repository
         return $this->query('SELECT * FROM `festivals`;');
     }
 
+    /* Query voor het opzoeken van festivals*/
+
     public function findByName(string $name)
     {
         $stmt = $this->prepare('

@@ -21,11 +21,11 @@ if ($result['success']) {
     <section>
         <article>
             <h3>Festivals</h3>
+            <!-- Fomulier die festivals zoekt-->
             <form action="festivals.php" method="post">
-                <input placeholder="Festival" name="filter"><br>
+                <input placeholder="Festival" name="filter">
                 <input type="submit" value="Zoek">
-            </form>
-            <p>Totaal <?= $festivals->num_rows; ?></p>
+            </form><br>
             <table class="table table-striped table-light">
                 <thead class="thead thead-light">
                 <tr>
@@ -45,6 +45,7 @@ if ($result['success']) {
                 <?php endwhile; ?>
                 </tbody>
             </table>
+            <p>Totaal: <?= $festivals->num_rows; ?></p>
         </article>
     </section>
 <?php require_once('../template/bottom.php'); ?>
