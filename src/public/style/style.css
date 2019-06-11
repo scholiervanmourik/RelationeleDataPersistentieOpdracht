@@ -145,7 +145,7 @@ a.btn:hover .button {
 }
 
 
-/*                      Start of the Google translator api adjustments                  */
+/*         Start of the Google translator api adjustments          */
 .skiptranslate iframe{
     visibility: hidden !important;
 }
