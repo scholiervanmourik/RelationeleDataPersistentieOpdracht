@@ -19,7 +19,9 @@ $userController = new UserController($userRepository);
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
-
+    <!-- start of the papaparse api "to create a csv file" -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.0.0/papaparse.js"></script>
+    <!-- end of the papaparse api-->
     <!-- start of the translate module -->
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
