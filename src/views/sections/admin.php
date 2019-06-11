@@ -9,7 +9,7 @@ require_once('../template/head.php');
 <section>
     <article>
         <h2>Artikel toevoegen</h2>
-        <form class="container">
+        <form class="container quill-wrapper">
             <div class="form-group row">
                 <label class="col-2">Titel</label>
                 <input class="col-10" name="title">
@@ -24,10 +24,10 @@ require_once('../template/head.php');
                     <option>Onderhoudsmodule</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div class="form-group" id="quilljsEditor">
                 <div id="quill" class="col"></div>
             </div>
-            <div class="form-group row">
+            <div class="form-group">
                 <label for="quillHtml">Html</label>
                 <textarea id="quillHtml" name="html"></textarea>
             </div>

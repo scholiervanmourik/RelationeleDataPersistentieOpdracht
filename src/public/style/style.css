@@ -157,3 +157,18 @@ a.btn:hover .button {
 .goog-te-gadget-icon{
     display: none !important;
 }
+
+.quill-wrapper .row{
+    margin-left: 0;
+    margin-right: 0;
+}
+#quilljsEditor{
+    background: #FFFFFF;
+}
+#quilljsEditor p, #quilljsEditor b, #quilljsEditor strong{
+    color:#000000;
+}
+#quillHtml {
+    width: 100%;
+    height: 150px;
+}
