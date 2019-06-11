@@ -1,3 +1,3 @@
 function googleTranslateElementInit(){
-    new google.translate.TranslateElement({pageLanguage: 'nl'}, 'Translator_language_selector')
+    new google.translate.TranslateElement({pageLanguage: 'NL', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'Translator_language_selector')
 }
