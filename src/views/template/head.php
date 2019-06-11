@@ -45,7 +45,7 @@ $userController = new UserController($userRepository);
                     <a href="/index.php#aboutUs" class="dropdown-item">Over ons</a>
                     <div class="dropdown-divider"></div>
                     <a href="/index.php#Company" class="dropdown-item">Bedrijven</a>
-                    <a href="/index.php#contact" class="dropdown-item">contact</a>
+                    <a href="/src/views/sections/contact.php" class="dropdown-item">Contact</a>
                 </div>
             </li>
 
