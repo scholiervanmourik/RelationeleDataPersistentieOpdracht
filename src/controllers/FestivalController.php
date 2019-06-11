@@ -39,4 +39,23 @@ class FestivalController
     {
         return $this->repository->getAll();
     }
+
+    public function findByName($name)
+    {
+        if (isset($name))
+        {
+            $result = $this->repository->findByName($name);
+            if (isset($result)){
+                return [
+                    'success' => true,
+                    'message' => 'Geslaagd',
+                    'result' => $result
+                ];
+            }
+        }
+        return[
+            'success' => false,
+            'message' => 'Geen resultaten'
+        ];
+    }
 }

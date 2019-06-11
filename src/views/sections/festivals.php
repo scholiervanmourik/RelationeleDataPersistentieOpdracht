@@ -1,10 +1,17 @@
 <?php
+
 use smd\controllers\FestivalController;
 
 require_once('../template/head.php');
 
 $controller = new FestivalController();
-$festivals = $controller->getAll();?>
+$result = $controller->findByName($_POST['filter']);
+if ($result['success']) {
+    $festivals = $result['result'];
+} else {
+    $festivals = $controller->getAll();
+}
+?>
     <section>
         <article>
             <h3>Festivals</h3>
@@ -14,6 +21,10 @@ $festivals = $controller->getAll();?>
     <section>
         <article>
             <h3>Festivals</h3>
+            <form action="festivals.php" method="post">
+                <input placeholder="Festival" name="filter"><br>
+                <input type="submit" value="Zoek">
+            </form>
             <p>Totaal <?= $festivals->num_rows; ?></p>
             <table class="table table-striped table-light">
                 <thead class="thead thead-light">
@@ -27,7 +38,8 @@ $festivals = $controller->getAll();?>
                     <tr>
                         <td><?= $festival->getName(); ?></td>
                         <td>
-                            <a href="../../actions/remove-festival.php?id=<?php echo $festival->getFestivalID(); ?>"><i class="fas fa-trash-alt"></i></a>
+                            <a href="../../actions/remove-festival.php?id=<?php echo $festival->getFestivalID(); ?>"><i
+                                        class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
                 <?php endwhile; ?>
