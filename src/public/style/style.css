@@ -27,6 +27,9 @@ nav a.logo img {
 nav li.burger-button {
     display: inline-block;
 }
+#topNavbar {
+    background-image: linear-gradient(rgba(0, 32, 64, 1), rgba(0, 32, 64, 0.01));
+}
 
 section {
     font-size: 12px;
@@ -141,9 +144,16 @@ a.btn:hover .button {
     background-color: #c51f27;
 }
 
-#topNavbar {
-    background-image: linear-gradient(rgba(0, 32, 64, 1), rgba(0, 32, 64, 0.01));
-}
+
+/*                      Start of the Google translator api adjustments                  */
 .skiptranslate iframe{
     visibility: hidden !important;
+}
+/*          center de input box at the navigation   */
+#Translator_language_selector{
+    padding: 7px;
+}
+/*      remove the google logo out of the input box. */
+.goog-te-gadget-icon{
+    display: none !important;
 }

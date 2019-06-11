@@ -35,16 +35,19 @@ $userController = new UserController($userRepository);
     </button>
     <div id="navList" class="collapse navbar-collapse">
         <ul class="nav navbar-nav w-100 justify-content-end">
-            <div class="dropdown">
-                <a class="dropdown-toggle nav-link" id="dropdownHome" data-toggle="dropdown">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownHome" data-toggle="dropdown">
                     Home
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownHome">
                     <a href="/index.php#theApp" class="dropdown-item">De app</a>
-                    <a href="/index.php#Company" class="dropdown-item">Bedrijven</a>
                     <a href="/index.php#aboutUs" class="dropdown-item">Over ons</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="/index.php#Company" class="dropdown-item">Bedrijven</a>
+                    <a href="/index.php#contact" class="dropdown-item">contact</a>
                 </div>
-            </div>
+            </li>
+
             <li class="nav-item"><a href="/src/views/sections/festivals.php" class="nav-link">Festivals</a></li>
             <?php if ($userController->isLoggedIn()): ?>
                 <li class="nav-item"><a href="/src/views/sections/user/profile.php" class="nav-link">Profiel</a></li>
