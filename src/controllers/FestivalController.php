@@ -8,11 +8,18 @@ class FestivalController
 {
     private $repository;
 
+    /**
+     * FestivalController constructor.
+     */
     public function __construct()
     {
         $this->repository = new FestivalRepository(Database::getConnection());
     }
 
+    /**
+     * @param int $id
+     * @return array
+     */
     public function removeFestival(int $id)
     {
         if ($this->repository->delete($id)) {

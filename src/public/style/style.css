@@ -144,6 +144,11 @@ a.btn:hover .button {
 #topNavbar {
     background-image: linear-gradient(rgba(0, 32, 64, 1), rgba(0, 32, 64, 0.01));
 }
+
+.ql-toolbar {
+    background: #fff;
+}
+
 .skiptranslate iframe{
     visibility: hidden !important;
 }
