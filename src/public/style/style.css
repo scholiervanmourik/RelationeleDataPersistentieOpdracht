@@ -152,3 +152,8 @@ a.btn:hover .button {
 .skiptranslate iframe{
     visibility: hidden !important;
 }
+
+#quillHtml {
+    width: 100%;
+    height: 150px;
+}

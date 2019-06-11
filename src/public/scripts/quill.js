@@ -10,7 +10,7 @@ let editor = new Quill('#quill', {
     },
     theme: 'snow'
 });
-let htmlEdit = document.getElementById('quill-html'),
+let htmlEdit = document.getElementById('quillHtml'),
     edit = true;
 
 editor.on('text-change', function () {
