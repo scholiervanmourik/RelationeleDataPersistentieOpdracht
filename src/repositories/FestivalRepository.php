@@ -45,18 +45,16 @@ class FestivalRepository extends Repository
         return $this->query('SELECT * FROM `festivals`;');
     }
 
-    /* Query voor het opzoeken van festivals*/
-
+    // Query voor het opzoeken van festivals
     public function findByName(string $name)
     {
         $stmt = $this->prepare('
             SELECT * FROM `Festivals`
             WHERE `Name` LIKE ?;');
 
-        $query = "%".$name."%";
+        $query = '%' . $name . '%';
         $stmt->bind_param('s', $query);
         $stmt->execute();
         return $stmt->get_result();
     }
-
 }

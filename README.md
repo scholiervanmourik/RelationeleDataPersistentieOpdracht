@@ -3,27 +3,26 @@
 
 ## Install
 
-# adapt your Database file. [src/Database.php]
+### adapt your Database file. [src/Database.php]
 Match the DB connection for any service. 
 change your user and password and set you server name + db name
 
-# To use de automation for the file paths, you have to use composer. 
+### To use de automation for the file paths, you have to use composer. 
 Go to your root file, open terminal at that location and execute the next commands.
 
-# Execute the following in the terminal:
+### Execute the following in the terminal:
 install
 * composer install
 update paths
 * composer dump-autoload
 
-# Execute the following for MAC in the terminal:
+### Execute the following for MAC in the terminal:
 get file
 * alias composer="php /usr/local/bin/composer.phar"
 install
 * composer install
 update paths
 * composer dump-autoload
-
 
 ## Testing
 
@@ -33,7 +32,7 @@ Execute the following in the terminal to start the tests:
 
 
 
-## About the project
+## About the project (School project)
 Support My Day was founded as a study company in September 2018.
 Our goal is to improve the festival experience. For example, by using interactive maps full of information
 for both visitors and organizations. That is why we are developing a mobile application

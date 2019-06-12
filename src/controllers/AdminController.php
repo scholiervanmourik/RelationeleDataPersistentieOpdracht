@@ -1,9 +1,12 @@
 <?php
 namespace smd\controllers;
 
-// this is the controller to save your CSV file to the server 
 class AdminController
 {
+    public function __construct()
+    {
+    }
+
     // Writes the csv to the given page
     public function writeCSVContent(string $pageName, string $content)
     {
@@ -15,6 +18,4 @@ class AdminController
     {
         return file_get_contents("../public/CSV/$pageName.csv"); 
     }
-
-    
 }
