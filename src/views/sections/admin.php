@@ -9,7 +9,7 @@ require_once('../template/head.php');
 <section>
     <article>
         <h2>Artikel toevoegen</h2>
-        <form class="container quill-wrapper" action="/src/actions/write-content.php" enctype="multipart/form-data" method="post">
+        <form class="container quill-wrapper xhr-form" action="/src/actions/write-content.php" enctype="multipart/form-data" method="post" data-callback="uploadContent">
             <div class="form-group row">
                 <label class="col-2">Pagina</label>
                 <select class="col-10 custom-select" size="4" name="page">

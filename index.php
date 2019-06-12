@@ -1,9 +1,8 @@
 <?php
 require_once './src/views/template/head.php';
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+$controller = new \smd\controllers\AdminController();
+$csv = $controller->readCSVContent('home');
 ?>
 <!-- <nav class="follow-nav navbar navbar-expand-md fixed-bottom">
     <div class="collapse navbar-collapse">
@@ -18,7 +17,7 @@ error_reporting(E_ALL);
 
 <section id="home" class="home">
     <article class="container-fluid">
-        <h2>Alle ondersteuning die je nodig hebt.</h2>
+        <h2><?= $csv['headDescription']?></h2>
         <hr>
         <p>Met onze applicatie krijg je een ongelofelijke ervaring op je festival. Support My Day heeft veel functies
             die ervoor zorgen dat jij een onvergetelijke dag hebt.</p>

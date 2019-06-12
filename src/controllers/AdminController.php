@@ -10,12 +10,21 @@ class AdminController
     // Writes the csv to the given page
     public function writeCSVContent(string $pageName, string $content)
     {
-        file_put_contents("../public/CSV/$pageName.csv", $content);
+        file_put_contents(__DIR__ . "/../public/csv/$pageName.csv", $content);
     }
 
     // Reads the csv of the given page
-    public function readCSVContent(string $pageName):string
+    public function readCSVContent(string $pageName): array
     {
-        return file_get_contents("../public/CSV/$pageName.csv"); 
+        $csv = array_map('str_getcsv', file(__DIR__ . "/../public/csv/$pageName.csv"));
+        $arr = [];
+        $headers = array_shift($csv);
+        array_shift($headers);
+        foreach($csv as $line)
+        {
+            $row = str_getcsv($line[0], ';');
+            $arr[$row[0]] = $row[1];
+        }
+        return $arr;
     }
 }

@@ -10,6 +10,12 @@ function request(method, url, params, cb) {
     xhr.send(params);
 }
 
+/**
+ * @param {string} method
+ * @param {string} url
+ * @param {HTMLFormElement} form
+ * @param {Function} cb
+ */
 function requestForm(method, url, form, cb) {
     let xhr = new XMLHttpRequest(),
         formData = new FormData(form);
@@ -40,6 +46,8 @@ function getCallback(callbackName) {
             return registerCallback;
         case 'addOrganisation':
             return addOrganisationCallback;
+        case 'uploadContent':
+            return uploadContentCallback;
         default:
             return null;
     }
@@ -72,4 +80,9 @@ function addOrganisationCallback(result) {
     } else {
         alert(res.message);
     }
+}
+
+function uploadContentCallback(result) {
+    let res = JSON.parse(result.responseText);
+    alert(res.message);
 }
