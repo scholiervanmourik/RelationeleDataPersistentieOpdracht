@@ -1,10 +1,14 @@
 <?php
 namespace smd\controllers;
 
+use smd\Database;
+use smd\repositories\SearchTermsRepository;
+
 class AdminController
 {
     public function __construct()
     {
+        $this->repository = new SearchTermsRepository(Database::getConnection());
     }
 
     // Writes the csv to the given page
@@ -26,5 +30,25 @@ class AdminController
             $arr[$row[0]] = $row[1];
         }
         return $arr;
+    }
+
+    public function getSearchTerms()
+    {
+        return $this->repository->getAll();
+    }
+
+    public function removeSearchTerm($searchTerm)
+    {
+        if ($this->repository->delete($searchTerm)) {
+            return [
+                'success' => true,
+                'message' => 'Zoekterm verwijderd'
+            ];
+        }
+
+        return [
+            'success' => false,
+            'message' => 'Zoekterm kan niet worden verwijderd'
+        ];
     }
 }

@@ -6,11 +6,13 @@ require_once('../template/head.php');
 
 $adminController = new AdminController();
 $csv = $adminController->readCSVContent('app');
+$searchTerms = $adminController->getSearchTerms();
 ?>
 <section>
     <article>
         <h2>Content beheren</h2>
-        <form class="container quill-wrapper xhr-form" action="/src/actions/write-content.php" enctype="multipart/form-data" method="post" data-callback="uploadContent">
+        <form class="container quill-wrapper xhr-form" action="/src/actions/write-content.php"
+              enctype="multipart/form-data" method="post" data-callback="uploadContent">
             <div class="form-group row">
                 <label class="col-2">Pagina</label>
                 <select id="pageSelect" class="col-10 custom-select" size="4" name="page" onchange="updateAdminPage()">
@@ -36,6 +38,28 @@ $csv = $adminController->readCSVContent('app');
             </div>
             <input type="submit">
         </form>
+    </article>
+    <article>
+        <h2>Niet gevonden zoektermen</h2>
+        <table class="table table-striped table-light">
+            <thead class="thead thead-light">
+            <tr>
+                <th>Tekst</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php while ($searchTerm = $searchTerms->fetch_object('smd\\models\\SearchTerm')): ?>
+                <tr>
+                    <td><?= $searchTerm->getText(); ?></td>
+                    <td>
+                        <a href="../../actions/remove-search-term.php?searchterm=<?= $searchTerm->getText() ?>"><i
+                                    class="fas fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+            <?php endwhile; ?>
+            </tbody>
+        </table>
     </article>
 </section>
 <script>

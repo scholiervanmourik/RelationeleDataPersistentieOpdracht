@@ -2,6 +2,8 @@
 namespace smd\controllers;
 use smd\Database;
 use smd\repositories\FestivalRepository;
+use smd\repositories\SearchTermsRepository;
+
 require_once __DIR__ . '/../views/render.php';
 
 class FestivalController
@@ -46,6 +48,16 @@ class FestivalController
         {
             $result = $this->repository->findByName($name);
             if (isset($result)){
+                if ($result->num_rows < 1)
+                {
+                    $searchTermsRepository = new SearchTermsRepository(Database::getConnection());
+                    $searchTermsRepository->insert($name);
+                    return [
+                        'success' => true,
+                        'message' => 'Geen resultaten',
+                        'result' => $result
+                    ];
+                }
                 return [
                     'success' => true,
                     'message' => 'Geslaagd',
@@ -55,7 +67,7 @@ class FestivalController
         }
         return[
             'success' => false,
-            'message' => 'Geen resultaten'
+            'message' => 'Naam is leeg'
         ];
     }
 }
