@@ -150,7 +150,22 @@ input{
     text-align: center;
     font-size: 40px;
 }
-/* font awsome style's om de iconen aan te passen */
+/* fix for the home section "paragraph width fix" */
+.home p{
+    max-width: 50em;
+}
+/* fix for the app section "height of paragraphts" */
+.app p{
+    min-height: 100px;
+}
+.app article .row{
+    margin-bottom: 20px;
+}
+/* fix for the company section "align content center" */
+.company article{
+    text-align: center;
+}
+/* font awsome style's to change the icons */
 .fa-stack{
     margin: 5px;
 }
