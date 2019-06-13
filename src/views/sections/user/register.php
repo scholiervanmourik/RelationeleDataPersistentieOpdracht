@@ -79,7 +79,12 @@ require_once('../../template/head.php');
                     <input type="text" name="organisation" placeholder="Organisatie" class="form-control">
                 </div>
                 <div class="form-group">
-                    <button type="submit">Registreren</button>
+                <button type="submit" style="background:transparent; border:0; outline:none; padding:0;">
+                        <a class="btn">
+                            <div class="btn-text">Registreren</div>
+                            <div class="button"></div>
+                        </a>
+                    </button>
                 </div>
             </form>
         </article>
