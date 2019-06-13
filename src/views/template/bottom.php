@@ -3,13 +3,26 @@
         <h2>Contact</h2>
         <hr>
         <article>
-            <a><i class="fas fa-mobile-alt icon"></i></a>
-            <p>
-                0031 12 34 56 78</p>
-            <a href="mailto:info@supportmyday.nl"><i class="far fa-envelope icon"></i></a>
+            <a href="tel:+31 12 34 56 78">
+            <span class="fa-stack fa-lg">
+                <i class="far fa-circle fa-stack-2x"></i>
+                <i class="fas fa-mobile-alt fa-stack-1x" style="font-size: 14px;"></i>
+            </span>
+            </a>
+            <p>0031 12 34 56 78</p>
+
+            <a href="mailto:info@supportmyday.nl">
+            <span class="fa-stack fa-lg">
+                <i class="far fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x" style="font-size: 14px;"></i>
+            </span>
+            </a>
             <p>info@supportmyday.nl</p>
             <p>service@supportmyday.nl</p>
-            <a><i class="fas fa-address-card icon"></i></a>
+            <span class="fa-stack fa-lg">
+                <i class="far fa-circle fa-stack-2x"></i>
+                <i class="fas fa-address-card fa-stack-1x" style="font-size: 14px;"></i>
+            </span>
             <p>De geweldige straat 77</p>
             <p>4312BS, Nederland</p>
         </article>
@@ -18,18 +31,56 @@
         <h2>Social Media</h2>
         <hr>
         <ul class="list-unstyled">
-            <li><a href="https://twitter.com/"><i class="fab fa-twitter icon"></i></a></li>
-            <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f icon"></i></a></li>
-            <li><a href="https://www.instagram.com/?hl=nl"><i class="fab fa-instagram icon"></i></a></li>
-            <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in icon"></i></a></li>
-            <li><a href="https://www.youtube.com/"><i class="fab fa-youtube icon"></i></a></li>
+            <li>
+                <a href="https://twitter.com/">
+                    <span class="fa-stack fa-lg">
+                        <i class="far fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-twitter fa-stack-1x" style="font-size: 14px;"></i>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/">
+                    <span class="fa-stack fa-lg">
+                        <i class="far fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-facebook-f fa-stack-1x" style="font-size: 14px;"></i>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/?hl=nl">
+                    <span class="fa-stack fa-lg">
+                        <i class="far fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-instagram fa-stack-1x" style="font-size: 14px;"></i>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/">
+                    <span class="fa-stack fa-lg">
+                        <i class="far fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-linkedin-in fa-stack-1x" style="font-size: 14px;"></i>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/">
+                    <span class="fa-stack fa-lg">
+                        <i class="far fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-youtube fa-stack-1x" style="font-size: 14px;"></i>
+                    </span>
+                </a>
+            </li>
         </ul>
     </article>
     <article class="col">
         <h2>Terug naar home</h2>
         <hr>
-        <a class="icon" href="../../../index.php">
-            <i class="fas fa-home"></i>
+        <a href="../../../index.php">
+            <span class="fa-stack fa-lg">
+                <i class="far fa-circle fa-stack-2x"></i>
+                <i class="fas fa-home fa-stack-1x" style="font-size: 14px;"></i>
+            </span>
         </a>
     </article>
 </footer>
