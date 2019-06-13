@@ -19,7 +19,7 @@ class AdminController
         $csv = array_map('str_getcsv', file(__DIR__ . "/../public/csv/$pageName.csv"));
         $arr = [];
         $headers = array_shift($csv);
-        array_shift($headers);
+        if ($headers) array_shift($headers);
         foreach($csv as $line)
         {
             $row = str_getcsv($line[0], ';');

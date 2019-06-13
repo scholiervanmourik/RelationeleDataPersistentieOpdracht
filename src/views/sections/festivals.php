@@ -22,13 +22,13 @@ if (!isset($festivals)) {
 ?>
     <section>
         <article>
-            <h3>Festivals</h3>
-            <a href="add-organisation.php">Toevoegen organisatie</a>
+            <h3><?= $csv['festivals'] ?></h3>
+            <a href="add-organisation.php"><?= $csv['addOrganisation'] ?></a>
         </article>
     </section>
     <section>
         <article>
-            <h3>Festivals</h3>
+            <h3><?= $csv['festivals'] ?></h3>
             <!-- Fomulier die festivals zoekt-->
             <form action="festivals.php" method="post">
                 <input placeholder="Festival" name="filter">
@@ -38,7 +38,7 @@ if (!isset($festivals)) {
             <table class="table table-striped table-light">
                 <thead class="thead thead-light">
                 <tr>
-                    <th>Naam</th>
+                    <th><?= $csv['name'] ?></th>
                     <th></th>
                 <tr>
                 </thead>
@@ -54,7 +54,7 @@ if (!isset($festivals)) {
                 <?php endwhile; ?>
                 </tbody>
             </table>
-            <p>Totaal: <?= $festivals->num_rows; ?></p>
+            <p><?= $csv['total'] ?>: <?= $festivals->num_rows; ?></p>
         </article>
     </section>
 <?php require_once('../template/bottom.php'); ?>
