@@ -9,11 +9,6 @@ $csv = $adminController->readCSVContent('app');
 ?>
 <section>
     <article>
-        <h1>Onderhoudsmodule</h1>
-    </article>
-</section>
-<section>
-    <article>
         <h2>Content beheren</h2>
         <form class="container quill-wrapper xhr-form" action="/src/actions/write-content.php" enctype="multipart/form-data" method="post" data-callback="uploadContent">
             <div class="form-group row">
