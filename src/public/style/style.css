@@ -103,6 +103,9 @@ a.btn {
     width: 200px;
     margin-right: 25px;
     cursor: pointer;
+    margin:0;
+    padding:0;
+    margin-right:30px;
 }
 
 .btn-text {
@@ -113,6 +116,15 @@ a.btn {
     top: 10px;
     left: 20px;
     position: relative;
+}
+.input-group{
+    margin: 20px 0px;
+}
+input{
+    outline:none;
+}
+.xhr-form{
+    width:50%;
 }
 
 .button {
