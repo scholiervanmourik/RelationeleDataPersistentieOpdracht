@@ -37,6 +37,10 @@ section {
     /* set height of section to view height height */
     min-height: 95vh;
     height: auto;
+
+    display: flex;
+    /* justify-content: center;  horzontal alignment */
+    align-items: center; /* vertical alignment */
 }
 
 section article {

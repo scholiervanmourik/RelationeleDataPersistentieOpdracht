@@ -33,7 +33,7 @@ $csv = $controller->readCSVContent('home');
 
 <section id="theApp" class="app">
     <div class="row">
-        <article class="col">
+        <article class="col-4 float-left">
             <h2><?= $csv['indexAppTitleFindFriends'] ?></h2>
             <hr>
             <p><?= $csv['homeDescriptionFindFriends']?></p>
@@ -42,7 +42,7 @@ $csv = $controller->readCSVContent('home');
                 <i class="icon fas fa-map-marker-alt fa-3x col"></i>
             </div>
         </article>
-        <article class="col">
+        <article class="col-4 float-left">
             <h2><?= $csv['homeDrink'] ?></h2>
             <hr>
             <p><?= $csv['homeDrinkDescription'] ?></p>
@@ -51,7 +51,7 @@ $csv = $controller->readCSVContent('home');
                 <i class="icon fas fa-stopwatch fa-3x col"></i>
             </div>
         </article>
-        <article class="col">
+        <article class="col-4 float-left">
             <h2><?= $csv['homePlanTitle'] ?></h2>
             <hr>
             <p><?= $csv['homePlanDescription'] ?></p>
@@ -59,11 +59,11 @@ $csv = $controller->readCSVContent('home');
                 <i class="icon far fa-calendar-alt fa-3x col"></i>
             </div>
         </article>
+        <a href="src/views/sections/app-info.php" class="btn" target="_self">
+            <div class="btn-text"><?= $csv['homePlanMore'] ?></div>
+            <div class="button"></div>
+        </a>
     </div>
-    <a href="src/views/sections/app-info.php" class="btn" target="_self">
-        <div class="btn-text"><?= $csv['homePlanMore'] ?></div>
-        <div class="button"></div>
-    </a>
 </section>
 
 <section class="company" id="Company">
