@@ -150,6 +150,13 @@ input{
     text-align: center;
     font-size: 40px;
 }
+/* font awsome style's om de iconen aan te passen */
+.fa-stack{
+    margin: 5px;
+}
+.fa-circle{
+    color:#FFFFFF !important;
+}
 
 a.btn:hover .button {
     width: 200px;
