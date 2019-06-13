@@ -1,5 +1,11 @@
 <?php
+
+use smd\controllers\AdminController;
+
 require_once('../template/head.php');
+
+$adminController = new AdminController();
+$csv = $adminController->readCSVContent('app');
 ?>
 <section>
     <article>
@@ -26,10 +32,15 @@ require_once('../template/head.php');
                 <label for="quillHtml">Html</label>
                 <textarea id="quillHtml" name="html"></textarea>
             </div> -->
-            <input type="file" accept=".csv" name="fileUpload">
+            <a id="downloadCsv" class="btn btn-primary" href="/src/public/csv/home.csv" download>Download</a>
+
+            <h5>CSV bestand</h5>
+            <div class="custom-file">
+                <input class="custom-file-input" type="file" accept=".csv" name="fileUpload">
+                <label class="custom-file-label">Kies bestand</label>
+            </div>
             <input type="submit">
         </form>
-        <a id="downloadCsv" href="/src/public/csv/home.csv" download>Download</a>
     </article>
 </section>
 <script>

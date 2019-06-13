@@ -148,6 +148,7 @@ input{
 
 .icon {
     text-align: center;
+    font-size: 40px;
 }
 
 a.btn:hover .button {
@@ -155,7 +156,6 @@ a.btn:hover .button {
     height: 30px;
     background-color: #c51f27;
 }
-
 
 /*         Start of the Google translator api adjustments          */
 .skiptranslate iframe{
