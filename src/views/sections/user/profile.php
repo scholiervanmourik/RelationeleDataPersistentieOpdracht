@@ -4,6 +4,7 @@ $user = $userController->getUser();
 ?>
 <section>
     <article>
+        <h1>Welkom terug <?php echo $user->getFirstName(); ?>!</h1><br>
         <h3>Profiel</h3>
         <form action="../../../actions/edit-profile.php?email=<?php echo $user->getEmail(); ?>" method="POST"
               class="form-group">
