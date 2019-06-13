@@ -1,5 +1,11 @@
 <?php
+
+use smd\controllers\AdminController;
+
 require_once('../template/head.php');
+
+$adminController = new AdminController();
+$csv = $adminController->readCSVContent('app');
 ?>
 <section>
     <article>

@@ -1,10 +1,15 @@
 <?php
-
 use smd\controllers\OrganisationController;
+use smd\controllers\AdminController;
+
 
 require_once('../template/head.php');
 $controller = new OrganisationController();
 $organisations = $controller->getAll();
+
+$adminController = new AdminController();
+$csv = $adminController->readCSVContent('organisations');
+
 ?>
 <?php if ($userController->isLoggedIn() && $userController->getUser()->getRole() === 'admin'): ?>
     <section>

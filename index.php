@@ -68,62 +68,42 @@ $csv = $controller->readCSVContent('home');
 
 <section class="company" id="Company">
     <article>
-        <h2>Wat bieden we aan de bedrijven?</h2>
+        <h2><?= $csv['companyTitle'] ?></h2>
         <hr>
-        <p>We kunnen verschillende informatie aan bedrijven verstrekken. Denk aan de hoeveelheid bezoekers die er zijn,
-            hoeveel er totaal zijn geweest en drukke plekken op het evenement. Zo heb je altijd controle op jouw
-            evenement.</p>
+        <p><?= $csv['companyDescription'] ?></p>
 
         <aside>
-            <h3>Makkelijk te verkopen</h3>
-            <p>Een gemakkelijke manier om uw tickets te verkopen, via onze app</p>
+            <h3><?= $csv['companySellTitle'] ?></h3>
+            <p><?= $csv['companySellDescription'] ?></p>
         </aside>
 
         <aside>
-            <h3>Je persoonlijke muziek lijst</h3>
-            <p>Een exclusieve Spotify afspeellijst gebaseerd op de bezoeker.</p>
+            <h3><?= $csv['companyMusicTitle'] ?></h3>
+            <p><?= $csv['companyMusicDescription'] ?></p>
         </aside>
 
         <aside>
-            <h3>Menigtecontrole</h3>
-            <p>Bekijk je evenement real time. Zo zie je welke plekken het drukst zijn om zo de veiligheid te
-                garanderen.</p>
+            <h3><?= $csv['companyPeopleTitle'] ?></h3>
+            <p><?= $csv['companyPeopleDescription'] ?></p>
         </aside>
 
         <aside class="">
-            <h3>Een gemeenschap</h3>
-            <p>Een gemeenschap, waar foto's en video's gedeeld kunnen worden.</p>
+            <h3><?= $csv['companyGroupTitle'] ?></h3>
+            <p><?= $csv['companyGroupDescription'] ?></p>
         </aside>
     </article>
 </section>
 
 <section class="about" id="aboutUs">
     <article>
-        <h2>Wil je alles over ons weten?</h2>
+        <h2><?= $csv['aboutTitle'] ?></h2>
         <hr>
         <div class="row">
             <div class="col">
-                <p>Nederland trekt jaarlijks miljoenen festivalgangers. Van deze festivalgangers heeft het grootste
-                    gedeelte
-                    een smartphone bij zich. Logisch natuurlijk! Met deze apparaten kan je namelijk in een handomdraai
-                    informatie opzoeken, belangrijke momenten vastleggen en ben je altijd bereikbaar. Kortom, je hebt de
-                    wereld in je broekzak.</p>
-                <p>De dag makkelijker maken met diverse informatie die de hele dag binnenkomt. Dit is het mooiste wat er
-                    is
-                    volgens ons. Het is algemeen bekend dat er inmiddels overal een app voor is. Echter is er volgens
-                    ons
-                    een probleem. Deze apps zijn namelijk niet volledig waardoor de gebruiker meerdere applicaties moet
-                    downloaden en gebruiken. Wij spelen hierop in door een applicatie uit te brengen die de gebruiker
-                    vanaf
-                    het begin van de dag tot het eind van de dag kan gebruiken.</p>
+                <p><?= $csv['aboutDescription1'] ?></p>
             </div>
             <div class="col">
-                <p>Support My Day is gericht op de term “De wereld in je broekzak”. Wij zijn een jong en dynamisch
-                    bedrijf
-                    opgestart door vier studenten. Opgericht in juli 2018. Ons doel is om ervoor te zorgen dat de
-                    bezoeker
-                    optimaal van de dag kan genieten door zoveel mogelijk, op maat gemaakte informatie, aan te
-                    bieden.</p>
+                <p><?= $csv['aboutDescription2'] ?></p>
             </div>
         </div>
     </article>

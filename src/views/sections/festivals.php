@@ -1,10 +1,14 @@
 <?php
 
+use smd\controllers\AdminController;
 use smd\controllers\FestivalController;
 
 require_once('../template/head.php');
 
 $controller = new FestivalController();
+$adminController = new AdminController();
+
+$csv = $adminController->readCSVContent('festivals');
 if (isset($_POST['filter'])) {
     $result = $controller->findByName($_POST['filter']);
     if ($result['success']) {
