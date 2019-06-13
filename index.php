@@ -1,8 +1,11 @@
 <?php
 require_once './src/views/template/head.php';
 
-$controller = new \smd\controllers\AdminController();
+use smd\controllers\AdminController;
+
+$controller = new AdminController();
 $csv = $controller->readCSVContent('home');
+
 ?>
 <!-- <nav class="follow-nav navbar navbar-expand-md fixed-bottom">
     <div class="collapse navbar-collapse">
@@ -17,14 +20,12 @@ $csv = $controller->readCSVContent('home');
 
 <section id="home" class="home">
     <article class="container-fluid">
-        <h2><?= $csv['headDescription']?></h2>
+        <h2><?= $csv['top'] ?></h2>
         <hr>
-        <p>Met onze applicatie krijg je een ongelofelijke ervaring op je festival. Support My Day heeft veel functies
-            die ervoor zorgen dat jij een onvergetelijke dag hebt.</p>
-        <p>Alle informatie die je nodig hebt. Direct op je smartphone.</p>
+        <p><?= $csv['topDescription'] ?></p>
 
         <a href="itms-apps://..." class="btn" target="_self">
-            <div class="btn-text">Download the app</div>
+            <div class="btn-text"><?= $csv['homeDownloadPage'] ?></div>
             <div class="button"></div>
         </a>
     </article>
@@ -33,41 +34,34 @@ $csv = $controller->readCSVContent('home');
 <section id="theApp" class="app">
     <div class="row">
         <article class="col">
-            <h2>Een gemakkelijke manier om je vrienden te vinden</h2>
+            <h2><?= $csv['indexAppTitleFindFriends'] ?></h2>
             <hr>
-            <p>Wie kent het niet. Je loopt op een festival en bent je vrienden kwijt. Met de Friend Finder kan je jouw
-                vrienden makkelijk terugvinden.</p>
+            <p><?= $csv['homeDescriptionFindFriends']?></p>
             <div class="row">
                 <i class="icon fas fa-map-marked-alt fa-3x col"></i>
                 <i class="icon fas fa-map-marker-alt fa-3x col"></i>
             </div>
         </article>
         <article class="col">
-            <h2>Waar je drinken kunt krijgen</h2>
+            <h2><?= $csv['homeDrink'] ?></h2>
             <hr>
-            <p>Wil je wat te drinken of eten halen of even naar de WC? Doe je dit liever niet omdat je favoriete artiest
-                zo
-                optreedt? Geen probleem! Op onze interactieve kaart kan je door middel van heat maps precies zien welke
-                plekken het rustigst zijn. Zo hoef je dus niks te missen!</p>
+            <p><?= $csv['homeDrinkDescription'] ?></p>
             <div class="row">
                 <i class="icon far fa-clock fa-3x col"></i>
                 <i class="icon fas fa-stopwatch fa-3x col"></i>
             </div>
         </article>
         <article class="col">
-            <h2>Plan je hele dag, waar en wanneer</h2>
+            <h2><?= $csv['homePlanTitle'] ?></h2>
             <hr>
-            <p>Met planningsagenda kan je precies zien welke artiest waar optreedt. Ook kan je favorieten selecteren en
-                krijg je een melding vóór de show begint. Zo mis je niks en hoef je nooit meer met papieren programma’s
-                te
-                lopen.</p>
+            <p><?= $csv['homePlanDescription'] ?></p>
             <div class="row">
                 <i class="icon far fa-calendar-alt fa-3x col"></i>
             </div>
         </article>
     </div>
     <a href="src/views/sections/app-info.php" class="btn" target="_self">
-        <div class="btn-text">Meer over de app</div>
+        <div class="btn-text"><?= $csv['homePlanMore'] ?></div>
         <div class="button"></div>
     </a>
 </section>

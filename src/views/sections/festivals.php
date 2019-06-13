@@ -5,10 +5,14 @@ use smd\controllers\FestivalController;
 require_once('../template/head.php');
 
 $controller = new FestivalController();
-$result = $controller->findByName($_POST['filter']);
-if ($result['success']) {
-    $festivals = $result['result'];
-} else {
+if (isset($_POST['filter'])) {
+    $result = $controller->findByName($_POST['filter']);
+    if ($result['success']) {
+        $festivals = $result['result'];
+    }
+}
+
+if (!isset($festivals)) {
     $festivals = $controller->getAll();
 }
 ?>
@@ -25,7 +29,8 @@ if ($result['success']) {
             <form action="festivals.php" method="post">
                 <input placeholder="Festival" name="filter">
                 <input type="submit" value="Zoek">
-            </form><br>
+            </form>
+            <br>
             <table class="table table-striped table-light">
                 <thead class="thead thead-light">
                 <tr>
