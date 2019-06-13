@@ -16,7 +16,7 @@ require_once('../../template/head.php');
                 <div class="form-group">
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <div class="input-group-text">Email</div>
+                            <div class="input-group-text">Password</div>
                         </div>
                         <input type="password" name="password" placeholder="Wachtwoord" class="form-control">
                     </div>

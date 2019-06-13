@@ -55,7 +55,10 @@ if (!isset($festivals)) {
                 </tbody>
             </table>
             <?php if ($userController->isLoggedIn() && $userController->getUser()->getRole() === 'admin'): ?>
-                <a href="add-organisation.php"><?= $csv['addOrganisation'] ?></a>
+                <a href="add-organisation.php" class="btn" target="_self" style="width: 400px !important; text-align: start;">
+                    <div class="btn-text"><?= $csv['addOrganisation'] ?></div>
+                    <div class="button"></div>
+                </a>
             <?php endif; ?>
         </article>
     </section>
