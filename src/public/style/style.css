@@ -165,6 +165,20 @@ input{
 .company article{
     text-align: center;
 }
+
+/* register page style changes          */
+#Registreren{
+    display: flex;
+}
+#Registreren article{
+    width: calc(50% - 20px);
+}
+#Registreren .xhr-form{
+    width: calc(100% - 40px);
+}
+
+
+
 /* font awsome style's to change the icons */
 .fa-stack{
     margin: 5px;

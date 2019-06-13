@@ -61,7 +61,6 @@ $userController = new UserController($userRepository);
                 <?php endif; ?>
             <?php else: ?>
                 <li class="nav-item"><a href="/src/views/sections/user/login.php" class="nav-link">Login</a></li>
-                <li class="nav-item"><a href="/src/views/sections/user/register.php" class="nav-link">Registreren</a>
                 </li>
             <?php endif; ?>
             <li class="nav-item dropdown">
