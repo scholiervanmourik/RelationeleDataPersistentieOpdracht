@@ -121,7 +121,7 @@ a.btn {
     margin: 20px 0px;
 }
 input{
-    outline:none;
+    outline:none !important;
 }
 .xhr-form{
     width:50%;
