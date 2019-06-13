@@ -5,11 +5,6 @@ $user = $userController->getUser();
 <section>
     <article>
         <h3>Profiel</h3>
-    </article>
-</section>
-<section>
-    <article>
-        <h3>Profiel</h3>
         <form action="../../../actions/edit-profile.php?email=<?php echo $user->getEmail(); ?>" method="POST"
               class="form-group">
             <div class="input-group">
@@ -34,7 +29,12 @@ $user = $userController->getUser();
                        class="form-control">
             </div>
             <div class="input-group">
-                <input type="submit" value="Bewerken" class="btn btn-primary">
+                <button type="submit" style="background:transparent; border:0; outline:none; padding:0;">
+                    <a class="btn">
+                        <div class="btn-text">Bewerken</div>
+                        <div class="button"></div>
+                    </a>
+                </button>
             </div>
         </form>
     </article>

@@ -11,14 +11,6 @@ $adminController = new AdminController();
 $csv = $adminController->readCSVContent('organisations');
 
 ?>
-<?php if ($userController->isLoggedIn() && $userController->getUser()->getRole() === 'admin'): ?>
-    <section>
-        <article>
-            <h3>Organisaties</h3>
-            <a href="add-organisation.php">Toevoegen organisatie</a>
-        </article>
-    </section>
-<?php endif; ?>
     <section>
         <article>
             <h3>Organisaties</h3>
@@ -40,6 +32,9 @@ $csv = $adminController->readCSVContent('organisations');
                     </tr>
                 <?php endwhile; ?>
             </table>
+            <?php if ($userController->isLoggedIn() && $userController->getUser()->getRole() === 'admin'): ?>
+            <a href="add-organisation.php">Toevoegen organisatie</a>
+            <?php endif; ?>
         </article>
     </section>
 <?php require_once('../template/bottom.php'); ?>

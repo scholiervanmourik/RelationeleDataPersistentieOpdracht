@@ -23,16 +23,16 @@ if (!isset($festivals)) {
     <section>
         <article>
             <h3><?= $csv['festivals'] ?></h3>
-            <a href="add-organisation.php"><?= $csv['addOrganisation'] ?></a>
-        </article>
-    </section>
-    <section>
-        <article>
-            <h3><?= $csv['festivals'] ?></h3>
+            <p><?= $csv['total'] ?>: <?= $festivals->num_rows; ?></p>
             <!-- Fomulier die festivals zoekt-->
             <form action="festivals.php" method="post">
-                <input placeholder="Festival" name="filter">
-                <input type="submit" value="Zoek">
+                <input placeholder="Festival" name="filter" class="form-control">
+                <button type="submit" style="background:transparent; border:0; outline:none; padding:0;">
+                    <a class="btn">
+                        <div class="btn-text">Zoek</div>
+                        <div class="button"></div>
+                    </a>
+                </button>
             </form>
             <br>
             <table class="table table-striped table-light">
@@ -54,7 +54,9 @@ if (!isset($festivals)) {
                 <?php endwhile; ?>
                 </tbody>
             </table>
-            <p><?= $csv['total'] ?>: <?= $festivals->num_rows; ?></p>
+            <?php if ($userController->isLoggedIn() && $userController->getUser()->getRole() === 'admin'): ?>
+                <a href="add-organisation.php"><?= $csv['addOrganisation'] ?></a>
+            <?php endif; ?>
         </article>
     </section>
 <?php require_once('../template/bottom.php'); ?>
