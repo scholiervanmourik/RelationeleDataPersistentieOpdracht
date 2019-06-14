@@ -14,37 +14,55 @@ require_once('../template/head.php');
             $name = $email = $topic = $comment = "";
 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {        //check if form is actually posted
+                $valid = true;
                 if (empty($_POST["name"])) {
                     $nameErr = "Naam is een verplicht veld";   //alert for user when name hasn't been entered
+                    $valid = false;
                 } else {
                     $name = test_input($_POST["name"]);
 
                     if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
                         $nameErr = "Gebruik alleen letters en spaties";    //check if name only contains letters and whitespace
+                        $valid = false;
                     }
                 }
 
                 if (empty($_POST["email"])) {
                     $emailErr = "E-mail is een verplicht veld";
+                    $valid = false;
                 } else {
                     $email = test_input($_POST["email"]);
 
                     // check if e-mail address is well-formed
                     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                         $emailErr = "Gebruik alleen een geldig email adres";
+                        $valid = false;
                     }
                 }
 
                 if (empty($_POST["topic"])) {
                     $topicErr = "Kies een onderwerp";
+                    $valid = false;
                 } else {
                     $topic = test_input($_POST["topic"]);
                 }
 
                 if (empty($_POST["comment"])) {
                     $commentErr = "Vul hier je vraag in, dit is een verplicht veld";
+                    $valid = false;
                 } else {
                     $comment = test_input($_POST["comment"]);
+                }
+
+                //creating the message
+                $msg = "$name \n $email \n $topic \n $comment";
+
+                //wordwrap if lines are over 50 characters long
+                $msg = wordwrap($msg,50);
+
+                if ($valid) {
+                    //actual sending mail command
+                    mail($email, $topic, $msg);
                 }
             }
 
@@ -98,18 +116,6 @@ require_once('../template/head.php');
 
                 <input type="submit" name="submit" value="Verzend">
             </form>
-
-            <!--send question to those very nice SMD people by mail-->
-            <?php
-            //creating the message
-            $msg = "$name \n $email \n $topic \n $comment";
-
-            //wordwrap if lines are over 50 characters long
-            $msg = wordwrap($msg,50);
-
-            //actual sending mail command
-            mail("chpsnoij@avans.nl","Gebruikersvraag",$msg);
-            ?>
         </article>
     </section>
 
