@@ -5,7 +5,6 @@ use smd\controllers\AdminController;
 require_once('../template/head.php');
 
 $adminController = new AdminController();
-$csv = $adminController->readCSVContent('app');
 $searchTerms = $adminController->getSearchTerms();
 ?>
 <section id="ContentAdmin">
@@ -15,9 +14,8 @@ $searchTerms = $adminController->getSearchTerms();
               enctype="multipart/form-data" method="post" data-callback="uploadContent">
             <div class="form-group row">
                 <label >Pagina</label>
-                <select id="pageSelect" class="custom-select" size="4" name="page" onchange="updateAdminPage()">
+                <select id="pageSelect" class="custom-select" size="3" name="page" onchange="updateAdminPage()">
                     <option selected value="home">Home</option>
-                    <option value="app">App page</option>
                     <option value="organisations">Organisaties</option>
                     <option value="festivals">Festivals</option>
                 </select>

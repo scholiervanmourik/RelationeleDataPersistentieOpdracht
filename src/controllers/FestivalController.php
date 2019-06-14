@@ -5,6 +5,7 @@ use smd\repositories\SearchTermsRepository;
 
 require_once __DIR__ . '/../views/render.php';
 
+// Controller for all festivals
 class FestivalController
 {
     private $repository;
@@ -18,6 +19,7 @@ class FestivalController
     }
 
     /**
+     * Remove a festival at the given id
      * @param int $id
      * @return array
      */
@@ -36,11 +38,13 @@ class FestivalController
         }
     }
 
+    // Get all records
     public function getAll()
     {
         return $this->repository->getAll();
     }
 
+    // Filter by name in the database
     public function findByName($name)
     {
         if (isset($name))

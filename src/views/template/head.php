@@ -29,7 +29,7 @@ $userController = new UserController($userRepository);
 
     <link rel="stylesheet" href="/src/public/style/style.css">
 </head>
-<body data-spy="scroll" data-target=".follow-navbar" data-offset="50">
+<body>
 <nav id="topNavbar" class="navbar navbar-expand-md fixed-top">
     <a href="/index.php" class="logo navbar-brand"><img src="/src/public/img/logo.svg" alt="Brand Logo"></a>
     <button class="navbar-toggler" data-toggle="collapse" data-target="#navList">

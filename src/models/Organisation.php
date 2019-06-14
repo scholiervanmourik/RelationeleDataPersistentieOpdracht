@@ -4,7 +4,7 @@ namespace smd\models;
 
 class Organisation
 {
-    private $Organisation_ID, $Name;
+    private $Organisation_ID, $Name, $Email;
 
     public function getOrganisationID(): string
     {
@@ -14,5 +14,10 @@ class Organisation
     public function getName(): string
     {
         return $this->Name;
+    }
+
+    public function getEmail()
+    {
+        return $this->Email;
     }
 }
