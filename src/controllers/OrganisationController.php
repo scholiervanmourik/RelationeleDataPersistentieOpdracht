@@ -32,7 +32,7 @@ class OrganisationController
     // Remove a organisation from the database
     public function removeOrganisation(int $id)
     {
-        header('Location: /views/sections/organisations.php');
+        header('Location: /src/views/sections/organisations.php');
         if ($this->repository->deleteById($id)) {
             return [
                 'success' => true,

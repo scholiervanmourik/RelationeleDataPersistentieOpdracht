@@ -8,5 +8,5 @@ use smd\controllers\OrganisationController;
 $controller = new OrganisationController();
 $res = $controller->removeOrganisation($_GET['id']);
 
-header('Location: /views/sections/organisations.php');
+header('Location: /src/views/sections/organisations.php');
 showDialog($res['message']);

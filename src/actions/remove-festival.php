@@ -9,5 +9,5 @@ use smd\repositories\FestivalRepository;
 
 $controller = new FestivalController(new FestivalRepository(Database::getConnection()));
 $res = $controller->removeFestival($_GET['id']);
-header('Location: /views/sections/festivals.php');
+header('Location: /src/views/sections/festivals.php');
 showDialog($res['message']);

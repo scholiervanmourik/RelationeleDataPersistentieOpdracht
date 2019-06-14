@@ -30,7 +30,7 @@ $csv = $adminController->readCSVContent('organisations');
                         <td><?= $organisation->getName() ?></td>
                         <td><?= $organisation->getEmail() ?></td>
                         <td>
-                            <a href="../../actions/remove-organisation.php?id=<?php echo $organisation->getOrganisationID(); ?>"><i
+                            <a href="/src/actions/remove-organisation.php?id=<?php echo $organisation->getOrganisationID(); ?>"><i
                                         class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
