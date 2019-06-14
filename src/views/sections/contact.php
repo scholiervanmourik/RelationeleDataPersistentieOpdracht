@@ -1,11 +1,13 @@
 <?php
 require_once('../template/head.php');
 ?>
+
+<!--HTML form with inputs using POST superglobal, enduser can send a request for information to SMD email-->
+
     <section id="contact">
         <article>
             <h3>Contact</h3>
 
-            <!--HTML form with inputs using POST superglobal, enduser can send a request for information to SMD email-->
             <?php
             // define variables and set to empty values
             $nameErr = $emailErr = $topicErr = $commentErr = "";
@@ -97,18 +99,6 @@ require_once('../template/head.php');
                 <input type="submit" name="submit" value="Verzend">
             </form>
 
-            <!--verbeteren: onderstaand php segment weghalen voor live versie-->
-            <?php
-            echo "<h2>Your Input:</h2>";
-            echo $name;
-            echo "<br>";
-            echo $email;
-            echo "<br>";
-            echo $topic;
-            echo "<br>";
-            echo $comment;
-            ?>
-
             <!--send question to those very nice SMD people by mail-->
             <?php
             //creating the message
@@ -122,4 +112,5 @@ require_once('../template/head.php');
             ?>
         </article>
     </section>
+
 <?php require_once('../template/bottom.php') ?>
