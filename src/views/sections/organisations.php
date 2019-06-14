@@ -19,12 +19,14 @@ $csv = $adminController->readCSVContent('organisations');
                 <thead class="thead-light">
                 <tr>
                     <th>Naam</th>
+                    <th>Email</th>
                     <th></th>
                 <tr>
                 </thead>
                 <?php while ($organisation = $organisations->fetch_object('smd\\models\\Organisation')): ?>
                     <tr>
                         <td><?= $organisation->getName() ?></td>
+                        <td><?= $organisation->getEmail() ?></td>
                         <td>
                             <a href="../../actions/remove-organisation.php?id=<?php echo $organisation->getOrganisationID(); ?>"><i
                                         class="fas fa-trash-alt"></i></a>
