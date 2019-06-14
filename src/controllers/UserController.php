@@ -9,6 +9,7 @@ use smd\repositories\UserRepository;
 
 require_once __DIR__ . '/../views/render.php';
 
+// Controller for all users
 class UserController
 {
     private $repository;
@@ -19,6 +20,7 @@ class UserController
         if (session_status() == PHP_SESSION_NONE) session_start();
     }
 
+    // After succesfully login the session will be set
     public function login($email, $password)
     {
         if (isset($email) && isset($password)) {
@@ -41,6 +43,7 @@ class UserController
         ];
     }
 
+    // Registers the given user in the database
     public function register(string $email, string $password, string $screenName, string $firstName, string $lastName, string $role = 'user')
     {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -63,17 +66,20 @@ class UserController
 
     }
 
+    // Destroys the session
     public function logout()
     {
         session_destroy();
         header('Location: /index.php');
     }
 
+    // Checks if the user is currently logged in
     public function isLoggedIn(): bool
     {
         return isset($_SESSION['user']);
     }
 
+    // Edits the user in the database
     public function editUser($email, $firstName, $lastName)
     {
         if ($this->repository->editUser($email, $firstName, $lastName)) {
@@ -84,6 +90,7 @@ class UserController
         redirect('/src/views/sections/user/profile.php');
     }
 
+    // Sets the organisation to the given user
     public function setOrganisation($email, $organisationName)
     {
         $organisationRepository = new OrganisationRepository(Database::getConnection());
@@ -91,6 +98,7 @@ class UserController
         $this->repository->setOrganisation($email, $organisationId);
     }
 
+    // Sets a image to the given user
     public function setImage($email, $file)
     {
         $fileName = basename($file['name']);
@@ -99,6 +107,7 @@ class UserController
         $this->repository->setImage($email, $fileName);
     }
 
+    // Gets the user from the session
     public function getUser(): ?User
     {
         return $_SESSION['user'];

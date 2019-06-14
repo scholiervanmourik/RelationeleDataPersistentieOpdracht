@@ -3,6 +3,7 @@ namespace smd\controllers;
 use smd\Database;
 use smd\repositories\OrganisationRepository;
 
+// Controller for all organisations using a database
 class OrganisationController
 {
     private $repository;
@@ -12,6 +13,7 @@ class OrganisationController
         $this->repository = new OrganisationRepository(Database::getConnection());
     }
 
+    // Add a organisation with the given name
     public function addOrganisation(string $name)
     {
         if ($this->repository->insert($name)) {
@@ -27,6 +29,7 @@ class OrganisationController
         }
     }
 
+    // Remove a organisation from the database
     public function removeOrganisation(int $id)
     {
         header('Location: /views/sections/organisations.php');
@@ -43,6 +46,7 @@ class OrganisationController
         }
     }
 
+    // Get all records from the database
     public function getAll()
     {
         return $this->repository->getAll();

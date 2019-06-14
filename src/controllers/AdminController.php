@@ -4,6 +4,7 @@ namespace smd\controllers;
 use smd\Database;
 use smd\repositories\SearchTermsRepository;
 
+// Controller for Admin users
 class AdminController
 {
     public function __construct()
@@ -27,6 +28,7 @@ class AdminController
         foreach($csv as $line)
         {
             $row = str_getcsv($line[0], ';');
+            // $row[0] = key, $row[1] = value
             $arr[$row[0]] = $row[1];
         }
         return $arr;
