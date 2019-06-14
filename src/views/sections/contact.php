@@ -62,7 +62,7 @@ require_once('../template/head.php');
 
                 if ($valid) {
                     //actual sending mail command
-                    mail(info@supportmyday.nl, "Gebruikersvraag over: "$topic, $msg);
+                    mail('info@supportmyday.nl', "Gebruikersvraag over: $topic", $msg);
                 }
             }
 
