@@ -1,13 +1,9 @@
 <?php
 require_once('../template/head.php');
 ?>
-    <section>
+    <section id="contact">
         <article>
             <h3>Contact</h3>
-
-            <style>
-                .error {color: #C2E812;}   <!--verbeteren:kleur uit stylesheet halen-->
-            </style>
 
             <!--HTML form with inputs using POST superglobal, enduser can send a request for information to SMD email-->
             <?php
@@ -15,7 +11,7 @@ require_once('../template/head.php');
             $nameErr = $emailErr = $topicErr = $commentErr = "";
             $name = $email = $topic = $comment = "";
 
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {        //check if form is actually posted
                 if (empty($_POST["name"])) {
                     $nameErr = "Naam is een verplicht veld";   //alert for user when name hasn't been entered
                 } else {
@@ -50,10 +46,10 @@ require_once('../template/head.php');
                 }
             }
 
-
+            //strip unnecessary characters and backslashes
             function test_input($data) {
-                $data = trim($data);
-                $data = stripslashes($data);     //deze doet ie vlgs mij niet
+                $data = trim($data);            //removes extra spaces, tabs, newlines
+                $data = stripslashes($data);    //removes backslashes
                 $data = htmlspecialchars($data);
                 return $data;
             }
@@ -62,7 +58,8 @@ require_once('../template/head.php');
             <h2>Vraag informatie op bij Support My Day</h2>
             <p><span class="error">* verplicht veld</span></p>
 
-            <!-- htmlspecialchars converts special characters to HTML entities, prevents code injection by means of Cross Site Scripting (XSS) -->
+            <!-- htmlspecialchars converts special characters to HTML entities,
+            prevents code injection by means of Cross Site Scripting (XSS) -->
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
                 <!--echo $name in input value makes that value is restored when one of the other fields is rejected-->
@@ -112,6 +109,7 @@ require_once('../template/head.php');
             echo $comment;
             ?>
 
+            <!--send question to those very nice SMD people by mail-->
             <?php
             //creating the message
             $msg = "$name \n $email \n $topic \n $comment";

@@ -250,3 +250,8 @@ a.btn:hover .button {
     width: 100%;
     height: 150px;
 }
+
+/*set color for alerts in contactform*/
+#contact .error {
+    color: #C2E812 !important;
+}
