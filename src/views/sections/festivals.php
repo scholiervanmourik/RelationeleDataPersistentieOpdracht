@@ -29,7 +29,7 @@ if (!isset($festivals)) {
                 <input placeholder="Festival" name="filter" class="form-control">
                 <button type="submit" style="background:transparent; border:0; outline:none; padding:0;">
                     <a class="btn">
-                        <div class="btn-text">Zoek</div>
+                        <div class="btn-text"><?= $csv['search'] ?></div>
                         <div class="button"></div>
                     </a>
                 </button>
@@ -47,7 +47,7 @@ if (!isset($festivals)) {
                     <tr>
                         <td><?= $festival->getName(); ?></td>
                         <td>
-                            <a href="../../actions/remove-festival.php?id=<?php echo $festival->getFestivalID(); ?>"><i
+                            <a href="../../actions/remove-festival.php?id=<?= $festival->getFestivalID() ?>"><i
                                         class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>

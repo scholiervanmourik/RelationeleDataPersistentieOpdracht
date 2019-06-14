@@ -62,6 +62,7 @@ CREATE TABLE `Users` (
   `Last_Name` VARCHAR(40) NOT NULL,
   `Email` VARCHAR(40) NOT NULL,
   `Password` VARCHAR(255) NOT NULL,
+  `Image` TEXT,
   `Role` ENUM ('user', 'organisation', 'admin') DEFAULT 'user' NOT NULL,
   `Organisation_ID` INT(11) DEFAULT NULL,
   PRIMARY KEY (`Email`),

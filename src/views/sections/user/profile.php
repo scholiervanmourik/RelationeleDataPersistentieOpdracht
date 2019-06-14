@@ -4,9 +4,10 @@ $user = $userController->getUser();
 ?>
 <section>
     <article>
+        <img src="/src/public/img/<?= $user->getImage() ?>">
         <h1>Welkom terug <?php echo $user->getFirstName(); ?>!</h1><br>
         <h3>Profiel</h3>
-        <form action="../../../actions/edit-profile.php?email=<?php echo $user->getEmail(); ?>" method="POST"
+        <form action="../../../actions/edit-profile.php?email=<?php echo $user->getEmail(); ?>" method="POST" enctype="multipart/form-data"
               class="form-group">
             <div class="input-group">
                 <div class="input-group-prepend">
@@ -28,6 +29,9 @@ $user = $userController->getUser();
                 </div>
                 <input type="text" placeholder="Achternaam" name="lastName" value="<?php echo $user->getLastName(); ?>"
                        class="form-control">
+            </div>
+            <div class="input-group">
+                <input type="file" accept="image/*" name="imageUpload">
             </div>
             <div class="input-group">
                 <button type="submit" style="background:transparent; border:0; outline:none; padding:0;">

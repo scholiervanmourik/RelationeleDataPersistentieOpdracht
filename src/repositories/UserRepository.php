@@ -1,4 +1,5 @@
 <?php
+
 namespace smd\repositories;
 
 use smd\models\User;
@@ -60,6 +61,17 @@ class UserRepository extends Repository
             WHERE `Email` = ?;
         ');
         $stmt->bind_param('is', $organisationId, $email);
+        return $stmt->execute();
+    }
+
+    public function setImage($email, string $imageBase64)
+    {
+        $stmt = $this->prepare('
+            UPDATE `users`
+            SET `Image` = ?
+            WHERE `Email` = ?;
+        ');
+        $stmt->bind_param('ss', $imageBase64, $email);
         return $stmt->execute();
     }
 

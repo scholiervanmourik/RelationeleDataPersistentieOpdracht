@@ -91,6 +91,14 @@ class UserController
         $this->repository->setOrganisation($email, $organisationId);
     }
 
+    public function setImage($email, $file)
+    {
+        $fileName = basename($file['name']);
+        $path = __DIR__ . '/../public/img/' . $fileName;
+        move_uploaded_file($file['tmp_name'], $path);
+        $this->repository->setImage($email, $fileName);
+    }
+
     public function getUser(): ?User
     {
         return $_SESSION['user'];
