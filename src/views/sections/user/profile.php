@@ -2,9 +2,18 @@
 require_once '../../template/head.php';
 $user = $userController->getUser();
 ?>
+<!--
+    This page is to change your data of you account
+    change your email
+    change your first name
+    change your last name
+-->
 <section>
     <article>
-        <img src="/src/public/img/<?= $user->getImage() ?>">
+        <!-- show if the user has an image set -->
+        <?php if ($user->getImage != Null): ?>
+            <img src="/src/public/img/<?= $user->getImage() ?>">
+        <?php endif; ?>
         <h1>Welkom terug <?php echo $user->getFirstName(); ?>!</h1><br>
         <h3>Profiel</h3>
         <form action="../../../actions/edit-profile.php?email=<?php echo $user->getEmail(); ?>" method="POST" enctype="multipart/form-data"

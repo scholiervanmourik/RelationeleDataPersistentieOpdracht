@@ -1,6 +1,12 @@
 <?php
 require_once('../../template/head.php');
 ?>
+<!-- 
+    This is the login page 
+    here are a few things to find
+    a login form with a email adress and a password
+    a login button or a register button for the useres that dont have an account.
+-->
     <section>
         <article>
             <h3>Login</h3>

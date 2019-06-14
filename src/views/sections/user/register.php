@@ -1,6 +1,15 @@
 <?php
 require_once('../../template/head.php');
 ?>
+<!--
+    This page contains two forms 
+
+    one to register a user 
+    email, password, screen name, first name, last name
+
+    and one to register a organisation 
+    email, password, screen name, first name, last name, organisation name
+-->
     <section id="Registreren">
         <article>
             <h3>Registreren als gebruiker</h3>

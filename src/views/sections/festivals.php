@@ -45,6 +45,7 @@ if (!isset($festivals)) {
                 <tr>
                 </thead>
                 <tbody>
+                <!-- print the SQL query as an object you retreive -->
                 <?php while ($festival = $festivals->fetch_object('smd\\models\\Festival')): ?>
                     <tr>
                         <td><?= $festival->getName(); ?></td>
@@ -56,6 +57,7 @@ if (!isset($festivals)) {
                 <?php endwhile; ?>
                 </tbody>
             </table>
+            <!-- show if an user is logged in and he hase admin status  -->
             <?php if ($userController->isLoggedIn() && $userController->getUser()->getRole() === 'admin'): ?>
                 <a href="add-organisation.php" class="btn" target="_self" style="width: 400px !important; text-align: start;">
                     <div class="btn-text"><?= $csv['addOrganisation'] ?></div>

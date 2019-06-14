@@ -57,6 +57,7 @@ $searchTerms = $adminController->getSearchTerms();
             </tr>
             </thead>
             <tbody>
+            <!-- print the SQL query as an object you retreive -->
             <?php while ($searchTerm = $searchTerms->fetch_object('smd\\models\\SearchTerm')): ?>
                 <tr>
                     <td><?= $searchTerm->getText(); ?></td>

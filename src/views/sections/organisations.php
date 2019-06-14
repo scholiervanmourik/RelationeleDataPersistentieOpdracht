@@ -4,6 +4,7 @@ use smd\controllers\AdminController;
 
 
 require_once('../template/head.php');
+# retreive all data for the organisations and store them 
 $controller = new OrganisationController();
 $organisations = $controller->getAll();
 
@@ -22,6 +23,7 @@ $csv = $adminController->readCSVContent('organisations');
                     <th></th>
                 <tr>
                 </thead>
+                <!-- print the SQL query as an object you retreive -->
                 <?php while ($organisation = $organisations->fetch_object('smd\\models\\Organisation')): ?>
                     <tr>
                         <td><?= $organisation->getName() ?></td>
@@ -32,6 +34,7 @@ $csv = $adminController->readCSVContent('organisations');
                     </tr>
                 <?php endwhile; ?>
             </table>
+             <!-- show if an user is logged in and he hase admin status  -->
             <?php if ($userController->isLoggedIn() && $userController->getUser()->getRole() === 'admin'): ?>
             <a href="add-organisation.php" class="btn" target="_self" style="width: 400px !important; text-align: start;">
                     <div class="btn-text">Toevoegen organisatie</div>

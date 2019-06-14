@@ -51,14 +51,17 @@ $userController = new UserController($userRepository);
             </li>
 
             <li class="nav-item"><a href="/src/views/sections/festivals.php" class="nav-link">Festivals</a></li>
+            <!-- checks if the user is logged in : if the user is logged in show the next section -->
             <?php if ($userController->isLoggedIn()): ?>
                 <li class="nav-item"><a href="/src/views/sections/user/profile.php" class="nav-link">Profiel</a></li>
                 <li class="nav-item"><a href="/src/views/sections/organisations.php" class="nav-link">Organisaties</a>
                 </li>
                 <li class="nav-item"><a href="/src/actions/logout.php" class="nav-link">Logout</a></li>
+                <!-- show this part if the user has administrator role -->
                 <?php if ($userController->getUser()->getRole() === 'admin'): ?>
                     <li class="nav-item"><a href="/src/views/sections/admin.php" class="nav-link">Onderhoudsmodule</a></li>
                 <?php endif; ?>
+            <!-- if there is no user logged in show the login btn instead of profile, organisation and profile -->
             <?php else: ?>
                 <li class="nav-item"><a href="/src/views/sections/user/login.php" class="nav-link">Login</a></li>
                 </li>

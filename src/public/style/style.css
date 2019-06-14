@@ -171,6 +171,7 @@ input{
 /* fix for the company section "align content center" */
 .company article{
     text-align: center;
+    margin: 0 auto;
 }
 
 /* register page style changes          */
