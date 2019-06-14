@@ -9,7 +9,11 @@ class FestivalRepository extends Repository
         parent::__construct($conn);
     }
 
-    public function insert(string $name): bool
+    /**
+     * @param string $name
+     * @return bool
+     */
+    public function insert(string $name)
     {
         $stmt = $this->prepare('
 					INSERT INTO `Festivals` (name)
@@ -19,6 +23,10 @@ class FestivalRepository extends Repository
         return $stmt->execute();
     }
 
+    /**
+     * @param int $id
+     * @return mixed
+     */
     public function getById(int $id)
     {
         $stmt = $this->prepare('
@@ -30,7 +38,11 @@ class FestivalRepository extends Repository
         return $stmt->get_result()->fetch_object('Festival');
     }
 
-    public function delete(int $festivalId): bool
+    /**
+     * @param int $festivalId
+     * @return bool
+     */
+    public function delete(int $festivalId)
     {
         $stmt = $this->prepare('
             DELETE FROM `Festivals`

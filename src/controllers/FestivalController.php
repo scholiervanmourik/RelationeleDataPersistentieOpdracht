@@ -1,7 +1,6 @@
 <?php
 namespace smd\controllers;
 use smd\Database;
-use smd\repositories\FestivalRepository;
 use smd\repositories\SearchTermsRepository;
 
 require_once __DIR__ . '/../views/render.php';
@@ -13,9 +12,9 @@ class FestivalController
     /**
      * FestivalController constructor.
      */
-    public function __construct()
+    public function __construct($festivalRepository)
     {
-        $this->repository = new FestivalRepository(Database::getConnection());
+        $this->repository = $festivalRepository;
     }
 
     /**

@@ -2,10 +2,12 @@
 
 use smd\controllers\AdminController;
 use smd\controllers\FestivalController;
+use smd\Database;
+use smd\repositories\FestivalRepository;
 
 require_once('../template/head.php');
 
-$controller = new FestivalController();
+$controller = new FestivalController(new FestivalRepository(Database::getConnection()));
 $adminController = new AdminController();
 
 $csv = $adminController->readCSVContent('festivals');

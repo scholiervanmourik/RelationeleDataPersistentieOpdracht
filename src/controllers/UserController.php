@@ -19,7 +19,7 @@ class UserController
         if (session_status() == PHP_SESSION_NONE) session_start();
     }
 
-    public function login(string $email, string $password)
+    public function login($email, $password)
     {
         if (isset($email) && isset($password)) {
             $user = $this->repository->login($email, $password);
