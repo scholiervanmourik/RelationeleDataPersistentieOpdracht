@@ -11,7 +11,7 @@ $user = $userController->getUser();
 <section>
     <article>
         <!-- show if the user has an image set -->
-        <?php if ($user->getImage != Null): ?>
+        <?php if ($user->getImage() != Null): ?>
             <img src="/src/public/img/<?= $user->getImage() ?>">
         <?php endif; ?>
         <h1>Welkom terug <?php echo $user->getFirstName(); ?>!</h1><br>
