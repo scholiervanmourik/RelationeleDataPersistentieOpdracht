@@ -12,7 +12,7 @@ $user = $userController->getUser();
     <article>
         <!-- show if the user has an image set -->
         <?php if ($user->getImage() != Null): ?>
-            <img src="/src/public/img/<?= $user->getImage() ?>">
+            <img src="/src/public/img/<?= $user->getImage() ?>" class="profilepic">
         <?php endif; ?>
         <h1>Welkom terug <?php echo $user->getFirstName(); ?>!</h1><br>
         <h3>Profiel</h3>

@@ -256,3 +256,11 @@ a.btn:hover .button {
 #contact .error {
     color: #C2E812 !important;
 }
+
+/*set profile picture round*/
+.profilepic{
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+
+}
