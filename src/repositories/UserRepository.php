@@ -64,14 +64,15 @@ class UserRepository extends Repository
         return $stmt->execute();
     }
 
-    public function setImage($email, string $imageBase64)
+    public function setImage($email, string $img)
     {
         $stmt = $this->prepare('
             UPDATE `users`
             SET `Image` = ?
             WHERE `Email` = ?;
         ');
-        $stmt->bind_param('ss', $imageBase64, $email);
+
+        $stmt->bind_param('ss', $img, $email);
         return $stmt->execute();
     }
 

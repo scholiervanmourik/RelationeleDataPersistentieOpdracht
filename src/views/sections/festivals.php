@@ -41,7 +41,9 @@ if (!isset($festivals)) {
                 <thead class="thead thead-light">
                 <tr>
                     <th><?= $csv['name'] ?></th>
-                    <th></th>
+                    <?php if ($userController->isLoggedIn() && $userController->getUser()->getRole() === 'admin'): ?>
+                        <th></th>
+                    <?php endif; ?>
                 <tr>
                 </thead>
                 <tbody>
@@ -49,17 +51,20 @@ if (!isset($festivals)) {
                 <?php while ($festival = $festivals->fetch_object('smd\\models\\Festival')): ?>
                     <tr>
                         <td><?= $festival->getName(); ?></td>
-                        <td>
-                            <a href="../../actions/remove-festival.php?id=<?= $festival->getFestivalID() ?>"><i
-                                        class="fas fa-trash-alt"></i></a>
-                        </td>
+                        <?php if ($userController->isLoggedIn() && $userController->getUser()->getRole() === 'admin'): ?>
+                            <td>
+                                <a href="../../actions/remove-festival.php?id=<?= $festival->getFestivalID() ?>"><i
+                                            class="fas fa-trash-alt"></i></a>
+                            </td>
+                        <?php endif; ?>
                     </tr>
                 <?php endwhile; ?>
                 </tbody>
             </table>
             <!-- show if an user is logged in and he hase admin status  -->
             <?php if ($userController->isLoggedIn() && $userController->getUser()->getRole() === 'admin'): ?>
-                <a href="add-organisation.php" class="btn" target="_self" style="width: 400px !important; text-align: start;">
+                <a href="add-organisation.php" class="btn" target="_self"
+                   style="width: 400px !important; text-align: start;">
                     <div class="btn-text"><?= $csv['addOrganisation'] ?></div>
                     <div class="button"></div>
                 </a>
