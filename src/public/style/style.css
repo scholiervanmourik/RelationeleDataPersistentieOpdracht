@@ -44,7 +44,15 @@ section {
 }
 
 section article {
-    min-width: 300px;
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+@media (max-width:600px)  {
+    section article{
+        width: calc(100% - 40px);   
+    }
 }
 
 section:first-of-type {
@@ -262,5 +270,7 @@ a.btn:hover .button {
     width: 200px;
     border-radius: 50%;
     border: 2px solid #fff;
-
+    margin: 0 auto;
+    margin-bottom: 30px;
+    display: inherit;
 }
